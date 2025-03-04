@@ -11,7 +11,7 @@ export default function PageTitle() {
           <div className=" bg-blue-100 rounded-2xl">Recipe Look Up</div>
         </button>
         <button type="button" className="px-2 py-1">
-          <div className=" bg-blue-100 rounded-2xl">About</div>
+          <div className=" bg-blue-100 rounded-2xl">Aboot</div>
         </button>
       </div>
     </div>
