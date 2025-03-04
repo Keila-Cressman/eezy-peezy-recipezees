@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/eezy-peezy-recipezees/static/css/main.fdc46c87.css",
-    "main.js": "/eezy-peezy-recipezees/static/js/main.94f83846.js",
+    "main.js": "/eezy-peezy-recipezees/static/js/main.613489d6.js",
     "static/js/453.beb2f6ee.chunk.js": "/eezy-peezy-recipezees/static/js/453.beb2f6ee.chunk.js",
     "index.html": "/eezy-peezy-recipezees/index.html",
     "main.fdc46c87.css.map": "/eezy-peezy-recipezees/static/css/main.fdc46c87.css.map",
-    "main.94f83846.js.map": "/eezy-peezy-recipezees/static/js/main.94f83846.js.map",
+    "main.613489d6.js.map": "/eezy-peezy-recipezees/static/js/main.613489d6.js.map",
     "453.beb2f6ee.chunk.js.map": "/eezy-peezy-recipezees/static/js/453.beb2f6ee.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fdc46c87.css",
-    "static/js/main.94f83846.js"
+    "static/js/main.613489d6.js"
   ]
 }
