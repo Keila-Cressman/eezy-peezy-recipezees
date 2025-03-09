@@ -26,9 +26,6 @@ importers:
       '@types/node':
         specifier: ^16.18.126
         version: 16.18.126
-      '@types/react':
-        specifier: ^19.0.10
-        version: 19.0.10
       '@types/react-dom':
         specifier: ^19.0.4
         version: 19.0.4(@types/react@19.0.10)
@@ -48,6 +45,9 @@ importers:
         specifier: ^2.1.4
         version: 2.1.4
     devDependencies:
+      '@types/react':
+        specifier: ^19.0.10
+        version: 19.0.10
       gh-pages:
         specifier: ^6.3.0
         version: 6.3.0
