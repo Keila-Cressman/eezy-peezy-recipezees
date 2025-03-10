@@ -1,6 +1,6 @@
 // import Logo from "./icons/logo"
 
-import GlobalView from "./components/GlobalView"
+import GlobalView from "./layout/GlobalView"
 
 export default function App() {
   return (

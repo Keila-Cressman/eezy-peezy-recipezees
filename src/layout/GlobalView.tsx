@@ -11,7 +11,7 @@ export default function GlobalView() {
       </div>
 
       <div className="absolute top-[110px] inset-0 rounded-3xl p-1 bg-blue-100 overflow-hidden drop-shadow-md m-3">
-        <div className="h-full w-full rounded-3xl drop-shadow-sm bg-gray-50 p-1">
+        <div className="h-full w-full rounded-3xl drop-shadow-sm bg-gray-50 p-1 overflow-y-auto max-h-[calc(100vh-150px)]">
           <PageContents/>
         </div>
       </div>
