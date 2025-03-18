@@ -1,6 +1,6 @@
-import About from "../components/About"
-import Gallery from "../components/Gallery"
-import Home from "../components/Home"
+import About from "../pages/About"
+import Gallery from "../pages/Gallery"
+import Home from "../pages/Home"
 
 export default function PageContents() {
   let PageView
