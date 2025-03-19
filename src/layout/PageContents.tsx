@@ -1,6 +1,8 @@
+import SearchBar from "../components/SearchBar"
 import About from "../pages/About"
 import Gallery from "../pages/Gallery"
 import Home from "../pages/Home"
+// import TextField from "@mui/material/TextField"
 
 export default function PageContents() {
   let PageView
@@ -18,6 +20,9 @@ export default function PageContents() {
 
   return (
     <div className="flex flex-col">
+      <div>
+        <SearchBar />
+        </div>
       <div className="flex flex-1 text-4xl text-center ">
         <Gallery />
       </div>
