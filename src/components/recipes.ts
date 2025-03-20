@@ -1,8 +1,3 @@
-// export type recipes = {
-//   id: number
-//   name: string
-//   image: string
-// }
 export const recipes = [
   { id: 1, name: "avocado_lime", image: "../images/avocado_lime.jpg" },
   { id: 2, name: "bagels", image: "../images/bagels.jpg" },

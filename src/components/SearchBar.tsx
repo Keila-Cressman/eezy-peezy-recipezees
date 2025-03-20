@@ -5,18 +5,15 @@ import { recipes } from "./recipes"
 
 export default function SearchBar() {
   const [searchInput, setSearchInput] = useState("")
-  const [filteredRecipes, setFilteredRecipes] = useState(recipes)
+  const pics = recipes
 
-  const handleChange = (e: {
-    preventDefault: () => void
-    target: { value: SetStateAction<string> }
-  }) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault()
     setSearchInput(e.target.value)
   }
 
   if (searchInput.length > 0) {
-    filteredRecipes.filter((recipe) => {
+    pics.filter((recipe) => {
       return recipe.name.match(searchInput)
     })
   }

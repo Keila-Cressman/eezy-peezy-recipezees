@@ -22,7 +22,7 @@ export default function PageContents() {
     <div className="flex flex-col">
       <div>
         <SearchBar />
-        </div>
+      </div>
       <div className="flex flex-1 text-4xl text-center ">
         <Gallery />
       </div>
