@@ -31,7 +31,7 @@ import lemon_chicken_mushroom from "../images/lemon_chicken_mushroom.jpg"
 import lotion from "../images/lotion.jpg"
 import mac_and_cheese_cicd from "../images/mac_and_cheese_cicd.jpg"
 import mac_and_cheese_og from "../images/mac_and_cheese_og.jpg"
-import mofongp from "../images/mofongp.jpg"
+import mofongo from "../images/mofongo.jpg"
 import paella from "../images/paella.jpg"
 import peach_jelly from "../images/peach_jelly.jpg"
 import peanut_butter_oats from "../images/peanut_butter_oats.jpg"
@@ -58,7 +58,7 @@ import strawberry_jam from "../images/strawberry_jam.jpg"
 import stuffed_cabbage from "../images/stuffed_cabbage.jpg"
 import stuffed_chicken from "../images/stuffed_chicken.jpg"
 import sushi from "../images/sushi.jpg"
-import swett_potato_casserole from "../images/swett_potato_casserole.jpg"
+import sweet_potato_casserole from "../images/sweet_potato_casserole.jpg"
 import thanksgiving_utensils from "../images/thanksgiving_utensils.jpg"
 import tomato_sauce from "../images/tomato_sauce.jpg"
 import top_round from "../images/top_round.jpg"
@@ -66,7 +66,11 @@ import tortilla_chips from "../images/tortilla_chips.jpg"
 import waffles_pancakes from "../images/waffles_pancakes.jpg"
 import zuchini_bread from "../images/zuchini_bread.jpg"
 
-export default function Gallery() {
+export type GalleryProps = {
+  recipeType: string
+  className?: string
+}
+export default function Gallery({ recipeType, className }: GalleryProps) {
   const recipes = [
     avocado_lime,
     bagels,
@@ -101,7 +105,7 @@ export default function Gallery() {
     lotion,
     mac_and_cheese_cicd,
     mac_and_cheese_og,
-    mofongp,
+    mofongo,
     paella,
     peach_jelly,
     peanut_butter_oats,
@@ -128,7 +132,7 @@ export default function Gallery() {
     stuffed_cabbage,
     stuffed_chicken,
     sushi,
-    swett_potato_casserole,
+    sweet_potato_casserole,
     thanksgiving_utensils,
     tomato_sauce,
     top_round,
@@ -136,13 +140,26 @@ export default function Gallery() {
     waffles_pancakes,
     zuchini_bread,
   ]
+  
+  const x = recipes.filter((recipe) => recipe.includes(recipeType)) as string[]
+
   return (
     <div>
-      <div className="flex flex-wrap gap-4">
-        {recipes.map((recipe) => (
-          <img src={recipe} alt={recipe} key={recipe} className="w-1/4 h-1/4" />
-        ))}
-      </div>
+      {recipeType === "View_all" ? (
+        <div className="flex flex-wrap gap-4">
+          {recipes.map((recipe) => (
+            <img src={recipe} alt={recipe} key={recipe} className={className} />
+          ))}
+        </div>
+      ) : (
+        <div>
+          <div className="flex flex-wrap gap-4">
+            {x.map((recipe) => (
+              <img src={recipe} alt={recipe} key={recipe} className={className} />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   )
 }

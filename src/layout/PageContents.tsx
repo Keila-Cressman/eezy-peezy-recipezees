@@ -11,15 +11,15 @@ export default function PageContents() {
     case "/about":
       PageView = <About />
       break
-    case "/gallery":
-      PageView = <Gallery />
-      break
+    // case "/gallery":
+    //   PageView = <Gallery />
+    //   break
   }
 
   return (
     <div className="flex flex-col">
       <div className="flex flex-1 text-4xl text-center ">
-        <Gallery />
+        {PageView}
       </div>
     </div>
   )
