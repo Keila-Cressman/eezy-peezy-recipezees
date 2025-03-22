@@ -1,26 +1,23 @@
-import About from "../components/About"
 import Gallery from "../components/Gallery"
 import Home from "../components/Home"
 
 export default function PageContents() {
   let PageView
   switch (window.location.pathname) {
-    case "/":
+    case ("/eezy-peezy-recipezees"):
       PageView = <Home />
       break
     case "/about":
-      PageView = <About />
+      PageView = <Gallery recipeType="" />
       break
-    // case "/gallery":
-    //   PageView = <Gallery />
-    //   break
+      case ("/"):
+      PageView = <Home />
+      break
   }
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-1 text-4xl text-center ">
-        {PageView}
-      </div>
+      <div className="flex flex-1 text-4xl text-center ">{PageView}</div>
     </div>
   )
 }

@@ -162,7 +162,7 @@ export const recipes = [
     id: 28,
     name: "grape_jelly",
     image: "../images/grape_jelly.jpg",
-    type: ["Jelly"],
+    type: ["Jam"],
   },
   { id: 29, 
     name: "kabobs", 
@@ -204,7 +204,7 @@ export const recipes = [
     id: 36,
     name: "peach_jelly",
     image: "../images/peach_jelly.jpg",
-    type: ["Jelly"],
+    type: ["Jam"],
   },
   {
     id: 37,
@@ -326,7 +326,7 @@ export const recipes = [
     id: 56,
     name: "strawberry_jam",
     image: "../images/strawberry_jam.jpg",
-    type: ["Jelly"],
+    type: ["Jam"],
   },
   {
     id: 57,

@@ -23,48 +23,53 @@ export default function Home() {
   return (
     <div>
       <div className="flex flex-col pt-5 px-5">
-        <div className="flex flex-row gap-4">
-          <div className="flex flex-col divde divide-y-2 gap-2 divide-blue-200">
-            <div className="rounded bg-blue-100 ">
-              <button
-                type="button"
-                onClick={() => buttonSelection(fullRecipes, "View_all")}
-              >
-                View All
-              </button>
-            </div>
+        <div className="flex flex-row gap-4 divide divide-x-2 divide-blue-200">
+          <div className="flex flex-col text-base gap-2">
             <button
               type="button"
+              className="rounded bg-blue-100"
+              onClick={() => buttonSelection(fullRecipes, "View_all")}
+            >
+              View All
+            </button>
+            <button
+              type="button"
+              className="rounded bg-blue-100"
               onClick={() => buttonSelection(fullRecipes, "Breakfast")}
             >
               Breakfast
             </button>
             <button
               type="button"
+              className="rounded bg-blue-100"
               onClick={() => buttonSelection(fullRecipes, "Side")}
             >
               Side
             </button>
             <button
               type="button"
+              className="rounded bg-blue-100"
               onClick={() => buttonSelection(fullRecipes, "Main")}
             >
               Main
             </button>
             <button
               type="button"
+              className="rounded bg-blue-100"
               onClick={() => buttonSelection(fullRecipes, "Drink")}
             >
               Drink
             </button>
             <button
               type="button"
+              className="rounded bg-blue-100"
               onClick={() => buttonSelection(fullRecipes, "Dessert")}
             >
               Dessert
             </button>
             <button
               type="button"
+              className="rounded bg-blue-100"
               onClick={() =>
                 buttonSelection(fullRecipes, "Holiday_Thanksgiving")
               }
@@ -73,50 +78,62 @@ export default function Home() {
             </button>
             <button
               type="button"
+              className="rounded bg-blue-100"
               onClick={() => buttonSelection(fullRecipes, "Holiday_Christmas")}
             >
               Christmas
             </button>
             <button
               type="button"
+              className="rounded bg-blue-100"
               onClick={() => buttonSelection(fullRecipes, "Pre-requisite")}
             >
               Pre-requisite
             </button>
             <button
               type="button"
+              className="rounded bg-blue-100"
               onClick={() => buttonSelection(fullRecipes, "Bakery")}
             >
               Bakery
             </button>
             <button
               type="button"
-              onClick={() => buttonSelection(fullRecipes, "Jelly")}
+              className="rounded bg-blue-100"
+              onClick={() => buttonSelection(fullRecipes, "Jam")}
             >
-              Jelly
+              Jam
             </button>
             <button
               type="button"
+              className="rounded bg-blue-100"
               onClick={() => buttonSelection(fullRecipes, "Sauce")}
             >
               Sauce
             </button>
             <button
               type="button"
+              className="rounded bg-blue-100"
               onClick={() => buttonSelection(fullRecipes, "Misc")}
             >
               Misc
             </button>
             <button
               type="button"
+              className="rounded bg-blue-100"
               onClick={() => buttonSelection(fullRecipes, "Tips_and_tricks")}
             >
-              Tipe & Tricks
+              Tips & Tricks
             </button>
           </div>
-          <div className="flex flex-col gap-4 mt-4">
+          <div className="flex flex-col gap-4 mt-2 pl-5">
             {currRecipe.map((recipe) => (
-              <Gallery recipeType={recipe.name} className="h-80" />
+              <ul className="text-left">
+                <li>{recipe.name}</li>
+              </ul>
+            ))}
+            {currRecipe.map((recipe) => (
+              <Gallery recipeType={recipe.name} className="h-60" />
             ))}
           </div>
         </div>
