@@ -4,14 +4,15 @@ import Home from "../components/Home"
 export default function PageContents() {
   let PageView
   switch (window.location.pathname) {
-    case ("/eezy-peezy-recipezees"):
-      PageView = <Home />
-      break
     case "/all-recipes":
+      console.log("in::",window.location.pathname)
       PageView = <Gallery recipeType="" />
       break
     case "/":
       PageView = <Home />
+      break
+    default:
+      <Home />
       break
       
   }
@@ -19,7 +20,8 @@ export default function PageContents() {
   return (
     <div className="flex flex-col">
       <div className="flex flex-1 text-4xl text-center ">
-        {PageView}
+        {/* {PageView} */}
+        <Home/>
       </div>
     </div>
   )
