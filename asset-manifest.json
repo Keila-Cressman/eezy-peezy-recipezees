@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/eezy-peezy-recipezees/static/css/main.00d9c4a5.css",
-    "main.js": "/eezy-peezy-recipezees/static/js/main.ce0227f8.js",
+    "main.css": "/eezy-peezy-recipezees/static/css/main.955408e5.css",
+    "main.js": "/eezy-peezy-recipezees/static/js/main.5b0181fe.js",
     "static/js/973.847c7374.chunk.js": "/eezy-peezy-recipezees/static/js/973.847c7374.chunk.js",
     "static/media/bread_loaf.jpg": "/eezy-peezy-recipezees/static/media/bread_loaf.097360d690118ff1c56d.jpg",
     "static/media/english_muffins.jpg": "/eezy-peezy-recipezees/static/media/english_muffins.e8fcca0b31640e7c1d1d.jpg",
@@ -13,7 +13,7 @@
     "static/media/chicken_garlic_aioli_tacos.jpg": "/eezy-peezy-recipezees/static/media/chicken_garlic_aioli_tacos.34d9625dc9cd169f790d.jpg",
     "static/media/paella.jpg": "/eezy-peezy-recipezees/static/media/paella.7e29eb64c7a503ca29b3.jpg",
     "static/media/bagels.jpg": "/eezy-peezy-recipezees/static/media/bagels.951284457329f8c502d1.jpg",
-    "static/media/swett_potato_casserole.jpg": "/eezy-peezy-recipezees/static/media/swett_potato_casserole.06da25711cab8c631ab3.jpg",
+    "static/media/sweet_potato_casserole.jpg": "/eezy-peezy-recipezees/static/media/sweet_potato_casserole.06da25711cab8c631ab3.jpg",
     "static/media/pernil.jpg": "/eezy-peezy-recipezees/static/media/pernil.588db195d5d2c2e558d6.jpg",
     "static/media/spanish_rice.jpg": "/eezy-peezy-recipezees/static/media/spanish_rice.e71e922f3a1a8bdc8366.jpg",
     "static/media/pollo_guisado.jpg": "/eezy-peezy-recipezees/static/media/pollo_guisado.ded39e1aae04bcc70ee7.jpg",
@@ -63,7 +63,7 @@
     "static/media/sushi.jpg": "/eezy-peezy-recipezees/static/media/sushi.a0b299b220b3c576c761.jpg",
     "static/media/salmon.jpg": "/eezy-peezy-recipezees/static/media/salmon.c6cdc326530126c6ac61.jpg",
     "static/media/carrot_cake.jpg": "/eezy-peezy-recipezees/static/media/carrot_cake.62920e06542aca880953.jpg",
-    "static/media/mofongp.jpg": "/eezy-peezy-recipezees/static/media/mofongp.0c9091e1b73f89bca5c9.jpg",
+    "static/media/mofongo.jpg": "/eezy-peezy-recipezees/static/media/mofongo.0c9091e1b73f89bca5c9.jpg",
     "static/media/lotion.jpg": "/eezy-peezy-recipezees/static/media/lotion.d0793f5e44bcda0c979a.jpg",
     "static/media/mac_and_cheese_og.jpg": "/eezy-peezy-recipezees/static/media/mac_and_cheese_og.00e719ed3038fddf57eb.jpg",
     "static/media/shepherds_pie.jpg": "/eezy-peezy-recipezees/static/media/shepherds_pie.6a47882c0b2cc85e421b.jpg",
@@ -71,12 +71,12 @@
     "static/media/mac_and_cheese_cicd.jpg": "/eezy-peezy-recipezees/static/media/mac_and_cheese_cicd.31730e4a0cd493cb948c.jpg",
     "static/media/chocolate_cookies.jpg": "/eezy-peezy-recipezees/static/media/chocolate_cookies.54ef58db5b6ad42c2f2e.jpg",
     "index.html": "/eezy-peezy-recipezees/index.html",
-    "main.00d9c4a5.css.map": "/eezy-peezy-recipezees/static/css/main.00d9c4a5.css.map",
-    "main.ce0227f8.js.map": "/eezy-peezy-recipezees/static/js/main.ce0227f8.js.map",
+    "main.955408e5.css.map": "/eezy-peezy-recipezees/static/css/main.955408e5.css.map",
+    "main.5b0181fe.js.map": "/eezy-peezy-recipezees/static/js/main.5b0181fe.js.map",
     "973.847c7374.chunk.js.map": "/eezy-peezy-recipezees/static/js/973.847c7374.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.00d9c4a5.css",
-    "static/js/main.ce0227f8.js"
+    "static/css/main.955408e5.css",
+    "static/js/main.5b0181fe.js"
   ]
 }
