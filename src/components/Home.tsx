@@ -127,7 +127,7 @@ export default function Home() {
             </button>
           </div>
           <div className="flex flex-col gap-4 mt-2 pl-5">
-            {currRecipe.map((recipe) => (
+            {currRecipe.map((recipe) => ( 
               <ul className="text-left">
                 <li>{recipe.name}</li>
               </ul>
