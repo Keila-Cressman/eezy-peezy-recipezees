@@ -70,6 +70,8 @@ export type GalleryProps = {
   recipeType: string
   className?: string
 }
+
+
 export default function Gallery({ recipeType, className }: GalleryProps) {
   const recipes = [
     avocado_lime,
@@ -141,8 +143,8 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
     zuchini_bread,
   ]
   
-  const x = recipes.filter((recipe) => recipe.includes(recipeType)) as string[]
-
+  const sameType = recipes.filter((recipe) => recipe.includes(recipeType)) as string[]
+  
   return (
     <div>
       {recipeType === "View_all" ? (
@@ -154,7 +156,7 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
       ) : (
         <div>
           <div className="flex flex-wrap gap-4">
-            {x.map((recipe) => (
+            {sameType.map((recipe) => (
               <img src={recipe} alt={recipe} key={recipe} className={className} />
             ))}
           </div>
