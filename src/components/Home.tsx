@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { recipes } from "./recipes"
+import { recipes } from "../utils/recipes"
 import Gallery from "./Gallery"
 
 export default function Home() {
