@@ -1,122 +1,105 @@
-import { useState } from "react"
-import { recipes } from "../utils/recipes"
-
-export type SideNavProps ={
-  fullRecipes:any[]
-  currRecipe:{ image: string; name: string }[]
+export type SideNavProps = {
+  onClick: (recipeType: string) => void
 }
 
-export function SideNav({fullRecipes,currRecipe}:SideNavProps) {
-  const [currRec, setCurrRecipe] = useState(currRecipe)
-  function buttonSelection(recipes: any[], recipeType: string): void {
-    if (recipeType === "View_all") {
-      setCurrRecipe(fullRecipes)
-      return
-    }
-
-    const inRecipe = recipes.filter((recipe) =>
-      recipe.type.includes(recipeType)
-    ) as []
-    setCurrRecipe(inRecipe)
-  }
-
+export function SideNav({ onClick }: SideNavProps) {
   return (
     <div className="flex flex-col text-base gap-2">
       <button
         type="button"
         className="rounded bg-blue-100"
-        onClick={() => buttonSelection(fullRecipes, "View_all")}
+        onClick={() => onClick("View_all")}
       >
         View All
       </button>
       <button
         type="button"
         className="rounded bg-blue-100"
-        onClick={() => buttonSelection(fullRecipes, "Breakfast")}
+        onClick={() => onClick("Breakfast")}
       >
         Breakfast
       </button>
       <button
         type="button"
         className="rounded bg-blue-100"
-        onClick={() => buttonSelection(fullRecipes, "Side")}
+        onClick={() => onClick("Side")}
       >
         Side
       </button>
       <button
         type="button"
         className="rounded bg-blue-100"
-        onClick={() => buttonSelection(fullRecipes, "Main")}
+        onClick={() => onClick("Main")}
       >
         Main
       </button>
       <button
         type="button"
         className="rounded bg-blue-100"
-        onClick={() => buttonSelection(fullRecipes, "Drink")}
+        onClick={() => onClick("Drink")}
       >
         Drink
       </button>
       <button
         type="button"
         className="rounded bg-blue-100"
-        onClick={() => buttonSelection(fullRecipes, "Dessert")}
+        onClick={() => onClick("Dessert")}
       >
         Dessert
       </button>
       <button
         type="button"
         className="rounded bg-blue-100"
-        onClick={() => buttonSelection(fullRecipes, "Holiday_Thanksgiving")}
+        onClick={() => onClick("Holiday_Thanksgiving")}
       >
         Thanksgiving
       </button>
       <button
         type="button"
         className="rounded bg-blue-100"
-        onClick={() => buttonSelection(fullRecipes, "Holiday_Christmas")}
+        onClick={() => onClick("Holiday_Christmas")}
       >
         Christmas
       </button>
       <button
         type="button"
         className="rounded bg-blue-100"
-        onClick={() => buttonSelection(fullRecipes, "Pre-requisite")}
+        onClick={() => onClick("Pre-requisite")}
       >
         Pre-requisite
       </button>
       <button
         type="button"
         className="rounded bg-blue-100"
-        onClick={() => buttonSelection(fullRecipes, "Bakery")}
+        onClick={() => onClick("Bakery")}
       >
         Bakery
       </button>
       <button
         type="button"
         className="rounded bg-blue-100"
-        onClick={() => buttonSelection(fullRecipes, "Jam")}
+        onClick={() => onClick("Jam")}
       >
         Jam
       </button>
       <button
         type="button"
         className="rounded bg-blue-100"
-        onClick={() => buttonSelection(fullRecipes, "Sauce")}
+        onClick={() => onClick("Sauce")}
       >
         Sauce
       </button>
       <button
         type="button"
         className="rounded bg-blue-100"
-        onClick={() => buttonSelection(fullRecipes, "Misc")}
+        onClick={() => onClick("Misc")}
       >
         Misc
       </button>
       <button
         type="button"
         className="rounded bg-blue-100"
-        onClick={() => buttonSelection(fullRecipes, "Tips_and_tricks")}
+        onClick={() => onClick("Tips_and_tricks")}
       >
         Tips & Tricks
       </button>
