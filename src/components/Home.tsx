@@ -2,6 +2,7 @@ import { useState } from "react"
 import { recipes } from "../utils/recipes"
 import { SideNav } from "./SideNav"
 import SummaryView from "./SummaryView"
+import { Recipe } from "./RecipeCard"
 
 export default function Home() {
   const fullRecipes = recipes as []
@@ -30,7 +31,7 @@ export default function Home() {
               buttonSelection(fullRecipes, recipeType)
             }
           />
-          <SummaryView currRecipe={currRecipe} />
+          <SummaryView currRecipe={currRecipe as Recipe} />
         </div>
       </div>
     </div>
