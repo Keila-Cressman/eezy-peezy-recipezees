@@ -20,26 +20,26 @@ export default function RecipeCard({ currRecipe }: RecipeCardProps) {
     <div className="flex gap-4">
       <div className="flex flex-col gap-2">
         {firstHalf.map((recipe) => (
-          <div className="text-left bg-blue-100 rounded-xl w-[17rem] p-2">
+          <div className=" bg-blue-100 rounded-xl w-[17rem] p-2">
             <Gallery
               recipeType={recipe.name}
               className="rounded-xl h-36 my-4"
             />
-            <div className="flex bg-green-300 overflow-hidden">
-              <span>{recipe.name}</span>
+            <div className="flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden">
+              <span>{recipe.name.replaceAll("_", " ")}</span>
             </div>
           </div>
         ))}
       </div>
       <div className="flex flex-col gap-2">
         {secondHalf.map((recipe) => (
-          <div className="text-left bg-blue-100 rounded-xl w-[17rem] p-2">
+          <div className=" bg-blue-100 rounded-xl w-[17rem] p-2">
             <Gallery
               recipeType={recipe.name}
               className="rounded-xl h-36 my-4"
             />
-            <div className="flex bg-green-300 overflow-hidden">
-              <span>{recipe.name}</span>
+            <div className="flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden">
+              <span>{recipe.name.replaceAll("_", " ")}</span>
             </div>
           </div>
         ))}
