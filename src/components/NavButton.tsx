@@ -1,18 +1,18 @@
 export type NavButtonProps={
-  category: string
+  title: string
   recipeType: string
   onClick: (recipeType: string) => void
   className: string
 }
 
-export default function NavButton({category, recipeType, onClick, className}:NavButtonProps){
+export default function NavButton({title, recipeType, onClick, className}:NavButtonProps){
   return(
     <button
         type="button"
         className={className}
         onClick={() => onClick(recipeType)}
       >
-        {category}
+        {title}
       </button>
   )
 }

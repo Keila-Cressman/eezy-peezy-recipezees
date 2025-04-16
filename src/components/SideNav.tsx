@@ -7,103 +7,90 @@ export type SideNavProps = {
 export function SideNav({ onClick }: SideNavProps) {
   return (
     <div className="flex flex-col text-base gap-2">
-      <button
-        type="button"
-        className="rounded bg-blue-100"
-        onClick={() => onClick("View_all")}
-      >
-        View All
-      </button>
       <NavButton
-        category="Breakfast"
+        title="View all"
+        recipeType="View_all"
+        onClick={() => onClick("View_all")}
+        className="rounded bg-blue-100"
+      />
+      <NavButton
+        title="Breakfast"
         recipeType="Breakfast"
         onClick={() => onClick("Breakfast")}
         className="rounded bg-blue-100"
       />
-      <button
-        type="button"
-        className="rounded bg-blue-100"
+      <NavButton
+        title="Side"
+        recipeType="Side"
         onClick={() => onClick("Side")}
-      >
-        Side
-      </button>
-      <button
-        type="button"
         className="rounded bg-blue-100"
+      />
+      <NavButton
+        title="Main"
+        recipeType="Main"
         onClick={() => onClick("Main")}
-      >
-        Main
-      </button>
-      <button
-        type="button"
         className="rounded bg-blue-100"
+      />
+      <NavButton
+        title="Drink"
+        recipeType="Drink"
         onClick={() => onClick("Drink")}
-      >
-        Drink
-      </button>
-      <button
-        type="button"
         className="rounded bg-blue-100"
+      />
+      <NavButton
+        title="Dessert"
+        recipeType="Dessert"
         onClick={() => onClick("Dessert")}
-      >
-        Dessert
-      </button>
-      <button
-        type="button"
         className="rounded bg-blue-100"
+      />
+      <NavButton
+        title="Thanksgiving"
+        recipeType="Thanksgiving"
         onClick={() => onClick("Holiday_Thanksgiving")}
-      >
-        Thanksgiving
-      </button>
-      <button
-        type="button"
         className="rounded bg-blue-100"
+      />
+      <NavButton
+        title="Christmas"
+        recipeType="Christmas"
         onClick={() => onClick("Holiday_Christmas")}
-      >
-        Christmas
-      </button>
-      <button
-        type="button"
         className="rounded bg-blue-100"
+      />
+      <NavButton
+        title="Pre-requisite"
+        recipeType="Pre-requisite"
         onClick={() => onClick("Pre-requisite")}
-      >
-        Pre-requisite
-      </button>
-      <button
-        type="button"
         className="rounded bg-blue-100"
+      />
+      <NavButton
+        title="Bakery"
+        recipeType="Bakery"
         onClick={() => onClick("Bakery")}
-      >
-        Bakery
-      </button>
-      <button
-        type="button"
         className="rounded bg-blue-100"
+      />
+      <NavButton
+        title="Jam"
+        recipeType="Jam"
         onClick={() => onClick("Jam")}
-      >
-        Jam
-      </button>
-      <button
-        type="button"
         className="rounded bg-blue-100"
+      />
+      <NavButton
+        title="Sauce"
+        recipeType="Sauce"
         onClick={() => onClick("Sauce")}
-      >
-        Sauce
-      </button>
-      <button
-        type="button"
         className="rounded bg-blue-100"
+      />
+      <NavButton
+        title="Misc"
+        recipeType="Misc"
         onClick={() => onClick("Misc")}
-      >
-        Misc
-      </button>
-      <button
-        type="button"
         className="rounded bg-blue-100"
+      />
+      <NavButton
+        title="Tips & Tricks"
+        recipeType="Tips_and_tricks"
         onClick={() => onClick("Tips_and_tricks")}
-      >
-        Tips & Tricks
-      </button>
+        className="rounded bg-blue-100"
+      />
     </div>
   )
 }
