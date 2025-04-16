@@ -1,3 +1,5 @@
+import NavButton from "./NavButton"
+
 export type SideNavProps = {
   onClick: (recipeType: string) => void
 }
@@ -12,13 +14,12 @@ export function SideNav({ onClick }: SideNavProps) {
       >
         View All
       </button>
-      <button
-        type="button"
-        className="rounded bg-blue-100"
+      <NavButton
+        category="Breakfast"
+        recipeType="Breakfast"
         onClick={() => onClick("Breakfast")}
-      >
-        Breakfast
-      </button>
+        className="rounded bg-blue-100"
+      />
       <button
         type="button"
         className="rounded bg-blue-100"
