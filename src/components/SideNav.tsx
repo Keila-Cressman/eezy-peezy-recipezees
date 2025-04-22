@@ -1,3 +1,5 @@
+import { useState } from "react"
+import { cn } from "../utils/cn"
 import NavButton from "./NavButton"
 
 export type SideNavProps = {
@@ -5,91 +7,140 @@ export type SideNavProps = {
 }
 
 export function SideNav({ onClick }: SideNavProps) {
+  const [selected, setSelected] = useState<string | null>(null)
+
+  const handleClick = (recipeType: string) => {
+    setSelected(recipeType)
+    onClick(recipeType)
+  }
+
   return (
     <div className="flex flex-col text-base gap-2">
       <NavButton
         title="View all"
         recipeType="View_all"
-        onClick={() => onClick("View_all")}
-        className="rounded bg-blue-100"
+        onClick={() => handleClick("View_all")}
+        className={cn(
+          "rounded bg-blue-100 hover:bg-blue-300",
+          selected === "View_all" && "bg-blue-500 text-white"
+        )}
       />
       <NavButton
         title="Breakfast"
         recipeType="Breakfast"
-        onClick={() => onClick("Breakfast")}
-        className="rounded bg-blue-100"
+        onClick={() => handleClick("Breakfast")}
+        className={cn(
+          "rounded bg-blue-100 hover:bg-blue-300",
+          selected === "Breakfast" && "bg-blue-500 text-white"
+        )}
       />
       <NavButton
         title="Side"
         recipeType="Side"
-        onClick={() => onClick("Side")}
-        className="rounded bg-blue-100"
+        onClick={() => handleClick("Side")}
+        className={cn(
+          "rounded bg-blue-100 hover:bg-blue-300",
+          selected === "Side" && "bg-blue-500 text-white"
+        )}
       />
       <NavButton
         title="Main"
         recipeType="Main"
-        onClick={() => onClick("Main")}
-        className="rounded bg-blue-100"
+        onClick={() => handleClick("Main")}
+        className={cn(
+          "rounded bg-blue-100 hover:bg-blue-300",
+          selected === "Main" && "bg-blue-500 text-white"
+        )}
       />
       <NavButton
         title="Drink"
         recipeType="Drink"
-        onClick={() => onClick("Drink")}
-        className="rounded bg-blue-100"
+        onClick={() => handleClick("Drink")}
+        className={cn(
+          "rounded bg-blue-100 hover:bg-blue-300",
+          selected === "Drink" && "bg-blue-500 text-white"
+        )}
       />
       <NavButton
         title="Dessert"
         recipeType="Dessert"
-        onClick={() => onClick("Dessert")}
-        className="rounded bg-blue-100"
+        onClick={() => handleClick("Dessert")}
+        className={cn(
+          "rounded bg-blue-100 hover:bg-blue-300",
+          selected === "Dessert" && "bg-blue-500 text-white"
+        )}
       />
       <NavButton
         title="Thanksgiving"
         recipeType="Thanksgiving"
-        onClick={() => onClick("Holiday_Thanksgiving")}
-        className="rounded bg-blue-100"
+        onClick={() => handleClick("Holiday_Thanksgiving")}
+        className={cn(
+          "rounded bg-blue-100 hover:bg-blue-300",
+          selected === "Holiday_Thanksgiving" && "bg-blue-500 text-white"
+        )}
       />
       <NavButton
         title="Christmas"
         recipeType="Christmas"
-        onClick={() => onClick("Holiday_Christmas")}
-        className="rounded bg-blue-100"
+        onClick={() => handleClick("Holiday_Christmas")}
+        className={cn(
+          "rounded bg-blue-100 hover:bg-blue-300",
+          selected === "Holiday_Christmas" && "bg-blue-500 text-white"
+        )}
       />
       <NavButton
         title="Pre-requisite"
         recipeType="Pre-requisite"
-        onClick={() => onClick("Pre-requisite")}
-        className="rounded bg-blue-100"
+        onClick={() => handleClick("Pre-requisite")}
+        className={cn(
+          "rounded bg-blue-100 hover:bg-blue-300",
+          selected === "Pre-requisite" && "bg-blue-500 text-white"
+        )}
       />
       <NavButton
         title="Bakery"
         recipeType="Bakery"
-        onClick={() => onClick("Bakery")}
-        className="rounded bg-blue-100"
+        onClick={() => handleClick("Bakery")}
+        className={cn(
+          "rounded bg-blue-100 hover:bg-blue-300",
+          selected === "Bakery" && "bg-blue-500 text-white"
+        )}
       />
       <NavButton
         title="Jam"
         recipeType="Jam"
-        onClick={() => onClick("Jam")}
-        className="rounded bg-blue-100"
+        onClick={() => handleClick("Jam")}
+        className={cn(
+          "rounded bg-blue-100 hover:bg-blue-300",
+          selected === "Jam" && "bg-blue-500 text-white"
+        )}
       />
       <NavButton
         title="Sauce"
         recipeType="Sauce"
-        onClick={() => onClick("Sauce")}
-        className="rounded bg-blue-100"
+        onClick={() => handleClick("Sauce")}
+        className={cn(
+          "rounded bg-blue-100 hover:bg-blue-300",
+          selected === "Sauce" && "bg-blue-500 text-white"
+        )}
       />
       <NavButton
         title="Misc"
         recipeType="Misc"
-        onClick={() => onClick("Misc")}
-        className="rounded bg-blue-100"
+        onClick={() => handleClick("Misc")}
+        className={cn(
+          "rounded bg-blue-100 hover:bg-blue-300",
+          selected === "Misc" && "bg-blue-500 text-white"
+        )}
       />
       <NavButton
         title="Tips & Tricks"
         recipeType="Tips_and_tricks"
-        onClick={() => onClick("Tips_and_tricks")}
-        className="rounded bg-blue-100"
+        onClick={() => handleClick("Tips_and_tricks")}
+        className={cn(
+          "rounded bg-blue-100 hover:bg-blue-300",
+          selected === "Tips_and_tricks" && "bg-blue-500 text-white"
+        )}
       />
     </div>
   )
