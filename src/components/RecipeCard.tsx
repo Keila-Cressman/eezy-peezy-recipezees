@@ -22,7 +22,12 @@ export default function RecipeCard({ currRecipe }: RecipeCardProps) {
 
   return (
     <div className="flex gap-4 relative">
-      {openRecipeCard && <ExpandRecipeCard recipeSelectedName="chocolate_cookies"/>}
+      {openRecipeCard && (
+        <ExpandRecipeCard
+          recipeSelectedName="chocolate_cookies"
+          onClose={() => setOpenRecipeCard(false)}
+        />
+      )}
       <div className="flex flex-col gap-2">
         {firstHalf.map((recipe) => (
           <button
