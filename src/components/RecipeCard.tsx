@@ -19,12 +19,13 @@ export default function RecipeCard({ currRecipe }: RecipeCardProps) {
   const secondHalf = currRecipe.slice(midIndex)
 
   const [openRecipeCard, setOpenRecipeCard] = useState(false)
+  const [selectRecipe, setSelectRecipe] = useState("")
 
   return (
     <div className="flex gap-4 relative">
       {openRecipeCard && (
         <ExpandRecipeCard
-          recipeSelectedName="chocolate_cookies"
+          recipeSelectedName={selectRecipe}
           onClose={() => setOpenRecipeCard(false)}
         />
       )}
@@ -32,7 +33,9 @@ export default function RecipeCard({ currRecipe }: RecipeCardProps) {
         {firstHalf.map((recipe) => (
           <button
             type="button"
-            onClick={() => setOpenRecipeCard(!openRecipeCard)}
+            onClick={() => {setOpenRecipeCard(!openRecipeCard)
+              setSelectRecipe(recipe.name)
+            }}
             className=" bg-blue-100 rounded-xl w-[17rem] p-2"
           >
             <Gallery
@@ -47,7 +50,11 @@ export default function RecipeCard({ currRecipe }: RecipeCardProps) {
       </div>
       <div className="flex flex-col gap-2">
         {secondHalf.map((recipe) => (
-          <div className=" bg-blue-100 rounded-xl w-[17rem] p-2">
+          <button
+          type="button"
+          onClick={() => {setOpenRecipeCard(!openRecipeCard)
+            setSelectRecipe(recipe.name)
+          }} className=" bg-blue-100 rounded-xl w-[17rem] p-2">
             <Gallery
               recipeType={recipe.name}
               className="rounded-xl h-36 my-4"
@@ -55,7 +62,7 @@ export default function RecipeCard({ currRecipe }: RecipeCardProps) {
             <div className="flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden">
               <span>{recipe.name.replaceAll("_", " ")}</span>
             </div>
-          </div>
+          </button>
         ))}
       </div>
     </div>
