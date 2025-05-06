@@ -12,8 +12,9 @@ export function ExpandRecipeCard({
 }: expandedRecipeCardProps) {
   return (
     <div className="absolute top-0 left-0 w-full h-full">
-      <div className="w-full h-full bg-blue-700">
-        <div className="flex justify-end">
+      <div className="w-full h-full bg-gray-50">
+        <div className="flex justify-between">
+          <span className=""> {recipeSelectedName.replaceAll("_"," ")}</span>
           <button
             type="button"
             onClick={() => {
@@ -31,7 +32,7 @@ export function ExpandRecipeCard({
           {recipes.map((recipe) => {
             if (recipe.name === recipeSelectedName && recipe.ingredients) {
               return (
-                <ul key={recipe.name} className="text-left pl-4">
+                <ul key={recipe.name} className="text-left text-sm pl-4">
                   {recipe.ingredients.map((ingredient, index) => (
                     <li key={index}>{ingredient}</li>
                   ))}
