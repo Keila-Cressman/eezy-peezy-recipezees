@@ -599,6 +599,22 @@ export const recipes = [
     steps: [],
   },
   {
+    id: 52,
+    name: "White Rice",
+    image: "../images/white_rice.jpg",
+    type: ["Side"],
+    ingredients: [
+      "1 c white rice",
+      "2 tsp salt",
+      "1 tbsp coconut oil",
+      "1 1/2 c water"
+    ],
+    steps: [
+      "Add water, salt, oil, and rice to pot",
+      "Bring to boil then simmer for 25 minutes"
+    ],
+  },
+  {
     id: 53,
     name: "steak_poatato",
     image: "../images/steak_poatato.jpg",
