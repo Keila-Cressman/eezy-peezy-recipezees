@@ -17,8 +17,8 @@ import chicken_pot_pie from "../images/chicken_pot_pie.jpg"
 import chipotle from "../images/chipotle.jpg"
 import chocolate_candy from "../images/chocolate_candy.jpg"
 import chocolate_cookies from "../images/chocolate_cookies.jpg"
-import chocplate_rice_krispies from "../images/chocplate_rice_krispies.jpg"
-import chulettas_and_platanos from "../images/chulettas_and_platanos.jpg"
+import chocolate_rice_krispies from "../images/chocolate_rice_krispies.jpg"
+import chuletas_and_tostones from "../images/chuletas_and_tostones.jpg"
 import dippy_eggs from "../images/dippy_eggs.jpg"
 import dutch_oven_beff_stew from "../images/dutch_oven_beff_stew.jpg"
 import english_muffins from "../images/english_muffins.jpg"
@@ -93,8 +93,8 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
     chipotle,
     chocolate_candy,
     chocolate_cookies,
-    chocplate_rice_krispies,
-    chulettas_and_platanos,
+    chocolate_rice_krispies,
+    chuletas_and_tostones,
     dippy_eggs,
     dutch_oven_beff_stew,
     english_muffins,
