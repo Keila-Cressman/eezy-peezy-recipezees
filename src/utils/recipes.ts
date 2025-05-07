@@ -8,7 +8,6 @@ export const recipes = [
     steps: [],
   },
   {
-    id: 2,
     name: "Bagel",
     image: "../images/bagels.jpg",
     type: ["Bakery"],
@@ -34,7 +33,6 @@ export const recipes = [
     ],
   },
   {
-    id: 3,
     name: "Beef Bone in Chuck Roast",
     image: "../images/beef_bone_in_chuck_roast.jpg",
     type: ["Main"],
@@ -60,7 +58,6 @@ export const recipes = [
     ],
   },
   {
-    id: 4,
     name: "Beef Sirloin Tip Roast",
     image: "../images/beef_sirloin_tip_roast.jpg",
     type: ["Main"],
@@ -110,14 +107,6 @@ export const recipes = [
     steps: [],
   },
   {
-    id: 8,
-    name: "buttermilk_pancakes",
-    image: "src/images/buttermilk_pancakes.jpg",
-    type: ["Breakfast"],
-    ingredients: [],
-    steps: [],
-  },
-  {
     id: 9,
     name: "cabbage_and_meatball",
     image: "../images/cabbage_and_meatball.jpg",
@@ -142,7 +131,6 @@ export const recipes = [
     steps: [],
   },
   {
-    id: 12,
     name: "Cheese Burgers",
     image: "../images/cheese_burgers.jpg",
     type: ["Main"],
@@ -183,7 +171,6 @@ export const recipes = [
     steps: [],
   },
   {
-    id: 15,
     name: "Chicken Nugs and French Fries",
     image: "../images/chicken_nugs_and_french_fries.jpg",
     type: ["Side", "Main"],
@@ -210,7 +197,6 @@ export const recipes = [
     ],
   },
   {
-    id: 16,
     name: "Chicken Pot Pie",
     image: "../images/chicken_pot_pie.jpg",
     type: ["Main"],
@@ -261,7 +247,6 @@ export const recipes = [
     steps: [],
   },
   {
-    id: 19,
     name: "Chocolate Chocolate Peanut Butter Chip Cookies",
     image: "../images/chocolate_cookies.jpg",
     type: ["Dessert"],
@@ -290,7 +275,6 @@ export const recipes = [
     steps: [],
   },
   {
-    id: 21,
     name: "Chuletas and Tostones",
     image: "../images/chuletas_and_tostones.jpg",
     type: ["Side", "Main"],
@@ -311,12 +295,11 @@ export const recipes = [
     ],
   },
   {
-    id: 22,
-    name: "dippy_eggs",
+    name: "Dippy Eggs",
     image: "../images/dippy_eggs.jpg",
     type: ["Breakfast"],
-    ingredients: [],
-    steps: [],
+    ingredients: ["sliced bread", "eggs", "salt", "butter"],
+    steps: ["toast bread and add butter", "fry eggs in butter and add salt"],
   },
   {
     id: 23,
@@ -343,7 +326,6 @@ export const recipes = [
     steps: [],
   },
   {
-    id: 26,
     name: "Flour Tortilla",
     image: "../images/flour_tortilla.jpg",
     type: ["Side", "Pre-requisite"],
@@ -365,12 +347,15 @@ export const recipes = [
     ],
   },
   {
-    id: 27,
-    name: "french_toast",
+    name: "French Toast",
     image: "../images/french_toast.jpg",
     type: ["Breakfast"],
-    ingredients: [],
-    steps: [],
+    ingredients: [
+      "sliced bread",
+      "1 egg/2 slices of bread",
+      "1/4 c milk/1 egg",
+    ],
+    steps: ["Mix egg and milk in a bowl", "Dip bread in egg dip"],
   },
   {
     id: 28,
@@ -389,7 +374,28 @@ export const recipes = [
     ingredients: [],
     steps: [],
   },
-  { id: 31, name: "lotion", image: "../images/lotion.jpg", type: ["Misc"] },
+  {
+    name: "Lotion",
+    image: "../images/lotion.jpg",
+    type: ["Misc"],
+    ingredients: [
+      "3/4 c shea butter",
+      "1/4 c coconut oil",
+      "1 tbsp arrowroot powder",
+      "5 drops vitamin E",
+      "15 drops vanilla essential oil",
+      "15 drops grapefruit essential oil",
+    ],
+    steps: [
+      "Create a double boiler with a smaller glass bowl in a bigger glass bowl",
+      "Fill bigger bowl with enough hot water to almost cover the smaller bowl",
+      "Melt shea butter and coconut oil in smaller bowl",
+      "Place smaller bowl in freezer for 20 minutes or until lotion density",
+      "Add essential oils and mix with a hand mixer",
+      "Add the arrowroot powder a little at a time with hand mixer",
+      "Add to a air tight glass jar, cover and let cool"
+    ],
+  },
   {
     id: 32,
     name: "mac_and_cheese_cicd",
@@ -407,7 +413,6 @@ export const recipes = [
     steps: [],
   },
   {
-    id: 34,
     name: "Shrimp Mofongo 3 Ways",
     image: "../images/mofongo.jpg",
     type: ["Side", "Main", "Pre-requisite"],
@@ -498,7 +503,6 @@ export const recipes = [
     steps: [],
   },
   {
-    id: 43,
     name: "Salmon",
     image: "../images/salmon.jpg",
     type: ["Main"],
@@ -551,7 +555,6 @@ export const recipes = [
     steps: [],
   },
   {
-    id: 49,
     name: "Shoulder Roast",
     image: "../images/shoulder_roast.jpg",
     type: ["Main"],
@@ -591,15 +594,33 @@ export const recipes = [
     steps: [],
   },
   {
-    id: 52,
-    name: "spanish_rice",
+    name: "Spanish Rice",
     image: "../images/spanish_rice.jpg",
     type: ["Side"],
-    ingredients: [],
-    steps: [],
+    ingredients: [
+      "black beans recipe",
+      "1 c white rice",
+      "1 tbsp coconut oil",
+      "1 packet sazon",
+      "2 tsp adobo",
+      "1 can tomato sauce",
+      "1 1/4 c water",
+      "1 tbsp sofrito",
+    ],
+    steps: [
+      "Make balck beans",
+      "Add all to pot and bring to boil",
+      "Simmer for 40 minutes",
+    ],
   },
   {
-    id: 52,
+    name: "Black Beans",
+    image: "../images/black_beans.jpg",
+    type: ["Side"],
+    ingredients: ["1 1/2 c water", , "1/2 c black beans", "1 tsp salt"],
+    steps: ["Add all to pot and bring to boil", "Simmer for 2 hrs"],
+  },
+  {
     name: "White Rice",
     image: "../images/white_rice.jpg",
     type: ["Side"],
@@ -607,11 +628,11 @@ export const recipes = [
       "1 c white rice",
       "2 tsp salt",
       "1 tbsp coconut oil",
-      "1 1/2 c water"
+      "1 1/2 c water",
     ],
     steps: [
       "Add water, salt, oil, and rice to pot",
-      "Bring to boil then simmer for 25 minutes"
+      "Bring to boil then simmer for 25 minutes",
     ],
   },
   {
@@ -631,12 +652,15 @@ export const recipes = [
     steps: [],
   },
   {
-    id: 55,
-    name: "stove_cleaner",
+    name: "Stove Cleaner",
     image: "../images/stove_cleaner.jpg",
     type: ["Misc"],
-    ingredients: [],
-    steps: [],
+    ingredients: ["1 c baking soda", "1/4 c lquid soap", "hydrogen peroxide"],
+    steps: [
+      "Mix all into a paste",
+      "Scrub onto stove",
+      "Let sit for 30 minutes",
+    ],
   },
   {
     id: 56,
@@ -696,7 +720,6 @@ export const recipes = [
     steps: [],
   },
   {
-    id: 64,
     name: "Tortilla Chips",
     image: "../images/tortilla_chips.jpg",
     type: ["Side", "Pre-requisite"],
@@ -709,12 +732,36 @@ export const recipes = [
     ],
   },
   {
-    id: 65,
-    name: "waffles_pancakes",
+    name: "Waffles(2)",
     image: "../images/waffles_pancakes.jpg",
     type: ["Breakfast"],
-    ingredients: [],
-    steps: [],
+    ingredients: [
+      "1 c red flour",
+      "1 tbsp honey",
+      "1/2 tbsp baking powder",
+      "1 tsp salt",
+      "3/4 c milk",
+      "1 egg",
+      "1/8 c olive oil",
+      "1 tsp vanilla",
+    ],
+    steps: ["Mix all in a bowl", "Rest for 5 minutes"],
+  },
+  {
+    name: "Pancakes(10)",
+    image: "../images/waffles_pancakes.jpg",
+    type: ["Breakfast"],
+    ingredients: [
+      "1 c red flour",
+      "1 tbsp honey",
+      "1/2 tbsp baking powder",
+      "1 tsp salt",
+      "3/4 c milk",
+      "1 egg",
+      "1/8 c olive oil",
+      "1 tsp vanilla",
+    ],
+    steps: ["Mix all in a bowl", "Rest for 5 minutes"],
   },
   {
     id: 66,
