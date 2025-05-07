@@ -35,11 +35,29 @@ export const recipes = [
   },
   {
     id: 3,
-    name: "beef_bone_in_chuck_roast",
+    name: "Beef Bone in Chuck Roast",
     image: "../images/beef_bone_in_chuck_roast.jpg",
     type: ["Main"],
-    ingredients: [],
-    steps: [],
+    ingredients: [
+      "4 lb chuck roast",
+      "3 tbsp olive oil",
+      "1 tbsp onion powder",
+      "1 tbsp garlic powder",
+      "1 tbsp thyme",
+      "1 tbsp salt",
+      "1 tbsp pepper",
+      "1 tsp red chili flakes",
+      "1 tsp smoked paprika",
+    ],
+    steps: [
+      "In a small bowl mix onion, garlic, thyme, salt, pepper, chili flakes, and smoked paprika",
+      "Add seasoning all over roast and marindade for at least 1 hr in the fridge",
+      "Take roast out of fridge 1 hr before cooking",
+      "Set oven to 275F",
+      "In dutch oven add olive oil and sear all sides of roast",
+      "Bake for 10 minutes/lb",
+      "* Roast temp: 145F",
+    ],
   },
   {
     id: 4,
@@ -64,7 +82,7 @@ export const recipes = [
       "Add broth, onion, garlic, and smoked paprika",
       "Bake for 15 min and set oven to 300F",
       "Bake for 45 minutes per 2 lbs of meat",
-      "Shred while still in pot"
+      "Shred while still in pot",
     ],
   },
   {
@@ -145,6 +163,7 @@ export const recipes = [
       "Bake bacon in oven 425F for 15 minutes",
       "Form burger patties and cook/grill",
       "Stack it",
+      "* burger temp: 185F",
     ],
   },
   {
@@ -275,8 +294,21 @@ export const recipes = [
     name: "Chuletas and Tostones",
     image: "../images/chuletas_and_tostones.jpg",
     type: ["Side", "Main"],
-    ingredients: [],
-    steps: [],
+    ingredients: [
+      "tostones recipe",
+      "garlic recipe",
+      "3 chuletas",
+      "salt",
+      "oil of choice: butter, tallow, ghee",
+    ],
+    steps: [
+      "Make tostones recipe",
+      "Make garlic recipe",
+      "Set oven to 450F",
+      "Fry chuletas in oil and salt for 3 minutes",
+      "Flip and bake for 3 minutes",
+      "* chuleta temp: 145F",
+    ],
   },
   {
     id: 22,
@@ -443,8 +475,8 @@ export const recipes = [
   },
   {
     id: 41,
-    name: "platanos_garlic",
-    image: "../images/platanos_garlic.jpg",
+    name: "Garlic Tostones",
+    image: "../images/garlic_tostones.jpg",
     type: ["Main", "Sauce"],
     ingredients: [],
     steps: [],
@@ -465,7 +497,19 @@ export const recipes = [
     ingredients: [],
     steps: [],
   },
-  { id: 43, name: "salmon", image: "../images/salmon.jpg", type: ["Main"] },
+  {
+    id: 43,
+    name: "Salmon",
+    image: "../images/salmon.jpg",
+    type: ["Main"],
+    ingredients: ["salmon", "butter", "salt", "basil", "onion powder"],
+    steps: [
+      "Set oven to 400F",
+      "Add to salmon, salt, onion, basil, and butter",
+      "Bake for 10 minutes",
+      "* Salmon temp: 145F",
+    ],
+  },
   {
     id: 44,
     name: "sausage_subs",
@@ -527,6 +571,7 @@ export const recipes = [
       "Add all spices to pot",
       "Stab roast with fork and add to pot",
       "Bake for 30 minutes, flip roast, and finish baking for 30 miutes",
+      "* Roast temp: 145F",
     ],
   },
   {
@@ -636,11 +681,16 @@ export const recipes = [
   },
   {
     id: 64,
-    name: "tortilla_chips",
+    name: "Tortilla Chips",
     image: "../images/tortilla_chips.jpg",
     type: ["Side", "Pre-requisite"],
-    ingredients: [],
-    steps: [],
+    ingredients: ["Left over masa", "olive oil", "salt"],
+    steps: [
+      "Set oven to 350F",
+      "Slice masa into trinagles and put on pan",
+      "Brush oliv oil on slices and add salt",
+      "Bake for 5 minutes",
+    ],
   },
   {
     id: 65,

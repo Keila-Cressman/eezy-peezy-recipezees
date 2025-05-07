@@ -38,7 +38,7 @@ import peanut_butter_oats from "../images/peanut_butter_oats.jpg"
 import pernil from "../images/pernil.jpg"
 import pie_crust from "../images/pie_crust.jpg"
 import pizza_crust from "../images/pizza_crust.jpg"
-import platanos_garlic from "../images/platanos_garlic.jpg"
+import garlic_tostones from "../images/garlic_tostones.jpg"
 import pollo_guisado from "../images/pollo_guisado.jpg"
 import rostiaire_chicken from "../images/rostiaire_chicken.jpg"
 import salmon from "../images/salmon.jpg"
@@ -114,7 +114,7 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
     pernil,
     pie_crust,
     pizza_crust,
-    platanos_garlic,
+    garlic_tostones,
     pollo_guisado,
     rostiaire_chicken,
     salmon,
