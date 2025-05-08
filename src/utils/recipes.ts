@@ -640,8 +640,8 @@ export const recipes = [
   },
   {
     id: 44,
-    name: "sausage_subs",
-    image: "../images/sausage_subs.jpg",
+    name: "sausage_boats",
+    image: "../images/sausage_boats.jpg",
     type: ["Main"],
     ingredients: [],
     steps: [],

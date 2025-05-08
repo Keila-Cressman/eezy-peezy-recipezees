@@ -42,7 +42,7 @@ import garlic_tostones from "../images/garlic_tostones.jpg"
 import pollo_guisado from "../images/pollo_guisado.jpg"
 import rostiaire_chicken from "../images/rostiaire_chicken.jpg"
 import salmon from "../images/salmon.jpg"
-import sausage_subs from "../images/sausage_subs.jpg"
+import sausage_boats from "../images/sausage_boats.jpg"
 import shawns_chili from "../images/shawns_chili.jpg"
 import shawns_lemonade from "../images/shawns_lemonade.jpg"
 import shawns_tea from "../images/shawns_tea.jpg"
@@ -118,7 +118,7 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
     pollo_guisado,
     rostiaire_chicken,
     salmon,
-    sausage_subs,
+    sausage_boats,
     shawns_chili,
     shawns_lemonade,
     shawns_tea,
