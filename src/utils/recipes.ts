@@ -639,20 +639,53 @@ export const recipes = [
     ],
   },
   {
-    id: 44,
-    name: "sausage_boats",
+    name: "Sausage Boats",
     image: "../images/sausage_boats.jpg",
     type: ["Main"],
-    ingredients: [],
-    steps: [],
+    ingredients: [
+      "1/2 bread recipe ingredients",
+      "8 olives",
+      "1 tomato",
+      "1 cucumber",
+      "1/4 cup choppped red onion",
+      "1 lb sausage",
+      "mayo",
+      "ketchup",
+      "spicy mustard"
+    ],
+    steps: [
+      "Make bread recipe and split the dough in half",
+      "create an aluminum wall high enough to seperate the 2 halfs",
+      "Add parchment paper to each half",
+      "Bake at 350 for 25 minutes",
+      "Create hotdog shapes with sausage and cook",
+      "Let bread cool while cooking sausage",
+      "Chop all veggies",
+      "Scoop out insides of bread"
+    ],
   },
   {
-    id: 45,
-    name: "shawns_chili",
+    name: "Shawns Chili",
     image: "../images/shawns_chili.jpg",
     type: ["Main"],
-    ingredients: [],
-    steps: [],
+    ingredients: [
+      "2 lbs ground beef",
+      "6 tomatoes chopped",
+      "16 oz red kidney beans(black beans recipe)",
+      "2 corn",
+      "2 garlic bulbs",
+      "shredded cheese",
+      "1 onion",
+      "3 peppers",
+      "2 jalapenos plus seeds",
+      "2 tbsp salt"
+    ],
+    steps: [
+      "Chop all veggies",
+      "Add to large pot",
+      "Add beans and bean water to pot",
+      "Cook on low"
+      ],
   },
   {
     name: "Shawns Lemonade",

@@ -5,7 +5,6 @@ import beef_sirloin_tip_roast from "../images/beef_sirloin_tip_roast.jpg"
 import bone_broth from "../images/bone_broth.jpg"
 import boneless_ribs from "../images/boneless_ribs.jpg"
 import bread_loaf from "../images/bread_loaf.jpg"
-import buttermilk_pancakes from "../images/buttermilk_pancakes.jpg"
 import cabbage_and_meatball from "../images/cabbage_and_meatball.jpg"
 import carrot_cake from "../images/carrot_cake.jpg"
 import cauliflower_shrimp from "../images/cauliflower_shrimp.jpg"
@@ -30,7 +29,6 @@ import kabobs from "../images/kabobs.jpg"
 import lemon_chicken_mushroom from "../images/lemon_chicken_mushroom.jpg"
 import lotion from "../images/lotion.jpg"
 import mac_and_cheese_cicd from "../images/mac_and_cheese_cicd.jpg"
-import mac_and_cheese_og from "../images/mac_and_cheese_og.jpg"
 import mofongo from "../images/mofongo.jpg"
 import paella from "../images/paella.jpg"
 import peach_jelly from "../images/peach_jelly.jpg"
@@ -71,7 +69,6 @@ export type GalleryProps = {
   className?: string
 }
 
-
 export default function Gallery({ recipeType, className }: GalleryProps) {
   const recipes = [
     avocado_lime,
@@ -81,7 +78,6 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
     bone_broth,
     boneless_ribs,
     bread_loaf,
-    buttermilk_pancakes,
     cabbage_and_meatball,
     carrot_cake,
     cauliflower_shrimp,
@@ -106,7 +102,6 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
     lemon_chicken_mushroom,
     lotion,
     mac_and_cheese_cicd,
-    mac_and_cheese_og,
     mofongo,
     paella,
     peach_jelly,
@@ -142,9 +137,11 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
     waffles_pancakes,
     zuchini_bread,
   ]
-  
-  const sameType = recipes.filter((recipe) => recipe.includes(recipeType)) as string[]
-  
+
+  const sameType = recipes.filter((recipe) =>
+    recipe.includes(recipeType)
+  ) as string[]
+
   return (
     <div>
       {recipeType === "View_all" ? (
@@ -157,7 +154,12 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
         <div>
           <div className="flex flex-wrap gap-4">
             {sameType.map((recipe) => (
-              <img src={recipe} alt={recipe} key={recipe} className={className} />
+              <img
+                src={recipe}
+                alt={recipe}
+                key={recipe}
+                className={className}
+              />
             ))}
           </div>
         </div>
