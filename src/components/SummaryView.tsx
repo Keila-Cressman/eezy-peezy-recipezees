@@ -6,7 +6,7 @@ export type SummaryViewProps = {
 
 export default function SummaryView({ currRecipe }: SummaryViewProps) {
   return (
-    <div className="flex flex-col gap-4 mt-2 pl-5">
+    <div className="gap-4 mt-2 pl-5">
       <RecipeCard currRecipe={currRecipe as Recipe} />
     </div>
   )
