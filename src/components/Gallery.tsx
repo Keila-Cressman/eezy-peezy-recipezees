@@ -50,7 +50,6 @@ import spaghetti_and_meatballs from "../images/spaghetti_and_meatballs.jpg"
 import spaghetti from "../images/spaghetti.jpg"
 import spanish_rice from "../images/spanish_rice.jpg"
 import steak_poatato from "../images/steak_poatato.jpg"
-import stir_fry from "../images/stir_fry.jpg"
 import stove_cleaner from "../images/stove_cleaner.jpg"
 import strawberry_jam from "../images/strawberry_jam.jpg"
 import stuffed_cabbage from "../images/stuffed_cabbage.jpg"
@@ -123,7 +122,6 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
     spaghetti,
     spanish_rice,
     steak_poatato,
-    stir_fry,
     stove_cleaner,
     strawberry_jam,
     stuffed_cabbage,

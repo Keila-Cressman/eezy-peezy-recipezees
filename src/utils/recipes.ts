@@ -201,10 +201,27 @@ export const recipes = [
       "2 tomatoes",
     ],
     steps: [
-      "fsgbfhnjetjtukteukmet
       "Make masa recipe",
+      "Make garlic aioli recipe",
       "Cut chicken into strips and cook in pan",
       "* Chicken temp: 165F",
+    ],
+  },,
+  {
+    name: "Garlic Aioli",
+    image: "../images/chicken_garlic_aioli_tacos.jpg",
+    type: ["Sauce"],
+    ingredients: [
+      "5 tbsp mayo",
+      "1 tbsp basil",
+      "2 garlic bulbs",
+      "2 tomatoes",
+    ],
+    steps: [
+      "Chop garlic",
+      "Chop tomatoes",
+      "Add all to a bowl and mix",
+      "Let sit for at least 15 minutes",
     ],
   },
   {
@@ -916,14 +933,6 @@ export const recipes = [
     steps: [],
   },
   {
-    id: 54,
-    name: "stir_fry",
-    image: "../images/stir_fry.jpg",
-    type: ["Pre-requisite"],
-    ingredients: [],
-    steps: [],
-  },
-  {
     name: "Stove Cleaner",
     image: "../images/stove_cleaner.jpg",
     type: ["Misc"],
@@ -977,12 +986,28 @@ export const recipes = [
     ],
   },
   {
-    id: 58,
-    name: "stuffed_chicken",
+    name: "Stuffed Chicken",
     image: "../images/stuffed_chicken.jpg",
     type: ["Main"],
-    ingredients: [],
-    steps: [],
+    ingredients: [
+      "2 chicken breast",
+      "1 tomato",
+      "1 bunch of spinach",
+      "1 bulb of garlic",
+      "1 shallot",
+      "2 tsp salt",
+      "2 tsp onion powder",
+      "2 tsp garlic powder",
+      "1 tbsp avocado oil",
+    ],
+    steps: [
+      "set oven to 450F",
+      "Cut chicken breast in half the long way but not all the way through",
+      "Add 1/2 tsp salt, 1/2 tsp onion powder, and 1/2 tsp garlic powder to inside of chicken",
+      "In pan add oil and chopped garlic",
+      "Once garlic is started to turn golden brown add chopped spinach",
+      ""
+    ],
   },
   { id: 59, name: "sushi", image: "../images/sushi.jpg", type: ["Main"] },
   {
