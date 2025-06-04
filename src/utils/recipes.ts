@@ -141,12 +141,27 @@ export const recipes = [
     steps: [],
   },
   {
-    id: 11,
     name: "cauliflower_shrimp",
     image: "../images/cauliflower_shrimp.jpg",
     type: ["Main"],
-    ingredients: [],
-    steps: [],
+    ingredients: [
+      "1 head of cauliflower",
+      "1 lb shrimp",
+      "1/2 green pepper",
+      "1/2 yellow onion",
+      "1 garlic bulb",
+      "shelled edamame",
+      "2 tsp onion powder",
+      "2 tsp garlic powder",
+      "1 tsp salt",
+      "1 tsp basil",
+
+    ],
+    steps: [
+      "Chop cauliflower, green pepper, onion, and garlic",
+      "Cook pepper and onion until lightly browned",
+      "Add all ingredients to pan and cook until shrimp is pink",
+    ],
   },
   {
     name: "Cheese Burgers",
@@ -206,7 +221,8 @@ export const recipes = [
       "Cut chicken into strips and cook in pan",
       "* Chicken temp: 165F",
     ],
-  },,
+  },
+  ,
   {
     name: "Garlic Aioli",
     image: "../images/chicken_garlic_aioli_tacos.jpg",
@@ -410,7 +426,6 @@ export const recipes = [
     steps: [],
   },
   {
-    id: 25,
     name: "Fathers Day Special",
     image: "../images/fathers_day_special.jpg",
     type: ["Main"],
@@ -418,9 +433,19 @@ export const recipes = [
       "~2lb live lobster",
       "Ghee or 1 stick of butter",
       "1 lb clams",
-      "1 lb crab legs"
+      "1 lb crab legs",
     ],
-    steps: [],
+    steps: [
+      "Bring water to a boil in a pot large enought o fit the whole lobster",
+      "Heat oven to 425F",
+      "Bake frozen crab legs for 15 minutes",
+      "Heat oven to 475F and add clams for 15 minutes",
+      "Add lobster to boiling water",
+      "Once water begins to boil again leave lobster in for 10 minutes for the 1st lb and 3 minutes for every lb after",
+      "Melt butter on low heat",
+      "Turn off the heat and remove the top foam",
+      "Slowly pour the clear part of the melted butter into a bowl",
+    ],
   },
   {
     name: "Flour Tortilla",
@@ -509,8 +534,7 @@ export const recipes = [
       "Set oven to 350F",
       "In a pan cook chicken until half cooked",
       "Fill mushrooms with chicken",
-      "Bake for 20 minutes"
-
+      "Bake for 20 minutes",
     ],
   },
   {
@@ -586,7 +610,28 @@ export const recipes = [
       "Add all to bowl",
     ],
   },
-  { id: 35, name: "paella", image: "../images/paella.jpg", type: ["Main"] },
+  {
+    name: "paella",
+    image: "../images/paella.jpg",
+    type: ["Main"],
+    ingredients: [
+      "frozen shrimp",
+      "frozen shelled scallops",
+      "frozen shelled mussels",
+      "2 jalepenos",
+      "2 tomatoes",
+      "1/2 c white rice",
+      "1 tsp onion powder",
+      "1 tsp garlic powder",
+      "1 tsp oregano",
+    ],
+    steps: [
+      "Add shrimp, scallops, and mussels to a large pot",
+      "Once seafood is defrosted add rice, onion powder, garlic powder, oregano, 1/4 c water, 1 chopped tomato, and chopped jalepenos with seeds",
+      "Cook for 20 minutes on low heat",
+      "Garnish with 1 chopped tomato",
+    ],
+  },
   {
     id: 36,
     name: "peach_jelly",
@@ -1002,7 +1047,7 @@ export const recipes = [
       "In blender add tomatoes and tomato paste",
       "Pour tomato sauce over cabbge rolls",
       "Bake for 30 minutes",
-      "* Cabbage temp: 145F"
+      "* Cabbage temp: 145F",
     ],
   },
   {
@@ -1035,7 +1080,26 @@ export const recipes = [
       "* Chicken temp: 165F",
     ],
   },
-  { id: 59, name: "sushi", image: "../images/sushi.jpg", type: ["Main"] },
+  {
+    name: "sushi",
+    image: "../images/sushi.jpg",
+    type: ["Main"],
+    ingredients: [
+      "seaweed",
+      "white rice recipe",
+      "shrimp",
+      "1 cucumber",
+      "1 avocado",
+    ],
+    steps: [
+      "Make white rice recipe",
+      "Cook shrimp",
+      "Chop shrimp, cucumber, and avocado into thin strips",
+      "Lay seaweed and add a thin layer of rice",
+      "Add shrimp, cucumber, and avocado in a line on top of rice",
+      "Roll seaweed tightly and slice into 1 inch pieces",
+    ],
+  },
   {
     name: "Sweet Potato Casserole",
     image: "../images/sweet_potato_casserole.jpg",
