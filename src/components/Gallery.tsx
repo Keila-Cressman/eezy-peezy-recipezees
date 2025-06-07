@@ -19,7 +19,7 @@ import chocolate_cookies from "../images/chocolate_cookies.jpg"
 import chocolate_rice_krispies from "../images/chocolate_rice_krispies.jpg"
 import chuletas_and_tostones from "../images/chuletas_and_tostones.jpg"
 import dippy_eggs from "../images/dippy_eggs.jpg"
-import dutch_oven_beff_stew from "../images/dutch_oven_beff_stew.jpg"
+import dutch_oven_beef_stew from "../images/dutch_oven_beef_stew.jpg"
 import english_muffins from "../images/english_muffins.jpg"
 import fathers_day_special from "../images/fathers_day_special.jpg"
 import flour_tortilla from "../images/flour_tortilla.jpg"
@@ -31,7 +31,6 @@ import lotion from "../images/lotion.jpg"
 import mac_and_cheese_cicd from "../images/mac_and_cheese_cicd.jpg"
 import mofongo from "../images/mofongo.jpg"
 import paella from "../images/paella.jpg"
-import peach_jelly from "../images/peach_jelly.jpg"
 import peanut_butter_oats from "../images/peanut_butter_oats.jpg"
 import pernil from "../images/pernil.jpg"
 import pie_crust from "../images/pie_crust.jpg"
@@ -49,7 +48,7 @@ import shoulder_roast from "../images/shoulder_roast.jpg"
 import spaghetti_and_meatballs from "../images/spaghetti_and_meatballs.jpg"
 import spaghetti from "../images/spaghetti.jpg"
 import spanish_rice from "../images/spanish_rice.jpg"
-import steak_poatato from "../images/steak_poatato.jpg"
+import steak_potato from "../images/steak_potato.jpg"
 import stove_cleaner from "../images/stove_cleaner.jpg"
 import strawberry_jam from "../images/strawberry_jam.jpg"
 import stuffed_cabbage from "../images/stuffed_cabbage.jpg"
@@ -91,7 +90,7 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
     chocolate_rice_krispies,
     chuletas_and_tostones,
     dippy_eggs,
-    dutch_oven_beff_stew,
+    dutch_oven_beef_stew,
     english_muffins,
     fathers_day_special,
     flour_tortilla,
@@ -103,7 +102,6 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
     mac_and_cheese_cicd,
     mofongo,
     paella,
-    peach_jelly,
     peanut_butter_oats,
     pernil,
     pie_crust,
@@ -121,7 +119,7 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
     spaghetti_and_meatballs,
     spaghetti,
     spanish_rice,
-    steak_poatato,
+    steak_potato,
     stove_cleaner,
     strawberry_jam,
     stuffed_cabbage,
