@@ -196,7 +196,7 @@ export const recipes = [
     steps: ["Mix all together", "Bake at 350F for 50 min"],
   },
   {
-    name: "cauliflower_shrimp",
+    name: "Cauliflower Shrimp",
     image: "../images/cauliflower_shrimp.jpg",
     type: ["Main"],
     ingredients: [
@@ -279,7 +279,7 @@ export const recipes = [
     name: "Thanksgiving Items",
     image: "../images/cherry_pie.jpg",
     type: ["Misc", "Holiday_Thanksgiving"],
-    ingredients: ["turkey tray"],
+    ingredients: ["Brown paper bags", "Aluminum pan"],
     steps: [],
   },
   {
@@ -798,7 +798,7 @@ export const recipes = [
     ],
   },
   {
-    name: "paella",
+    name: "Paella",
     image: "../images/paella.jpg",
     type: ["Main"],
     ingredients: [
@@ -941,7 +941,7 @@ export const recipes = [
     steps: ["Peel and chop garlic", "Add all to a small bowl"],
   },
   {
-    name: "pollo_guisado",
+    name: "Pollo Guisado",
     image: "../images/pollo_guisado.jpg",
     type: ["Main"],
     ingredients: [
@@ -1346,7 +1346,7 @@ export const recipes = [
     ],
   },
   {
-    name: "sushi",
+    name: "Sushi",
     image: "../images/sushi.jpg",
     type: ["Main"],
     ingredients: [
@@ -1382,13 +1382,6 @@ export const recipes = [
       "Stir in brown sugar, butter, orange juice, and cinnamon to bowl",
       "Add marshmallows on top and bake at 350F for 30 minutes",
     ],
-  },
-  {
-    name: "thanksgiving_utensils",
-    image: "../images/thanksgiving_utensils.jpg",
-    type: ["Holiday_Thanksgiving"],
-    ingredients: ["Brown paper bags", "Aluminum pan"],
-    steps: [],
   },
   {
     name: "Tomato Sauce",

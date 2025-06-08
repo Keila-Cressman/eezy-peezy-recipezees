@@ -50,7 +50,11 @@ export function ExpandRecipeCard({
 
         <div className="pb-10">
           {recipes.map((recipe) => {
-            if (recipe.name === recipeSelectedName && recipe.ingredients) {
+            if (
+              recipe &&
+              recipe.name === recipeSelectedName &&
+              recipe.ingredients
+            ) {
               return (
                 <ul key={recipe.name} className="text-left text-sm pl-4">
                   {recipe.ingredients.map((ingredient, index) => (
@@ -65,7 +69,7 @@ export function ExpandRecipeCard({
 
         <div>
           {recipes.map((recipe) => {
-            if (recipe.name === recipeSelectedName && recipe.steps) {
+            if (recipe && recipe.name === recipeSelectedName && recipe.steps) {
               return (
                 <ul key={recipe.name} className="text-left text-base pl-4">
                   {recipe.steps.map((step, index) => (
