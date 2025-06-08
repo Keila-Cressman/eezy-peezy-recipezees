@@ -324,7 +324,6 @@ export const recipes = [
       "* Chicken temp: 165F",
     ],
   },
-  ,
   {
     name: "Garlic Aioli",
     image: "../images/chicken_garlic_aioli_tacos.jpg",
@@ -1221,7 +1220,7 @@ export const recipes = [
     name: "Black Beans",
     image: "../images/black_beans.jpg",
     type: ["Side"],
-    ingredients: ["1 1/2 c water", , "1/2 c black beans", "1 tsp salt"],
+    ingredients: ["1 1/2 c water", "1/2 c black beans", "1 tsp salt"],
     steps: ["Add all to pot and bring to boil", "Simmer for 2 hrs"],
   },
   {
