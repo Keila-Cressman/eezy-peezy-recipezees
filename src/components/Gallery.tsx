@@ -5,7 +5,6 @@ import beef_sirloin_tip_roast from "../images/beef_sirloin_tip_roast.jpg"
 import bone_broth from "../images/bone_broth.jpg"
 import boneless_ribs from "../images/boneless_ribs.jpg"
 import bread_loaf from "../images/bread_loaf.jpg"
-import buttermilk_pancakes from "../images/buttermilk_pancakes.jpg"
 import cabbage_and_meatball from "../images/cabbage_and_meatball.jpg"
 import carrot_cake from "../images/carrot_cake.jpg"
 import cauliflower_shrimp from "../images/cauliflower_shrimp.jpg"
@@ -17,10 +16,10 @@ import chicken_pot_pie from "../images/chicken_pot_pie.jpg"
 import chipotle from "../images/chipotle.jpg"
 import chocolate_candy from "../images/chocolate_candy.jpg"
 import chocolate_cookies from "../images/chocolate_cookies.jpg"
-import chocplate_rice_krispies from "../images/chocplate_rice_krispies.jpg"
-import chulettas_and_platanos from "../images/chulettas_and_platanos.jpg"
+import chocolate_rice_krispies from "../images/chocolate_rice_krispies.jpg"
+import chuletas_and_tostones from "../images/chuletas_and_tostones.jpg"
 import dippy_eggs from "../images/dippy_eggs.jpg"
-import dutch_oven_beff_stew from "../images/dutch_oven_beff_stew.jpg"
+import dutch_oven_beef_stew from "../images/dutch_oven_beef_stew.jpg"
 import english_muffins from "../images/english_muffins.jpg"
 import fathers_day_special from "../images/fathers_day_special.jpg"
 import flour_tortilla from "../images/flour_tortilla.jpg"
@@ -30,19 +29,17 @@ import kabobs from "../images/kabobs.jpg"
 import lemon_chicken_mushroom from "../images/lemon_chicken_mushroom.jpg"
 import lotion from "../images/lotion.jpg"
 import mac_and_cheese_cicd from "../images/mac_and_cheese_cicd.jpg"
-import mac_and_cheese_og from "../images/mac_and_cheese_og.jpg"
 import mofongo from "../images/mofongo.jpg"
 import paella from "../images/paella.jpg"
-import peach_jelly from "../images/peach_jelly.jpg"
 import peanut_butter_oats from "../images/peanut_butter_oats.jpg"
 import pernil from "../images/pernil.jpg"
 import pie_crust from "../images/pie_crust.jpg"
 import pizza_crust from "../images/pizza_crust.jpg"
-import platanos_garlic from "../images/platanos_garlic.jpg"
+import garlic_tostones from "../images/garlic_tostones.jpg"
 import pollo_guisado from "../images/pollo_guisado.jpg"
 import rostiaire_chicken from "../images/rostiaire_chicken.jpg"
 import salmon from "../images/salmon.jpg"
-import sausage_subs from "../images/sausage_subs.jpg"
+import sausage_boats from "../images/sausage_boats.jpg"
 import shawns_chili from "../images/shawns_chili.jpg"
 import shawns_lemonade from "../images/shawns_lemonade.jpg"
 import shawns_tea from "../images/shawns_tea.jpg"
@@ -51,8 +48,7 @@ import shoulder_roast from "../images/shoulder_roast.jpg"
 import spaghetti_and_meatballs from "../images/spaghetti_and_meatballs.jpg"
 import spaghetti from "../images/spaghetti.jpg"
 import spanish_rice from "../images/spanish_rice.jpg"
-import steak_poatato from "../images/steak_poatato.jpg"
-import stir_fry from "../images/stir_fry.jpg"
+import steak_potato from "../images/steak_potato.jpg"
 import stove_cleaner from "../images/stove_cleaner.jpg"
 import strawberry_jam from "../images/strawberry_jam.jpg"
 import stuffed_cabbage from "../images/stuffed_cabbage.jpg"
@@ -71,7 +67,6 @@ export type GalleryProps = {
   className?: string
 }
 
-
 export default function Gallery({ recipeType, className }: GalleryProps) {
   const recipes = [
     avocado_lime,
@@ -81,7 +76,6 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
     bone_broth,
     boneless_ribs,
     bread_loaf,
-    buttermilk_pancakes,
     cabbage_and_meatball,
     carrot_cake,
     cauliflower_shrimp,
@@ -93,10 +87,10 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
     chipotle,
     chocolate_candy,
     chocolate_cookies,
-    chocplate_rice_krispies,
-    chulettas_and_platanos,
+    chocolate_rice_krispies,
+    chuletas_and_tostones,
     dippy_eggs,
-    dutch_oven_beff_stew,
+    dutch_oven_beef_stew,
     english_muffins,
     fathers_day_special,
     flour_tortilla,
@@ -106,19 +100,17 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
     lemon_chicken_mushroom,
     lotion,
     mac_and_cheese_cicd,
-    mac_and_cheese_og,
     mofongo,
     paella,
-    peach_jelly,
     peanut_butter_oats,
     pernil,
     pie_crust,
     pizza_crust,
-    platanos_garlic,
+    garlic_tostones,
     pollo_guisado,
     rostiaire_chicken,
     salmon,
-    sausage_subs,
+    sausage_boats,
     shawns_chili,
     shawns_lemonade,
     shawns_tea,
@@ -127,8 +119,7 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
     spaghetti_and_meatballs,
     spaghetti,
     spanish_rice,
-    steak_poatato,
-    stir_fry,
+    steak_potato,
     stove_cleaner,
     strawberry_jam,
     stuffed_cabbage,
@@ -142,9 +133,11 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
     waffles_pancakes,
     zuchini_bread,
   ]
-  
-  const sameType = recipes.filter((recipe) => recipe.includes(recipeType)) as string[]
-  
+
+  const sameType = recipes.filter((recipe) =>
+    recipe.includes(recipeType)
+  ) as string[]
+
   return (
     <div>
       {recipeType === "View_all" ? (
@@ -157,7 +150,12 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
         <div>
           <div className="flex flex-wrap gap-4">
             {sameType.map((recipe) => (
-              <img src={recipe} alt={recipe} key={recipe} className={className} />
+              <img
+                src={recipe}
+                alt={recipe}
+                key={recipe}
+                className={className}
+              />
             ))}
           </div>
         </div>
