@@ -324,7 +324,6 @@ export const recipes = [
       "* Chicken temp: 165F",
     ],
   },
-  ,
   {
     name: "Garlic Aioli",
     image: "../images/chicken_garlic_aioli_tacos.jpg",
@@ -419,7 +418,6 @@ export const recipes = [
       "Chop red onion, tomato, and 1/2 bunch of cilanto and add to bowl",
     ],
   },
-
   {
     name: "Chipotle",
     image: "../images/chipotle.jpg",
@@ -693,13 +691,14 @@ export const recipes = [
     name: "Pasta",
     image: "../images/lemon_chicken_mushroom.jpg",
     type: ["Pre-requisite"],
-    ingredients: ["2 c soft white flour", "3 eggs"],
+    ingredients: ["1 c soft white flour", "2 eggs"],
     steps: [
       "Pour flour on counter and create a well in the center",
       "Add eggs to well and scramble with fork",
       "Slowly add surrounding flour",
       "Knead until smooth - ~5 minutes",
       "Let rest for 1 hr",
+      "Boil water half way up pot and add 3 tbsp salt",
     ],
   },
   {
@@ -1221,7 +1220,7 @@ export const recipes = [
     name: "Black Beans",
     image: "../images/black_beans.jpg",
     type: ["Side"],
-    ingredients: ["1 1/2 c water", , "1/2 c black beans", "1 tsp salt"],
+    ingredients: ["1 1/2 c water", "1/2 c black beans", "1 tsp salt"],
     steps: ["Add all to pot and bring to boil", "Simmer for 2 hrs"],
   },
   {
@@ -1498,4 +1497,64 @@ export const recipes = [
       "Add chopped tomatoes, lettuce, and shredded cheese",
     ],
   },
+  {
+    name: "Chicken Parm",
+    image: "no image found",
+    type: ["Main"],
+    ingredients: [
+      "1 c hard white flour",
+      "4 1/2 tbsp salt",
+      "2 tbsp italian seasoning",
+      "1 egg",
+      "1/6 c milk",
+      "Olive oil",
+      "3 chicken breast",
+      "Mozerella cheese",
+      "Parmesan cheese",
+      "Pasta recipe",
+      "Marinara sauce recipe",
+    ],
+    steps: [
+      "Make marinara sauce recipe",
+      "Make pasta recipe",
+      "In a bowl mix hard white flour, 1 1/2 tbsp salt, 1/4 c shredded parmesan, and italian seasoning",
+      "In a separate bowl mix egg and milk",
+      "In a flat bottom pan add enough olive oil so chicken is half submerged",
+      "Set oven to 450F",
+      "Cut chicken breast in half and dip in egg , flour, egg, then flour again",
+      "Fry each side of the chicken for 3 minutes",
+      "In a glass dish add chicken and 2 slices of mozerella cheese",
+      "Bake for 10 minutes",
+    ],
+  },
+  {
+    name: "Marinara Sauce",
+    image: "no image found",
+    type: ["Sauce"],
+    ingredients: [
+      "6 whole peeled tomatoes",
+      "1/2 c olive oil",
+      "1 yellow onion",
+      "1/2 tbsp salt",
+      "1 garlic bulb",
+      "1/2 tbsp oregano",
+      "1/2 tbsp basil",
+      "1 tsp black pepper",
+    ],
+    steps: [
+      "Blend all",
+      "Add to a pot and bring to boil",
+      "Simmer for 30 minutes",
+      "Store in mason jar",
+    ],
+  },
+  // {
+  //   name: ,
+  //   image: ,
+  //   type: ["Main", "Holiday_Thanksgiving", "Holiday_Christmas", "Dessert", "Bakery", "Misc", "Drink", "Side", "Pre-requisite", "Sauce", "Jam"],
+  //   ingredients: [
+  //   ],
+  //   steps: [
+  //   ],
+  // },
 ]
