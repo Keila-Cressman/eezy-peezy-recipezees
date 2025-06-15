@@ -26,6 +26,15 @@ export function SideNav({ onClick }: SideNavProps) {
         )}
       />
       <NavButton
+        title="Friday Favorites"
+        recipeType="Friday_Favorites"
+        onClick={() => handleClick("Friday_Favorites")}
+        className={cn(
+          "rounded bg-blue-100 hover:bg-blue-300",
+          selected === "Friday_Favorites" && "bg-blue-500 text-white"
+        )}
+      />
+      <NavButton
         title="Breakfast"
         recipeType="Breakfast"
         onClick={() => handleClick("Breakfast")}
