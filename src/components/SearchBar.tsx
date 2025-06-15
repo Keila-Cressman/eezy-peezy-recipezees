@@ -5,11 +5,14 @@ export type SearchBarProps = {
   setSearchRecipeName: Dispatch<SetStateAction<string>>
 }
 
-export function SearchBar({ searchRecipeName, setSearchRecipeName }: SearchBarProps) {
+export function SearchBar({
+  searchRecipeName,
+  setSearchRecipeName,
+}: SearchBarProps) {
   return (
-    <div className="flex justify-around">
+    <div className="flex justify-around ">
       <input
-        className="border-2 border-black rounded-md px-2"
+        className="border-2 border-black rounded-md px-2 h-14 text-3xl"
         type="search"
         placeholder="Search recipe name..."
         value={searchRecipeName}
