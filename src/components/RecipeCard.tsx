@@ -27,13 +27,38 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
   }
   return (
     <div className="flex gap-4 relative">
+      {searchFor !== "" && (
+        <div className="flex flex-col gap-2">
+          {recipes
+            .filter((recipe) =>
+              lowerCase(recipe.name).includes(lowerCase(searchFor))
+            )
+            .map((recipe) => (
+              <button
+                key={recipe.name}
+                type="button"
+                onClick={() => {
+                  setOpenRecipeCard(!openRecipeCard)
+                  setSelectRecipe(recipe.name)
+                }}
+                className=" bg-blue-100 rounded-xl w-[17rem] p-2"
+              >
+                <div className="flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden">
+                  <span>{recipe.name}</span>
+                </div>
+              </button>
+            ))}
+        </div>
+      )}
+
       {openRecipeCard && (
         <ExpandRecipeCard
           recipeSelectedName={selectRecipe}
           onClose={() => setOpenRecipeCard(false)}
         />
       )}
-      {searchFor === "" ? (
+
+      {searchFor === "" && (
         <>
           <div className="flex flex-col gap-2">
             {firstHalf.map((recipe) => (
@@ -76,16 +101,6 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
             ))}
           </div>
         </>
-      ) : (
-        
-        <div>
-          {recipes.map((recipe) => {
-            if (lowerCase(recipe.name).includes(lowerCase(searchFor))) {
-              return recipe.name
-            }
-            return null
-          })}
-        </div>
       )}
     </div>
   )

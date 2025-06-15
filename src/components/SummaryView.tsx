@@ -11,6 +11,7 @@ export default function SummaryView({ currRecipe }: SummaryViewProps) {
   const [searchRecipeName, setSearchRecipeName] = useState("")
   return (
     <div className="flex flex-col gap-4 mt-2 pl-5">
+      {/* to be used for VIewALL */}
       <SearchBar
         searchRecipeName={searchRecipeName}
         setSearchRecipeName={setSearchRecipeName}
@@ -18,7 +19,7 @@ export default function SummaryView({ currRecipe }: SummaryViewProps) {
       {/* <ViewAll
         searchFor={searchRecipeName}
       /> */}
-
+      {/* to be used on side nav buttons */}
       <RecipeCard currRecipe={currRecipe as Recipe} searchFor={searchRecipeName}/>
     </div>
   )
