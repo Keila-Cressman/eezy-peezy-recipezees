@@ -154,7 +154,7 @@ export const recipes = [
   {
     name: "Cabbage and Meatball",
     image: "../images/cabbage_and_meatball.jpg",
-    type: ["Main"],
+    type: ["Main", "Friday_Favorites"],
     ingredients: [
       "1 cabbage",
       "1 lb ground beef",
@@ -220,7 +220,7 @@ export const recipes = [
   {
     name: "Fried Tacos",
     image: "no image found",
-    type: ["Main"],
+    type: ["Main", "Friday_Favorites"],
     ingredients: [
       "Masa recipe",
       "1 lb ground beef",
@@ -307,7 +307,7 @@ export const recipes = [
   {
     name: "Chicken Garlic Aioli Tacos",
     image: "../images/chicken_garlic_aioli_tacos.jpg",
-    type: ["Main", "Sauce"],
+    type: ["Main", "Sauce", "Friday_Favorites"],
     ingredients: [
       "Masa recipe",
       "Garlic aioli recipe",
@@ -370,7 +370,7 @@ export const recipes = [
   {
     name: "Chicken Pot Pie",
     image: "../images/chicken_pot_pie.jpg",
-    type: ["Main"],
+    type: ["Main", "Friday_Favorites"],
     ingredients: [
       "pie crust recipe",
       "2 chicken breasts",
@@ -421,7 +421,7 @@ export const recipes = [
   {
     name: "Chipotle",
     image: "../images/chipotle.jpg",
-    type: ["Main"],
+    type: ["Main", "Friday_Favorites"],
     ingredients: [
       "1 lb steak",
       "white rice recipe",
@@ -507,7 +507,7 @@ export const recipes = [
   {
     name: "Chuletas and Tostones",
     image: "../images/chuletas_and_tostones.jpg",
-    type: ["Side", "Main"],
+    type: ["Side", "Main", "Friday_Favorites"],
     ingredients: [
       "tostones recipe",
       "garlic recipe",
@@ -774,7 +774,7 @@ export const recipes = [
   {
     name: "Shrimp Mofongo 3 Ways",
     image: "../images/mofongo.jpg",
-    type: ["Side", "Main", "Pre-requisite"],
+    type: ["Main", "Friday_Favorites"],
     ingredients: [
       "4 platanos",
       "1 lb shrimp",
@@ -799,7 +799,7 @@ export const recipes = [
   {
     name: "Paella",
     image: "../images/paella.jpg",
-    type: ["Main"],
+    type: ["Main", "Friday_Favorites"],
     ingredients: [
       "frozen shrimp",
       "frozen shelled scallops",
@@ -973,7 +973,7 @@ export const recipes = [
   {
     name: "Rostiaire Chicken",
     image: "../images/rostiaire_chicken.jpg",
-    type: ["Main"],
+    type: ["Main", "Friday_Favorites"],
     ingredients: [
       "~5 lb whole chicken",
       "baking string",
@@ -1011,7 +1011,7 @@ export const recipes = [
   {
     name: "Sausage Boats",
     image: "../images/sausage_boats.jpg",
-    type: ["Main"],
+    type: ["Main", "Friday_Favorites"],
     ingredients: [
       "1/2 bread recipe ingredients",
       "8 olives",
@@ -1037,7 +1037,7 @@ export const recipes = [
   {
     name: "Shawns Chili",
     image: "../images/shawns_chili.jpg",
-    type: ["Main"],
+    type: ["Main", "Friday_Favorites"],
     ingredients: [
       "2 lbs ground beef",
       "6 tomatoes chopped",
