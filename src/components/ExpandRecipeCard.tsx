@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react"
-import close_icon from "../icons/close_icon.png"
+import { CloseIcon } from "../icons/CloseIcon"
 import { recipes } from "../utils/recipes"
 
 export type expandedRecipeCardProps = {
@@ -40,11 +40,7 @@ export function ExpandRecipeCard({
               onClose()
             }}
           >
-            <img
-              src={close_icon}
-              alt="close"
-              className="cursor-pointer h-10 pr-4 pt-4"
-            />
+            <CloseIcon className="cursor-pointer h-10 pr-4 pt-4" />
           </button>
         </div>
 
