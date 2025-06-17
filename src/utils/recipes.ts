@@ -1568,6 +1568,27 @@ export const recipes = [
       "use ice cream scooper to sccop onto parchment paper and refrigerate",
     ],
   },
+  {
+    name: "Chocolate Foamy Jello Recipe(4) (CICD)",
+    image: "No image found",
+    type: ["Dessert"],
+    ingredients: [
+      "1 box cherry jello",
+      "1 box dove chocolate pudding",
+      "Whipped cream",
+      "1 lb strawberries",
+    ],
+    steps: [
+      "Make cherry jello mixed with 1 c boiling water",
+      "when dissolved add 1/2 c cold water",
+      "Let rest in fridge for 25 min",
+      "Whisk in 2 c whipped cream",
+      "Add chopped strawberries",
+      "Pour into cup let set for 2 hrs",
+      "Make box chocolate pudding with whole milk",
+      "Pour into cup let rest 2 hrs",
+    ],
+  },
   // {
   //   name: ,
   //   image: ,
