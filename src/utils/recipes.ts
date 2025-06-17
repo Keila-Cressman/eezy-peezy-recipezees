@@ -1548,6 +1548,26 @@ export const recipes = [
       "Store in mason jar",
     ],
   },
+  {
+    name: "Shawn Peanut Butter Oatmeal Cookies (CICD)",
+    image: "no image found",
+    type: ["Dessert"],
+    ingredients: [
+      "2 sticks butter",
+      "4 c sugar",
+      "1/2 tsp salt",
+      "1 c milk",
+      "1 tsp vanilla",
+      "6 c or 18 oz oats",
+      "2 1/2 c peanut or 28oz jar",
+    ],
+    steps: [
+      "In one bowl, stir butter, sugar, salt, milk for 4 min after roaring boiling",
+      "In a larger bowl, add vanilla, oats, and peanut butter",
+      "Stir first bowl into larger bowl",
+      "use ice cream scooper to sccop onto parchment paper and refrigerate",
+    ],
+  },
   // {
   //   name: ,
   //   image: ,
