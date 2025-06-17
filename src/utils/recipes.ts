@@ -1553,7 +1553,7 @@ export const recipes = [
     image: "no image found",
     type: ["Dessert"],
     ingredients: [
-      "2 sticks butter",
+      "1 c butter",
       "4 c sugar",
       "1/2 tsp salt",
       "1 c milk",
