@@ -409,7 +409,7 @@ export const recipes = [
       "1 bunch of cilantro",
       "1 lime",
       "3 avocados",
-      "1 tomato",
+      "2 tomatoes",
       "1/4 c red onion",
     ],
     steps: [
