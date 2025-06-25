@@ -2,6 +2,7 @@ import { useState } from "react"
 import { recipes } from "../utils/recipes"
 import { ExpandRecipeCard } from "./ExpandRecipeCard"
 import Gallery from "./Gallery"
+import { useMobileSize } from "../hooks/useMobileSize"
 
 export type Recipe = [
   {
@@ -19,7 +20,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
   const midIndex = Math.ceil(currRecipe.length / 2)
   const firstHalf = currRecipe.slice(0, midIndex)
   const secondHalf = currRecipe.slice(midIndex)
-
+  const isMobile = useMobileSize()
   const [openRecipeCard, setOpenRecipeCard] = useState(false)
   const [selectRecipe, setSelectRecipe] = useState("")
   const lowerCase = (str: string): string => {
@@ -27,7 +28,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
   }
   return (
     <div className="flex gap-4 relative">
-      {searchFor !== "" && (
+      {(searchFor !== "" || isMobile) && (
         <div className="flex flex-col gap-2">
           {recipes
             .filter((recipe) =>
@@ -58,7 +59,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
         />
       )}
 
-      {searchFor === "" && (
+      {searchFor === "" && !isMobile && (
         <>
           <div className="flex flex-col gap-2">
             {firstHalf.map((recipe) => (
