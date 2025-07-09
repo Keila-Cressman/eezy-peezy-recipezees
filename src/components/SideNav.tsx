@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { cn } from "../utils/cn"
 import NavButton from "./NavButton"
+import { useMobileSize } from "../hooks/useMobileSize"
 
 export type SideNavProps = {
   onClick: (recipeType: string) => void
@@ -8,14 +9,19 @@ export type SideNavProps = {
 
 export function SideNav({ onClick }: SideNavProps) {
   const [selected, setSelected] = useState<string | null>(null)
-
+  const isMobile = useMobileSize()
   const handleClick = (recipeType: string) => {
     setSelected(recipeType)
     onClick(recipeType)
   }
 
   return (
-    <div className="flex flex-col text-base gap-2">
+    <div
+      className={cn(
+        "flex flex-col text-base gap-2",
+        isMobile && "w-20 text-sm"
+      )}
+    >
       <NavButton
         title="View all"
         recipeType="View_all"
