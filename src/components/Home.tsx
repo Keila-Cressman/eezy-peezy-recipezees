@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <div className="relative">
-      <div className="absolute flex py-5 pt-5 px-5 gap-4 divide divide-x-2 divide-blue-200 bg-purple-500 h-full">
+      <div className="absolute flex py-5 pt-5 px-5 gap-4 divide divide-x-2 divide-blue-200 h-full">
         <div className="flex flex-col h-full">
           <SideNav
             onClick={(recipeType: string) =>
@@ -39,7 +39,7 @@ export default function Home() {
             }
           />
         </div>
-        <div className="flex flex-col h-full bg-gray-600">
+        <div className="flex flex-col h-full">
           <SummaryView currRecipe={currRecipe as Recipe} />
           {currRecipe.length === 0 && <Gallery recipeType={"View_all"} />}
         </div>
