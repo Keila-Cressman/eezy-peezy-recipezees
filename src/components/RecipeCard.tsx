@@ -38,7 +38,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
         )}
 
         {searchFor !== "" && !openRecipeCard && (
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 w-full">
             {recipes
               .filter((recipe) =>
                 lowerCase(recipe.name).includes(lowerCase(searchFor))
@@ -63,7 +63,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
 
         {searchFor === "" && !openRecipeCard && (
           <>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 w-full">
               {currRecipe.map((recipe) => (
                 <button
                   type="button"
