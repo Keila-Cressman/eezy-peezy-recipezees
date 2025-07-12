@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { useMobileSize } from "../hooks/useMobileSize"
 import { recipes } from "../utils/recipes"
 import Gallery from "./Gallery"
 import { Recipe } from "./RecipeCard"
@@ -8,7 +7,6 @@ import SummaryView from "./SummaryView"
 
 export default function Home() {
   const fullRecipes = recipes as []
-  const isMobile = useMobileSize()
   const [currRecipe, setCurrRecipe] = useState<
     { image: string; name: string }[]
   >([])
@@ -31,36 +29,17 @@ export default function Home() {
     setCurrRecipe(inRecipe)
   }
 
-  if (isMobile) {
-    return (
-      <div>
-        <div className=" flex pt-5 pl-5 gap-4 divide divide-x-2 divide-blue-200 bg-purple-500">
-          <div className="flex flex-col bg-red-700">
-            <SideNav
-              onClick={(recipeType: string) =>
-                buttonSelection(fullRecipes, recipeType)
-              }
-            />
-          </div>
-          <div className="flex flex-col h-screen overflow-y-auto">
-            <SummaryView currRecipe={currRecipe as Recipe} />
-          </div>
-        </div>
-      </div>
-    )
-  }
-
   return (
     <div className="relative">
-      <div className="absolute flex pt-5 px-5 gap-4 divide divide-x-2 divide-blue-200">
-        <div className="flex flex-col ">
+      <div className="absolute flex py-5 pt-5 px-5 gap-4 divide divide-x-2 divide-blue-200 bg-purple-500 h-full">
+        <div className="flex flex-col h-full">
           <SideNav
             onClick={(recipeType: string) =>
               buttonSelection(fullRecipes, recipeType)
             }
           />
         </div>
-        <div className="left-32 flex flex-col h-screen overflow-y-auto">
+        <div className="flex flex-col h-full overflow-y-scroll bg-gray-600">
           <SummaryView currRecipe={currRecipe as Recipe} />
           {currRecipe.length === 0 && <Gallery recipeType={"View_all"} />}
         </div>

@@ -9,12 +9,19 @@ export type SummaryViewProps = {
 export default function SummaryView({ currRecipe }: SummaryViewProps) {
   const [searchRecipeName, setSearchRecipeName] = useState("")
   return (
-    <div className="flex flex-col gap-4 px-5 pt-0 w-[17rem]">
-      <SearchBar
-        searchRecipeName={searchRecipeName}
-        setSearchRecipeName={setSearchRecipeName}
-      />
-      <RecipeCard currRecipe={currRecipe as Recipe} searchFor={searchRecipeName}/>
+    <div className="relative flex flex-col gap-4 px-5 pt-0 w-[17rem] h-full">
+      <div className="absolute">
+        <SearchBar
+          searchRecipeName={searchRecipeName}
+          setSearchRecipeName={setSearchRecipeName}
+        />
+      </div>
+      <div>
+        <RecipeCard
+          currRecipe={currRecipe as Recipe}
+          searchFor={searchRecipeName}
+        />
+      </div>
     </div>
   )
 }
