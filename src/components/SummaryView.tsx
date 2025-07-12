@@ -1,6 +1,8 @@
 import { useState } from "react"
 import RecipeCard, { Recipe } from "./RecipeCard"
 import { SearchBar } from "./SearchBar"
+import { useMobileSize } from "../hooks/useMobileSize"
+import { cn } from "../utils/cn"
 
 export type SummaryViewProps = {
   currRecipe: Recipe
@@ -8,9 +10,15 @@ export type SummaryViewProps = {
 
 export default function SummaryView({ currRecipe }: SummaryViewProps) {
   const [searchRecipeName, setSearchRecipeName] = useState("")
+  const isMobile = useMobileSize()
   return (
-    <div className="relative flex flex-col gap-4 px-4 pt-0 w-[17rem] h-full">
-      <div className="relative">
+    <div
+      className={cn(
+        "relative flex flex-col gap-4 px-4 pt-0 h-full",
+        isMobile && "w-[17rem]"
+      )}
+    >
+      <div className={cn("relative justify-self-stretch", isMobile && "pl-5")}>
         <SearchBar
           searchRecipeName={searchRecipeName}
           setSearchRecipeName={setSearchRecipeName}

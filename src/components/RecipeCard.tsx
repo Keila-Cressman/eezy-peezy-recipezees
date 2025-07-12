@@ -90,7 +90,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
   }
   return (
     <div className="flex gap-4 relative">
-      {searchFor !== "" && (
+      {searchFor !== "" &&  !openRecipeCard && (
         <div className="flex flex-col gap-2">
           {recipes
             .filter((recipe) =>
@@ -121,7 +121,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
         />
       )}
 
-      {searchFor === "" && (
+      {searchFor === "" &&  !openRecipeCard && (
         <>
           <div className="flex flex-col gap-2">
             {firstHalf.map((recipe) => (
