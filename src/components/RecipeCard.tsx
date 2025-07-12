@@ -29,7 +29,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
   }
   if (isMobile) {
     return (
-      <div className="flex gap-4 relative top-12">
+      <div className="flex gap-4 relative">
         {searchFor !== "" && (
           <div className="flex flex-col gap-2">
             {recipes

@@ -39,7 +39,7 @@ export default function Home() {
             }
           />
         </div>
-        <div className="flex flex-col h-full overflow-y-scroll bg-gray-600">
+        <div className="flex flex-col h-full bg-gray-600">
           <SummaryView currRecipe={currRecipe as Recipe} />
           {currRecipe.length === 0 && <Gallery recipeType={"View_all"} />}
         </div>
