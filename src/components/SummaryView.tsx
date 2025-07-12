@@ -9,7 +9,7 @@ export type SummaryViewProps = {
 export default function SummaryView({ currRecipe }: SummaryViewProps) {
   const [searchRecipeName, setSearchRecipeName] = useState("")
   return (
-    <div className="flex flex-col gap-4 mt-2 pl-5">
+    <div className="flex flex-col gap-4 px-5 pt-0 w-[17rem]">
       <SearchBar
         searchRecipeName={searchRecipeName}
         setSearchRecipeName={setSearchRecipeName}

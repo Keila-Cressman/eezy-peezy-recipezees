@@ -33,16 +33,16 @@ export default function Home() {
 
   if (isMobile) {
     return (
-      <div className="relative">
-        <div className="absolute flex pt-5 px-5 gap-4 divide divide-x-2 divide-blue-200">
-          <div className="flex flex-col ">
+      <div>
+        <div className=" flex pt-5 pl-5 gap-4 divide divide-x-2 divide-blue-200 bg-purple-500">
+          <div className="flex flex-col bg-red-700">
             <SideNav
               onClick={(recipeType: string) =>
                 buttonSelection(fullRecipes, recipeType)
               }
             />
           </div>
-          <div className="left-32 flex flex-col h-screen overflow-y-auto">
+          <div className="flex flex-col h-screen overflow-y-auto">
             <SummaryView currRecipe={currRecipe as Recipe} />
           </div>
         </div>

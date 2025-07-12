@@ -14,11 +14,11 @@ export function SearchBar({
 }: SearchBarProps) {
   const isMobile = useMobileSize()
   return (
-    <div className="flex justify-around">
+    <div className="flex">
       <input
         className={cn(
           "relative border-2 border-black rounded-md px-2 h-14 text-3xl",
-          isMobile && "w-56 h-10 text-base mr-auto"
+          isMobile && "h-10 text-base pr-10"
         )}
         type="text"
         placeholder="Search recipe name..."
@@ -29,13 +29,13 @@ export function SearchBar({
         type="button"
         onClick={() => setSearchRecipeName("")}
         className={cn(
-          "absolute right-[8.5rem] top-9",
+          "relative right-[8.5rem] top-9",
           searchRecipeName && "right-5",
-          isMobile && "right-[4.5rem] top-8"
+          isMobile && "right-9 top-0"
         )}
       >
         <CloseIcon className={cn("h-10 w-10",
-          isMobile && "h-8 w-8"
+          isMobile && "relative h-8 w-8"
         )}  />
       </button>
     </div>
