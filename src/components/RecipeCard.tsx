@@ -29,7 +29,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
   }
   if (isMobile) {
     return (
-      <div className="flex gap-4 relative text-base font-semibold">
+      <div className="flex gap-4 relative text-base font-semibold pr-2">
         {openRecipeCard && (
           <ExpandRecipeCard
             recipeSelectedName={selectRecipe}
