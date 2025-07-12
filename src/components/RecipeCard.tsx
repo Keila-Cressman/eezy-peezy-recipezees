@@ -30,7 +30,14 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
   if (isMobile) {
     return (
       <div className="flex gap-4 relative text-base font-semibold">
-        {searchFor !== "" && (
+        {openRecipeCard && (
+          <ExpandRecipeCard
+            recipeSelectedName={selectRecipe}
+            onClose={() => setOpenRecipeCard(false)}
+          />
+        )}
+
+        {searchFor !== "" && !openRecipeCard && (
           <div className="flex flex-col gap-2">
             {recipes
               .filter((recipe) =>
@@ -54,14 +61,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
           </div>
         )}
 
-        {openRecipeCard && (
-          <ExpandRecipeCard
-            recipeSelectedName={selectRecipe}
-            onClose={() => setOpenRecipeCard(false)}
-          />
-        )}
-
-        {searchFor === "" && (
+        {searchFor === "" && !openRecipeCard && (
           <>
             <div className="flex flex-col gap-2">
               {currRecipe.map((recipe) => (

@@ -30,8 +30,8 @@ export function ExpandRecipeCard({
   }, [onClose])
 
   return (
-    <div className="absolute top-0 left-0 w-full h-full">
-      <div ref={expandCardRef} className="w-full h-full bg-gray-50">
+    <div className="absolute top-0 left-0 w-full">
+      <div ref={expandCardRef} className="w-full h-full bg-purple-500">
         <div className="flex justify-between pb-5">
           <p className=""> {recipeSelectedName.replaceAll("_", " ")}</p>
           <button
