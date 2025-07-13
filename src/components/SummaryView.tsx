@@ -14,22 +14,20 @@ export default function SummaryView({ currRecipe }: SummaryViewProps) {
   return (
     <div
       className={cn(
-        "relative flex flex-col gap-4 px-4 pt-0 h-full",
-        isMobile && "w-[17rem]"
+        "flex flex-col gap-4 px-4 h-full w-full bg-blue-800",
+        isMobile && "w-[17rem] pl-2 pr-4"
       )}
     >
-      <div className={cn("relative justify-self-stretch", isMobile && "pl-5")}>
+      <div className="flex justify-center">
         <SearchBar
           searchRecipeName={searchRecipeName}
           setSearchRecipeName={setSearchRecipeName}
         />
       </div>
-      <div className="relative h-full overflow-y-auto">
         <RecipeCard
           currRecipe={currRecipe as Recipe}
           searchFor={searchRecipeName}
         />
-      </div>
     </div>
   )
 }

@@ -77,7 +77,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
                     recipeType={recipe.name}
                     className="rounded-xl h-36 my-4"
                   />
-                  <div className="flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden">
+                  <div className="flex justify-center items-center bg-blue-50 rounded-lg overflow-hidden">
                     <span>{recipe.name.replaceAll("_", " ")}</span>
                   </div>
                 </button>
@@ -89,7 +89,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
     )
   }
   return (
-    <div className="flex gap-4 relative">
+    <div className="flex gap-4 w-full bg-purple-700 overflow-y-auto h-full">
       {searchFor !== "" &&  !openRecipeCard && (
         <div className="flex flex-col gap-2">
           {recipes
@@ -115,14 +115,16 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
       )}
 
       {openRecipeCard && (
+        <div className="w-full h-full">
         <ExpandRecipeCard
           recipeSelectedName={selectRecipe}
           onClose={() => setOpenRecipeCard(false)}
         />
+        </div>
       )}
 
       {searchFor === "" &&  !openRecipeCard && (
-        <>
+        <div className="flex gap-2">
           <div className="flex flex-col gap-2">
             {firstHalf.map((recipe) => (
               <button
@@ -131,7 +133,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
                   setOpenRecipeCard(!openRecipeCard)
                   setSelectRecipe(recipe.name)
                 }}
-                className=" bg-blue-100 rounded-xl w-[17rem] p-2"
+                className=" bg-blue-100 rounded-xl w-full p-2"
               >
                 <Gallery
                   recipeType={recipe.name}
@@ -151,7 +153,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
                   setOpenRecipeCard(!openRecipeCard)
                   setSelectRecipe(recipe.name)
                 }}
-                className=" bg-blue-100 rounded-xl w-[17rem] p-2"
+                className=" bg-blue-100 rounded-xl w-full p-2"
               >
                 <Gallery
                   recipeType={recipe.name}
@@ -163,7 +165,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
               </button>
             ))}
           </div>
-        </>
+        </div>
       )}
     </div>
   )

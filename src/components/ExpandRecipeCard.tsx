@@ -33,7 +33,7 @@ export function ExpandRecipeCard({
   }, [onClose])
 
   return (
-    <div className="absolute top-0 left-0 w-full">
+    <div className="w-full">
       <div ref={expandCardRef} className="w-full h-full bg-gray-50">
         <div
           className={cn(
@@ -50,7 +50,7 @@ export function ExpandRecipeCard({
           >
             <CloseIcon
               className={cn(
-                "cursor-pointer h-10 pr-4 pt-4",
+                "cursor-pointer h-10",
                 isMobile && "p-1 pr-3 h-8"
               )}
             />

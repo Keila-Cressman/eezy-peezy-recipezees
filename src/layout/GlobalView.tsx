@@ -14,7 +14,7 @@ export default function GlobalView() {
           <PageTitle />
         </div>
       </div>
-      <div className="bg-blue-100 h-screen p-1 rounded-3xl drop-shadow-sm">
+      <div className="bg-blue-100 h-screen  p-1 rounded-3xl drop-shadow-sm">
         <div className="h-full w-full rounded-3xl drop-shadow-sm bg-gray-50 p-1 overflow-hidden">
           <PageContents />
         </div>

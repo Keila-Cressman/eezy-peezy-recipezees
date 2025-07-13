@@ -30,12 +30,11 @@ export function SearchBar({
         onClick={() => setSearchRecipeName("")}
         className={cn(
           "relative right-10",
-          searchRecipeName && "right-5",
           isMobile && "right-9"
         )}
       >
-        <CloseIcon className={cn("h-10 w-10",
-          isMobile && "relative h-8 w-8"
+        <CloseIcon className={cn("relative h-10 w-10",
+          isMobile && "h-8 w-8"
         )}  />
       </button>
     </div>
