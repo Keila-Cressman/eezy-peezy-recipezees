@@ -18,9 +18,6 @@ export type RecipeCardProps = {
 }
 
 export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
-  const midIndex = Math.ceil(currRecipe.length / 2)
-  const firstHalf = currRecipe.slice(0, midIndex)
-  const secondHalf = currRecipe.slice(midIndex)
   const isMobile = useMobileSize()
   const [openRecipeCard, setOpenRecipeCard] = useState(false)
   const [selectRecipe, setSelectRecipe] = useState("")
@@ -89,8 +86,8 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
     )
   }
   return (
-    <div className="flex gap-4 w-full bg-purple-700 overflow-y-auto h-full">
-      {searchFor !== "" &&  !openRecipeCard && (
+    <div className="flex flex-1 gap-4 overflow-auto ">
+      {searchFor !== "" && !openRecipeCard && (
         <div className="flex flex-col gap-2">
           {recipes
             .filter((recipe) =>
@@ -104,7 +101,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
                   setOpenRecipeCard(!openRecipeCard)
                   setSelectRecipe(recipe.name)
                 }}
-                className={cn("bg-blue-100 rounded-xl w-[17rem] p-2")}
+                className={cn("bg-blue-100 rounded-xl w-full p-2")}
               >
                 <div className="flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden">
                   <span>{recipe.name}</span>
@@ -116,56 +113,36 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
 
       {openRecipeCard && (
         <div className="w-full h-full">
-        <ExpandRecipeCard
-          recipeSelectedName={selectRecipe}
-          onClose={() => setOpenRecipeCard(false)}
-        />
+          <ExpandRecipeCard
+            recipeSelectedName={selectRecipe}
+            onClose={() => setOpenRecipeCard(false)}
+          />
         </div>
       )}
 
-      {searchFor === "" &&  !openRecipeCard && (
-        <div className="flex gap-2">
-          <div className="flex flex-col gap-2">
-            {firstHalf.map((recipe) => (
-              <button
-                type="button"
-                onClick={() => {
-                  setOpenRecipeCard(!openRecipeCard)
-                  setSelectRecipe(recipe.name)
-                }}
-                className=" bg-blue-100 rounded-xl w-full p-2"
-              >
-                <Gallery
-                  recipeType={recipe.name}
-                  className="rounded-xl h-36 my-4"
-                />
-                <div className="flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden">
-                  <span>{recipe.name.replaceAll("_", " ")}</span>
-                </div>
-              </button>
-            ))}
-          </div>
-          <div className="flex flex-col gap-2">
-            {secondHalf.map((recipe) => (
-              <button
-                type="button"
-                onClick={() => {
-                  setOpenRecipeCard(!openRecipeCard)
-                  setSelectRecipe(recipe.name)
-                }}
-                className=" bg-blue-100 rounded-xl w-full p-2"
-              >
-                <Gallery
-                  recipeType={recipe.name}
-                  className="rounded-xl h-36 my-4"
-                />
-                <div className="flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden">
-                  <span>{recipe.name.replaceAll("_", " ")}</span>
-                </div>
-              </button>
-            ))}
-          </div>
+      {searchFor === "" && !openRecipeCard && (
+        // <div className="flex gap-2">
+        <div className="grid grid-cols-2 gap-2 overflow-auto">
+          {currRecipe.map((recipe) => (
+            <button
+              type="button"
+              onClick={() => {
+                setOpenRecipeCard(!openRecipeCard)
+                setSelectRecipe(recipe.name)
+              }}
+              className=" bg-blue-100 rounded-xl w-full p-2"
+            >
+              <Gallery
+                recipeType={recipe.name}
+                className="rounded-xl h-36 my-4"
+              />
+              <div className="flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden">
+                <span>{recipe.name.replaceAll("_", " ")}</span>
+              </div>
+            </button>
+          ))}
         </div>
+        // </div>
       )}
     </div>
   )

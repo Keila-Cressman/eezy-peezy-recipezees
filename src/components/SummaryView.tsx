@@ -14,11 +14,11 @@ export default function SummaryView({ currRecipe }: SummaryViewProps) {
   return (
     <div
       className={cn(
-        "flex flex-col gap-4 px-4 h-full w-full bg-blue-800",
+        "flex flex-col gap-4 px-4 h-full w-full",
         isMobile && "w-[17rem] pl-2 pr-4"
       )}
     >
-      <div className={cn(isMobile && "flex justify-self-center")}>
+      <div className={cn( isMobile && "flex justify-self-center")}>
         <SearchBar
           searchRecipeName={searchRecipeName}
           setSearchRecipeName={setSearchRecipeName}
