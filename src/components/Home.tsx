@@ -30,7 +30,7 @@ export default function Home() {
   }
 
   return (
-      <div className="flex py-5 pl-5 gap-4">
+      <div className="flex flex-1 py-5 pl-5 gap-4">
           <SideNav
             onClick={(recipeType: string) =>
               buttonSelection(fullRecipes, recipeType)

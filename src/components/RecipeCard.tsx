@@ -86,9 +86,9 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
     )
   }
   return (
-    <div className="flex flex-1 gap-4 overflow-auto ">
+    <div className="flex flex-1 gap-4 overflow-auto">
       {searchFor !== "" && !openRecipeCard && (
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-1 flex-col gap-2">
           {recipes
             .filter((recipe) =>
               lowerCase(recipe.name).includes(lowerCase(searchFor))
@@ -121,8 +121,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
       )}
 
       {searchFor === "" && !openRecipeCard && (
-        // <div className="flex gap-2">
-        <div className="grid grid-cols-2 gap-2 overflow-auto">
+        <div className="grid grid-cols-2 gap-2 w-full overflow-auto">
           {currRecipe.map((recipe) => (
             <button
               type="button"
@@ -142,7 +141,6 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
             </button>
           ))}
         </div>
-        // </div>
       )}
     </div>
   )
