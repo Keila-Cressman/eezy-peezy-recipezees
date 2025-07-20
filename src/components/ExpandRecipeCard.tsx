@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react"
 import { useMobileSize } from "../hooks/useMobileSize"
-import { CloseIcon } from "../icons/CloseIcon"
+import { ReturnIcon } from "../icons/ReturnIcon"
 import { cn } from "../utils/cn"
 import { recipes } from "../utils/recipes"
 
@@ -47,12 +47,13 @@ export function ExpandRecipeCard({
             onClick={() => {
               onClose()
             }}
+            className="flex items-center"
           >
-            <CloseIcon
-              className={cn(
-                "cursor-pointer h-10",
-                isMobile && "p-1 pr-3 h-8"
-              )}
+            <span className={cn("text-xs", isMobile && "hidden")}>
+              Return To List
+            </span>
+            <ReturnIcon
+              className={cn("cursor-pointer h-7", isMobile && "p-1 pr-3 h-8")}
             />
           </button>
         </div>
@@ -65,7 +66,10 @@ export function ExpandRecipeCard({
               recipe.ingredients
             ) {
               return (
-                <ul key={recipe.name} className={cn("text-left text-sm pl-4", isMobile && "p-1")}>
+                <ul
+                  key={recipe.name}
+                  className={cn("text-left text-sm pl-4", isMobile && "p-1")}
+                >
                   {recipe.ingredients.map((ingredient, index) => (
                     <li key={index}>{ingredient}</li>
                   ))}
@@ -80,7 +84,10 @@ export function ExpandRecipeCard({
           {recipes.map((recipe) => {
             if (recipe && recipe.name === recipeSelectedName && recipe.steps) {
               return (
-                <ul key={recipe.name} className={cn("text-left text-base pl-4", isMobile && "p-1")}>
+                <ul
+                  key={recipe.name}
+                  className={cn("text-left text-base pl-4", isMobile && "p-1")}
+                >
                   {recipe.steps.map((step, index) => (
                     <li key={index}>
                       {index + 1}. {step}
