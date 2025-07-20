@@ -14,7 +14,8 @@ export function SearchBar({
 }: SearchBarProps) {
   const isMobile = useMobileSize()
   return (
-    <div className="flex relative justify-self-center">
+    <div className={cn(" flex relative justify-self-center pl-1",
+      isMobile && "pl-1")}>
       <input
         className={cn(
           "relative border-2 border-black rounded-md px-2 h-14 text-3xl",

@@ -15,7 +15,7 @@ export default function SummaryView({ currRecipe }: SummaryViewProps) {
     <div
       className={cn(
         "flex flex-col gap-4 px-4 h-full w-full mr-5",
-        isMobile && "w-[17rem] pl-2 pr-4"
+        isMobile && "w-[17rem] pl-0 pr-4 gap-2"
       )}
     >
       <div className={cn( isMobile && "flex justify-self-center")}>
@@ -24,7 +24,7 @@ export default function SummaryView({ currRecipe }: SummaryViewProps) {
           setSearchRecipeName={setSearchRecipeName}
         />
       </div>
-      <div className="flex w-full">
+      <div className="flex w-full overflow-y-auto">
         <RecipeCard
           currRecipe={currRecipe as Recipe}
           searchFor={searchRecipeName}
