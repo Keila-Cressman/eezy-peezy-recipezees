@@ -6,7 +6,7 @@ import PageTitle from "./PageTitle"
 export default function GlobalView() {
   const isMobile = useMobileSize()
   return (
-    <div className="h-screen flex flex-col rounded-3xl p-3 bg-gray-200 overflow-hidden drop-shadow-md m-2">
+    <div className="h-screen min-w-[390px] flex flex-col rounded-3xl p-3 bg-gray-200 overflow-hidden drop-shadow-md m-2">
       <div className={cn("bg-blue-100 h-24 p-1 rounded-3xl drop-shadow-sm mb-2",
         isMobile && "h-12"
       )}>
