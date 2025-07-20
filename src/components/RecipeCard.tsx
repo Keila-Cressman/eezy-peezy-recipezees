@@ -24,69 +24,13 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
   const lowerCase = (str: string): string => {
     return str.toLowerCase()
   }
-  if (isMobile) {
-    return (
-      <div className="flex gap-4 flex-1 text-base font-semibold pr-2">
-        {openRecipeCard && (
-          <ExpandRecipeCard
-            recipeSelectedName={selectRecipe}
-            onClose={() => setOpenRecipeCard(false)}
-          />
-        )}
-
-        {searchFor !== "" && !openRecipeCard && (
-          <div className="flex flex-col gap-2 w-full">
-            {recipes
-              .filter((recipe) =>
-                lowerCase(recipe.name).includes(lowerCase(searchFor))
-              )
-              .map((recipe) => (
-                <button
-                  key={recipe.name}
-                  type="button"
-                  onClick={() => {
-                    setOpenRecipeCard(!openRecipeCard)
-                    setSelectRecipe(recipe.name)
-                  }}
-                  className={cn("bg-blue-100 rounded-xl w-full p-2")}
-                >
-                  <div className="flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden">
-                    <span>{recipe.name}</span>
-                  </div>
-                </button>
-              ))}
-          </div>
-        )}
-
-        {searchFor === "" && !openRecipeCard && (
-          <>
-            <div className="flex flex-col gap-2 w-full">
-              {currRecipe.map((recipe) => (
-                <button
-                  type="button"
-                  onClick={() => {
-                    setOpenRecipeCard(!openRecipeCard)
-                    setSelectRecipe(recipe.name)
-                  }}
-                  className=" bg-blue-100 rounded-xl w-full p-2"
-                >
-                  <Gallery
-                    recipeType={recipe.name}
-                    className="rounded-xl h-36 my-4"
-                  />
-                  <div className="flex justify-center items-center bg-blue-50 rounded-lg overflow-hidden">
-                    <span>{recipe.name.replaceAll("_", " ")}</span>
-                  </div>
-                </button>
-              ))}
-            </div>
-          </>
-        )}
-      </div>
-    )
-  }
   return (
-    <div className="flex flex-1 gap-4 overflow-auto">
+    <div
+      className={cn(
+        "flex flex-1 gap-4 overflow-auto",
+        isMobile && "text-base font-semibold pr-2"
+      )}
+    >
       {searchFor !== "" && !openRecipeCard && (
         <div className="flex flex-1 flex-col gap-2">
           {recipes
@@ -103,7 +47,12 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
                 }}
                 className={cn("bg-blue-100 rounded-xl w-full p-2")}
               >
-                <div className="flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden">
+                <div
+                  className={cn(
+                    "flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden",
+                    isMobile && "pb-0"
+                  )}
+                >
                   <span>{recipe.name}</span>
                 </div>
               </button>
@@ -121,7 +70,12 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
       )}
 
       {searchFor === "" && !openRecipeCard && (
-        <div className="grid grid-cols-2 gap-2 w-full overflow-auto">
+        <div
+          className={cn(
+            "grid grid-cols-2 gap-2 w-full overflow-auto",
+            isMobile && "flex flex-col gap-2 w-full"
+          )}
+        >
           {currRecipe.map((recipe) => (
             <button
               type="button"
@@ -135,7 +89,12 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
                 recipeType={recipe.name}
                 className="rounded-xl h-36 my-4"
               />
-              <div className="flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden">
+              <div
+                className={cn(
+                  "flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden",
+                  isMobile && "pb-0"
+                )}
+              >
                 <span>{recipe.name.replaceAll("_", " ")}</span>
               </div>
             </button>

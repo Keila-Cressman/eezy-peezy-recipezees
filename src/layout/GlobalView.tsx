@@ -10,7 +10,7 @@ export default function GlobalView() {
       <div className={cn("bg-blue-100 h-24 p-1 rounded-3xl drop-shadow-sm mb-2",
         isMobile && "h-12"
       )}>
-        <div className="h-full w-full rounded-3xl drop-shadow-sm bg-gray-50 p-1">
+        <div className="h-full w-full rounded-3xl drop-shadow-sm bg-gray-50 p-1 flex justify-around">
           <PageTitle />
         </div>
       </div>
