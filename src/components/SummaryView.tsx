@@ -1,7 +1,8 @@
 import { useState } from "react"
 import RecipeCard, { Recipe } from "./RecipeCard"
 import { SearchBar } from "./SearchBar"
-// import { ViewAll } from "./side-nav-bar/ViewAll"
+import { useMobileSize } from "../hooks/useMobileSize"
+import { cn } from "../utils/cn"
 
 export type SummaryViewProps = {
   currRecipe: Recipe
@@ -9,18 +10,26 @@ export type SummaryViewProps = {
 
 export default function SummaryView({ currRecipe }: SummaryViewProps) {
   const [searchRecipeName, setSearchRecipeName] = useState("")
+  const isMobile = useMobileSize()
   return (
-    <div className="flex flex-col gap-4 mt-2 pl-5">
-      {/* to be used for VIewALL */}
-      <SearchBar
-        searchRecipeName={searchRecipeName}
-        setSearchRecipeName={setSearchRecipeName}
-      />
-      {/* <ViewAll
-        searchFor={searchRecipeName}
-      /> */}
-      {/* to be used on side nav buttons */}
-      <RecipeCard currRecipe={currRecipe as Recipe} searchFor={searchRecipeName}/>
+    <div
+      className={cn(
+        "flex flex-col gap-4 px-4 h-full w-full",
+        isMobile && "w-[17rem] pl-0 pr-4 gap-2"
+      )}
+    >
+      <div className={cn( isMobile && "flex justify-self-center")}>
+        <SearchBar
+          searchRecipeName={searchRecipeName}
+          setSearchRecipeName={setSearchRecipeName}
+        />
+      </div>
+      <div className="flex w-full overflow-y-auto">
+        <RecipeCard
+          currRecipe={currRecipe as Recipe}
+          searchFor={searchRecipeName}
+        />
+        </div>
     </div>
   )
 }

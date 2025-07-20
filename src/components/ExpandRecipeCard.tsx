@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react"
+import { useMobileSize } from "../hooks/useMobileSize"
 import { CloseIcon } from "../icons/CloseIcon"
+import { cn } from "../utils/cn"
 import { recipes } from "../utils/recipes"
 
 export type expandedRecipeCardProps = {
@@ -12,6 +14,7 @@ export function ExpandRecipeCard({
   onClose,
 }: expandedRecipeCardProps) {
   const expandCardRef = useRef<HTMLDivElement>(null)
+  const isMobile = useMobileSize()
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -30,21 +33,31 @@ export function ExpandRecipeCard({
   }, [onClose])
 
   return (
-    <div className="absolute top-0 left-0 w-full h-full">
+    <div className="w-full">
       <div ref={expandCardRef} className="w-full h-full bg-gray-50">
-        <div className="flex justify-between pb-5">
-          <p className=""> {recipeSelectedName.replaceAll("_", " ")}</p>
+        <div
+          className={cn(
+            "flex justify-between items-center pb-5",
+            isMobile && "pb-0"
+          )}
+        >
+          <p> {recipeSelectedName.replaceAll("_", " ")}</p>
           <button
             type="button"
             onClick={() => {
               onClose()
             }}
           >
-            <CloseIcon className="cursor-pointer h-10 pr-4 pt-4" />
+            <CloseIcon
+              className={cn(
+                "cursor-pointer h-10",
+                isMobile && "p-1 pr-3 h-8"
+              )}
+            />
           </button>
         </div>
 
-        <div className="pb-10">
+        <div className={cn("pb-10", isMobile && "pb-4")}>
           {recipes.map((recipe) => {
             if (
               recipe &&
@@ -52,7 +65,7 @@ export function ExpandRecipeCard({
               recipe.ingredients
             ) {
               return (
-                <ul key={recipe.name} className="text-left text-sm pl-4">
+                <ul key={recipe.name} className={cn("text-left text-sm pl-4", isMobile && "p-1")}>
                   {recipe.ingredients.map((ingredient, index) => (
                     <li key={index}>{ingredient}</li>
                   ))}
@@ -67,7 +80,7 @@ export function ExpandRecipeCard({
           {recipes.map((recipe) => {
             if (recipe && recipe.name === recipeSelectedName && recipe.steps) {
               return (
-                <ul key={recipe.name} className="text-left text-base pl-4">
+                <ul key={recipe.name} className={cn("text-left text-base pl-4", isMobile && "p-1")}>
                   {recipe.steps.map((step, index) => (
                     <li key={index}>
                       {index + 1}. {step}

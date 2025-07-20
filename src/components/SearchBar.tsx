@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction } from "react"
 import { cn } from "../utils/cn"
 import { CloseIcon } from "../icons/CloseIcon"
+import { useMobileSize } from "../hooks/useMobileSize"
 
 export type SearchBarProps = {
   searchRecipeName: string
@@ -11,10 +12,15 @@ export function SearchBar({
   searchRecipeName,
   setSearchRecipeName,
 }: SearchBarProps) {
+  const isMobile = useMobileSize()
   return (
-    <div className="flex justify-around">
+    <div className={cn(" flex relative justify-self-center pl-1",
+      isMobile && "pl-1")}>
       <input
-        className="relative border-2 border-black rounded-md px-2 h-14 text-3xl"
+        className={cn(
+          "relative border-2 border-black rounded-md px-2 h-14 text-3xl",
+          isMobile && "h-10 text-base pr-10"
+        )}
         type="text"
         placeholder="Search recipe name..."
         value={searchRecipeName}
@@ -24,11 +30,13 @@ export function SearchBar({
         type="button"
         onClick={() => setSearchRecipeName("")}
         className={cn(
-          "absolute right-[8.5rem] top-9",
-          searchRecipeName && "right-5"
+          "relative right-10",
+          isMobile && "right-9"
         )}
       >
-        <CloseIcon className=" h-10 w-10" />
+        <CloseIcon className={cn("relative h-10 w-10",
+          isMobile && "h-8 w-8"
+        )}  />
       </button>
     </div>
   )

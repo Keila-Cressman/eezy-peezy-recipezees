@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { useMobileSize } from "../hooks/useMobileSize"
+import { cn } from "../utils/cn"
 import { recipes } from "../utils/recipes"
 import { ExpandRecipeCard } from "./ExpandRecipeCard"
 import Gallery from "./Gallery"
@@ -16,19 +18,21 @@ export type RecipeCardProps = {
 }
 
 export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
-  const midIndex = Math.ceil(currRecipe.length / 2)
-  const firstHalf = currRecipe.slice(0, midIndex)
-  const secondHalf = currRecipe.slice(midIndex)
-
+  const isMobile = useMobileSize()
   const [openRecipeCard, setOpenRecipeCard] = useState(false)
   const [selectRecipe, setSelectRecipe] = useState("")
   const lowerCase = (str: string): string => {
     return str.toLowerCase()
   }
   return (
-    <div className="flex gap-4 relative">
-      {searchFor !== "" && (
-        <div className="flex flex-col gap-2">
+    <div
+      className={cn(
+        "flex flex-1 gap-4 overflow-auto",
+        isMobile && "text-base font-semibold pr-2"
+      )}
+    >
+      {searchFor !== "" && !openRecipeCard && (
+        <div className="flex flex-1 flex-col gap-2">
           {recipes
             .filter((recipe) =>
               lowerCase(recipe.name).includes(lowerCase(searchFor))
@@ -41,9 +45,14 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
                   setOpenRecipeCard(!openRecipeCard)
                   setSelectRecipe(recipe.name)
                 }}
-                className=" bg-blue-100 rounded-xl w-[17rem] p-2"
+                className={cn("bg-blue-100 rounded-xl w-full p-2")}
               >
-                <div className="flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden">
+                <div
+                  className={cn(
+                    "flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden",
+                    isMobile && "pb-0"
+                  )}
+                >
                   <span>{recipe.name}</span>
                 </div>
               </button>
@@ -52,55 +61,45 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
       )}
 
       {openRecipeCard && (
-        <ExpandRecipeCard
-          recipeSelectedName={selectRecipe}
-          onClose={() => setOpenRecipeCard(false)}
-        />
+        <div className="w-full h-full">
+          <ExpandRecipeCard
+            recipeSelectedName={selectRecipe}
+            onClose={() => setOpenRecipeCard(false)}
+          />
+        </div>
       )}
 
-      {searchFor === "" && (
-        <>
-          <div className="flex flex-col gap-2">
-            {firstHalf.map((recipe) => (
-              <button
-                type="button"
-                onClick={() => {
-                  setOpenRecipeCard(!openRecipeCard)
-                  setSelectRecipe(recipe.name)
-                }}
-                className=" bg-blue-100 rounded-xl w-[17rem] p-2"
+      {searchFor === "" && !openRecipeCard && (
+        <div
+          className={cn(
+            "grid grid-cols-2 gap-2 w-full overflow-auto",
+            isMobile && "flex flex-col gap-2 w-full"
+          )}
+        >
+          {currRecipe.map((recipe) => (
+            <button
+              type="button"
+              onClick={() => {
+                setOpenRecipeCard(!openRecipeCard)
+                setSelectRecipe(recipe.name)
+              }}
+              className=" bg-blue-100 rounded-xl w-full p-2"
+            >
+              <Gallery
+                recipeType={recipe.name}
+                className="rounded-xl h-36 my-4"
+              />
+              <div
+                className={cn(
+                  "flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden",
+                  isMobile && "pb-0"
+                )}
               >
-                <Gallery
-                  recipeType={recipe.name}
-                  className="rounded-xl h-36 my-4"
-                />
-                <div className="flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden">
-                  <span>{recipe.name.replaceAll("_", " ")}</span>
-                </div>
-              </button>
-            ))}
-          </div>
-          <div className="flex flex-col gap-2">
-            {secondHalf.map((recipe) => (
-              <button
-                type="button"
-                onClick={() => {
-                  setOpenRecipeCard(!openRecipeCard)
-                  setSelectRecipe(recipe.name)
-                }}
-                className=" bg-blue-100 rounded-xl w-[17rem] p-2"
-              >
-                <Gallery
-                  recipeType={recipe.name}
-                  className="rounded-xl h-36 my-4"
-                />
-                <div className="flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden">
-                  <span>{recipe.name.replaceAll("_", " ")}</span>
-                </div>
-              </button>
-            ))}
-          </div>
-        </>
+                <span>{recipe.name.replaceAll("_", " ")}</span>
+              </div>
+            </button>
+          ))}
+        </div>
       )}
     </div>
   )

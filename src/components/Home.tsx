@@ -4,9 +4,12 @@ import Gallery from "./Gallery"
 import { Recipe } from "./RecipeCard"
 import { SideNav } from "./SideNav"
 import SummaryView from "./SummaryView"
+import { cn } from "../utils/cn"
+import { useMobileSize } from "../hooks/useMobileSize"
 
 export default function Home() {
   const fullRecipes = recipes as []
+  const isMobile = useMobileSize()
   const [currRecipe, setCurrRecipe] = useState<
     { image: string; name: string }[]
   >([])
@@ -28,21 +31,18 @@ export default function Home() {
     ) as []
     setCurrRecipe(inRecipe)
   }
+
   return (
-    <div className="relative">
-      <div className="absolute flex pt-5 px-5 gap-4 divide divide-x-2 divide-blue-200">
-        <div className="flex flex-col ">
+      <div className={cn(" flex flex-1 py-5 pl-5 gap-4",
+        isMobile && "gap-2 px-2 py-2")}>
           <SideNav
             onClick={(recipeType: string) =>
               buttonSelection(fullRecipes, recipeType)
             }
           />
-        </div>
-        <div className="left-32 flex flex-col h-screen overflow-y-auto">
+        <div className="border-blue-200 border flex" />
           <SummaryView currRecipe={currRecipe as Recipe} />
           {currRecipe.length === 0 && <Gallery recipeType={"View_all"} />}
-        </div>
       </div>
-    </div>
   )
 }
