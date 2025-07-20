@@ -15,9 +15,14 @@ export type Recipe = [
 export type RecipeCardProps = {
   searchFor: string
   currRecipe: Recipe
+  recipeExpanded: (hide: boolean) => void
 }
 
-export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
+export default function RecipeCard({
+  searchFor,
+  currRecipe,
+  recipeExpanded,
+}: RecipeCardProps) {
   const isMobile = useMobileSize()
   const [openRecipeCard, setOpenRecipeCard] = useState(false)
   const [selectRecipe, setSelectRecipe] = useState("")
@@ -44,6 +49,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
                 onClick={() => {
                   setOpenRecipeCard(!openRecipeCard)
                   setSelectRecipe(recipe.name)
+                recipeExpanded(true)
                 }}
                 className={cn("bg-blue-100 rounded-xl w-full p-2")}
               >
@@ -64,7 +70,10 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
         <div className="w-full h-full">
           <ExpandRecipeCard
             recipeSelectedName={selectRecipe}
-            onClose={() => setOpenRecipeCard(false)}
+            onClose={() => {
+              setOpenRecipeCard(false)
+              recipeExpanded(false)
+            }}
           />
         </div>
       )}
@@ -82,6 +91,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
               onClick={() => {
                 setOpenRecipeCard(!openRecipeCard)
                 setSelectRecipe(recipe.name)
+                recipeExpanded(true)
               }}
               className=" bg-blue-100 rounded-xl w-full p-2"
             >
