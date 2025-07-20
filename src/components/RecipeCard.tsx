@@ -27,8 +27,8 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
   return (
     <div
       className={cn(
-        "flex flex-1 gap-4 overflow-auto",
-        isMobile && "text-base font-semibold pr-2"
+        "flex flex-1 gap-4 overflow-y-auto",
+        isMobile && "text-base font-semibold"
       )}
     >
       {searchFor !== "" && !openRecipeCard && (
@@ -73,7 +73,7 @@ export default function RecipeCard({ searchFor, currRecipe }: RecipeCardProps) {
         <div
           className={cn(
             "grid grid-cols-2 gap-2 w-full overflow-auto",
-            isMobile && "flex flex-col gap-2 w-full"
+            isMobile && "flex flex-col"
           )}
         >
           {currRecipe.map((recipe) => (

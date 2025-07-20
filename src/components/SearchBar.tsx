@@ -14,12 +14,16 @@ export function SearchBar({
 }: SearchBarProps) {
   const isMobile = useMobileSize()
   return (
-    <div className={cn(" flex relative justify-self-center pl-1",
-      isMobile && "pl-1")}>
+    <div
+      className={cn(
+        "relative flex justify-self-center",
+        isMobile && "w-full"
+      )}
+    >
       <input
         className={cn(
-          "relative border-2 border-black rounded-md px-2 h-14 text-3xl",
-          isMobile && "h-10 text-base pr-10"
+          "border-2 border-black rounded-md px-2 h-14 text-3xl w-full",
+          isMobile && "h-10 text-base"
         )}
         type="text"
         placeholder="Search recipe name..."
@@ -29,14 +33,9 @@ export function SearchBar({
       <button
         type="button"
         onClick={() => setSearchRecipeName("")}
-        className={cn(
-          "relative right-10",
-          isMobile && "right-9"
-        )}
+        className={cn("absolute right-0 h-full")}
       >
-        <CloseIcon className={cn("relative h-10 w-10",
-          isMobile && "h-8 w-8"
-        )}  />
+        <CloseIcon className={cn("h-10 w-10", isMobile && "h-8 w-8")} />
       </button>
     </div>
   )

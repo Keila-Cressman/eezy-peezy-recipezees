@@ -33,14 +33,16 @@ export default function Home() {
   }
 
   return (
-      <div className={cn(" flex flex-1 py-5 pl-5 gap-4",
+      <div className={cn(" flex flex-1 py-5 px-5 gap-4",
         isMobile && "gap-2 px-2 py-2")}>
           <SideNav
             onClick={(recipeType: string) =>
               buttonSelection(fullRecipes, recipeType)
             }
           />
+
         <div className="border-blue-200 border flex" />
+
           <SummaryView currRecipe={currRecipe as Recipe} />
           {currRecipe.length === 0 && <Gallery recipeType={"View_all"} />}
       </div>
