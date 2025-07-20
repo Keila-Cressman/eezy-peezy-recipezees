@@ -6,17 +6,19 @@ import { useMobileSize } from "../hooks/useMobileSize"
 export type SearchBarProps = {
   searchRecipeName: string
   setSearchRecipeName: Dispatch<SetStateAction<string>>
+  className?:string
 }
 
 export function SearchBar({
   searchRecipeName,
   setSearchRecipeName,
+  className,
 }: SearchBarProps) {
   const isMobile = useMobileSize()
   return (
     <div
       className={cn(
-        "relative flex justify-self-center",
+        "relative flex justify-self-center",className,
         isMobile && "w-full"
       )}
     >

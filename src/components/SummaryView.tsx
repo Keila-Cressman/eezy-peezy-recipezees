@@ -11,6 +11,7 @@ export type SummaryViewProps = {
 export default function SummaryView({ currRecipe }: SummaryViewProps) {
   const [searchRecipeName, setSearchRecipeName] = useState("")
   const isMobile = useMobileSize()
+  const [hideSearchBar, setHideSearchBar] = useState(false)
   return (
     <div
       className={cn(
@@ -18,16 +19,19 @@ export default function SummaryView({ currRecipe }: SummaryViewProps) {
         isMobile && "pl-0 gap-2"
       )}
     >
-      <div className="">
+      <div>
         <SearchBar
           searchRecipeName={searchRecipeName}
           setSearchRecipeName={setSearchRecipeName}
-        />
-      </div>
+          className={hideSearchBar ? "hidden" : undefined}
+        /></div>
       <div className="overflow-y-auto ">
         <RecipeCard
           currRecipe={currRecipe as Recipe}
           searchFor={searchRecipeName}
+          recipeExpanded={(open:boolean) => {
+            setHideSearchBar(open)
+          }}
         />
         </div>
     </div>

@@ -33,7 +33,7 @@ export default function Home() {
   }
 
   return (
-      <div className={cn(" flex flex-1 py-5 px-5 gap-4",
+      <div className={cn("flex flex-1 py-5 px-5 gap-4",
         isMobile && "gap-2 px-2 py-2")}>
           <SideNav
             onClick={(recipeType: string) =>
