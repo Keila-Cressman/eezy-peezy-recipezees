@@ -1,12 +1,12 @@
-import { Dispatch, SetStateAction } from "react"
-import { cn } from "../utils/cn"
-import { CloseIcon } from "../icons/CloseIcon"
+import { Dispatch, SetStateAction, useEffect, useRef } from "react"
 import { useMobileSize } from "../hooks/useMobileSize"
+import { CloseIcon } from "../icons/CloseIcon"
+import { cn } from "../utils/cn"
 
 export type SearchBarProps = {
   searchRecipeName: string
   setSearchRecipeName: Dispatch<SetStateAction<string>>
-  className?:string
+  className?: string
 }
 
 export function SearchBar({
@@ -14,11 +14,31 @@ export function SearchBar({
   setSearchRecipeName,
   className,
 }: SearchBarProps) {
+  const searchBarRef = useRef<HTMLDivElement>(null)
   const isMobile = useMobileSize()
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        searchBarRef.current &&
+        !searchBarRef.current.contains(event.target as Node)
+      ) {
+        setSearchRecipeName("")
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [setSearchRecipeName])
+
   return (
     <div
+      ref={searchBarRef}
       className={cn(
-        "relative flex justify-self-center",className,
+        "relative flex justify-self-center",
+        className,
         isMobile && "w-full"
       )}
     >
