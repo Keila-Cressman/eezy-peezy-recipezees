@@ -49,7 +49,7 @@ export default function RecipeCard({
                 onClick={() => {
                   setOpenRecipeCard(!openRecipeCard)
                   setSelectRecipe(recipe.name)
-                recipeExpanded(true)
+                  recipeExpanded(true)
                 }}
                 className={cn("bg-blue-100 rounded-xl w-full p-2")}
               >
