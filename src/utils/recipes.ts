@@ -1603,15 +1603,20 @@ export const recipes = [
       "Fry wings for 20 minutes",
     ],
   },
-  // {
-  //   name: ,
-  //   image: ,
-  //   type: ["Main", "Holiday_Thanksgiving", "Holiday_Christmas", "Dessert", "Bakery", "Misc", "Drink", "Side", "Pre-requisite", "Sauce", "Jam"],
-  //   ingredients: [
-  //   ],
-  //   steps: [
-  //   ],
-  // },
+  {
+    name: "Frozen Fries",
+    image: "no image found",
+    type: [ "Side"],
+    ingredients: [
+      "frozen fries",
+      "olive oil"
+    ],
+    steps: [
+      "Add enough oil to pot to cover fries",
+      "Once oil reaches 400F add fries",
+      "Fry fries for 10 minutes",
+    ],
+  },
   // {
   //   name: ,
   //   image: ,
