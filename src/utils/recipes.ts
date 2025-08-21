@@ -1593,10 +1593,7 @@ export const recipes = [
     name: "Fresh Wings",
     image: "no image found",
     type: ["Main", "Side"],
-    ingredients: [
-      "wings",
-      "olive oil"
-    ],
+    ingredients: ["wings", "olive oil"],
     steps: [
       "Add enough oil to pot to cover wings",
       "Once oil reacehes 360F add wings",
@@ -1606,26 +1603,21 @@ export const recipes = [
   {
     name: "Frozen Fries",
     image: "no image found",
-    type: [ "Side"],
-    ingredients: [
-      "frozen fries",
-      "olive oil"
-    ],
+    type: ["Side"],
+    ingredients: ["frozen fries", "olive oil"],
     steps: [
       "Add enough oil to pot to cover fries",
       "Once oil reaches 400F add fries",
       "Fry fries for 10 minutes",
     ],
   },
-  // {
-  //   name: ,
-  //   image: ,
-  //   type: ["Main", "Holiday_Thanksgiving", "Holiday_Christmas", "Dessert", "Bakery", "Misc", "Drink", "Side", "Pre-requisite", "Sauce", "Jam"],
-  //   ingredients: [
-  //   ],
-  //   steps: [
-  //   ],
-  // },
+  {
+    name: "Buffalo Sauce(coats 10 wings)",
+    image: "no image found",
+    type: ["Sauce"],
+    ingredients: ["3 tbsp butter", "1/4 c buffalo sauce"],
+    steps: ["Melt down butter in pan", "Add buffalo sauce and stir"],
+  },
   // {
   //   name: ,
   //   image: ,
