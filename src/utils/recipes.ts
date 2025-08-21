@@ -1589,6 +1589,38 @@ export const recipes = [
       "Pour into cup let rest 2 hrs",
     ],
   },
+  {
+    name: "Fresh Wings",
+    image: "no image found",
+    type: ["Main", "Side"],
+    ingredients: [
+      "wings",
+      "olive oil"
+    ],
+    steps: [
+      "Add enough oil to pot to cover wings",
+      "Once oil reacehes 360F add wings",
+      "Fry wings for 20 minutes",
+    ],
+  },
+  // {
+  //   name: ,
+  //   image: ,
+  //   type: ["Main", "Holiday_Thanksgiving", "Holiday_Christmas", "Dessert", "Bakery", "Misc", "Drink", "Side", "Pre-requisite", "Sauce", "Jam"],
+  //   ingredients: [
+  //   ],
+  //   steps: [
+  //   ],
+  // },
+  // {
+  //   name: ,
+  //   image: ,
+  //   type: ["Main", "Holiday_Thanksgiving", "Holiday_Christmas", "Dessert", "Bakery", "Misc", "Drink", "Side", "Pre-requisite", "Sauce", "Jam"],
+  //   ingredients: [
+  //   ],
+  //   steps: [
+  //   ],
+  // },
   // {
   //   name: ,
   //   image: ,
