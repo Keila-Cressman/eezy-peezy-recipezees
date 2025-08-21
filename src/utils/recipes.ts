@@ -307,7 +307,7 @@ export const recipes = [
   {
     name: "Chicken Garlic Aioli Tacos",
     image: "../images/chicken_garlic_aioli_tacos.jpg",
-    type: ["Main", "Sauce", "Friday_Favorites"],
+    type: ["Main", "Friday_Favorites"],
     ingredients: [
       "Masa recipe",
       "Garlic aioli recipe",
@@ -344,7 +344,7 @@ export const recipes = [
   {
     name: "Chicken Nugs and French Fries",
     image: "../images/chicken_nugs_and_french_fries.jpg",
-    type: ["Side", "Main"],
+    type: ["Main"],
     ingredients: [
       "olive oil",
       "chicken breast",
@@ -507,7 +507,7 @@ export const recipes = [
   {
     name: "Chuletas and Tostones",
     image: "../images/chuletas_and_tostones.jpg",
-    type: ["Side", "Main", "Friday_Favorites"],
+    type: ["Main", "Friday_Favorites"],
     ingredients: [
       "tostones recipe",
       "garlic recipe",
@@ -624,7 +624,7 @@ export const recipes = [
   {
     name: "Flour Tortilla",
     image: "../images/flour_tortilla.jpg",
-    type: ["Side", "Pre-requisite"],
+    type: ["Side"],
     ingredients: [
       "2 c white flour",
       "3/4 c water",
@@ -690,7 +690,7 @@ export const recipes = [
   {
     name: "Pasta",
     image: "../images/lemon_chicken_mushroom.jpg",
-    type: ["Pre-requisite"],
+    type: ["Side"],
     ingredients: ["1 c soft white flour", "2 eggs"],
     steps: [
       "Pour flour on counter and create a well in the center",
@@ -1135,7 +1135,7 @@ export const recipes = [
   {
     name: "Spaghetti Squash and Meatballs",
     image: "../images/spaghetti_and_meatballs.jpg",
-    type: ["Main", "Pre-requisite"],
+    type: ["Main"],
     ingredients: ["Spaghetti squash", "Meatball recipe", "Tomato Sauce recipe"],
     steps: [
       "Make meatball recipe",
@@ -1152,7 +1152,7 @@ export const recipes = [
   {
     name: "Spaghetti and Meatballs",
     image: "../images/spaghetti_and_meatballs.jpg",
-    type: ["Main", "Pre-requisite"],
+    type: ["Main"],
     ingredients: ["Spaghetti recipe", "Meatball recips", "Tomato Sauce recipe"],
     steps: [
       "Make spaghetti recipe",
@@ -1163,7 +1163,7 @@ export const recipes = [
   {
     name: "Meatballs",
     image: "../images/spaghetti_and_meatballs.jpg",
-    type: ["Pre-requisite"],
+    type: ["Side"],
     ingredients: [
       "1 lb ground beef",
       "1 tsp chili pepper flakes",
@@ -1183,7 +1183,7 @@ export const recipes = [
   {
     name: "Spaghetti",
     image: "../images/spaghetti.jpg",
-    type: ["Pre-requisite"],
+    type: ["Side"],
     ingredients: ["Pasta recipe", "1 1/2 tbsp salt", "1 tbsp olive oil"],
     steps: [
       "Make pasta recipe",
@@ -1415,7 +1415,7 @@ export const recipes = [
   {
     name: "Tortilla Chips",
     image: "../images/tortilla_chips.jpg",
-    type: ["Side", "Pre-requisite"],
+    type: ["Side"],
     ingredients: ["Left over masa", "olive oil", "salt"],
     steps: [
       "Set oven to 350F",
@@ -1588,6 +1588,48 @@ export const recipes = [
       "Make box chocolate pudding with whole milk",
       "Pour into cup let rest 2 hrs",
     ],
+  },
+  {
+    name: "Fresh Wings",
+    image: "no image found",
+    type: ["Main", "Side"],
+    ingredients: ["wings", "olive oil"],
+    steps: [
+      "Add enough oil to pot to cover wings",
+      "Once oil reacehes 360F add wings",
+      "Fry wings for 20 minutes",
+    ],
+  },
+  {
+    name: "Frozen Fries",
+    image: "no image found",
+    type: ["Side"],
+    ingredients: ["frozen fries", "olive oil"],
+    steps: [
+      "Add enough oil to pot to cover fries",
+      "Once oil reaches 400F add fries",
+      "Fry fries for 10 minutes",
+    ],
+  },
+  {
+    name: "Buffalo Sauce(coats 10 wings)",
+    image: "no image found",
+    type: ["Sauce"],
+    ingredients: ["3 tbsp butter", "1/4 c buffalo sauce"],
+    steps: ["Melt down butter in pan", "Add buffalo sauce and stir"],
+  },
+  {
+    name: "Strawberry Lemonade",
+    image: "no image found",
+    type: ["Drink"],
+    ingredients: [
+      "1 cup water",
+      "2 tbsp agave",
+      "3 tbsp lemon juice",
+      "4 strawberries",
+      "ice",
+    ],
+    steps: ["Add all to blender and blend", "Fill with ice and blend"],
   },
   // {
   //   name: ,
