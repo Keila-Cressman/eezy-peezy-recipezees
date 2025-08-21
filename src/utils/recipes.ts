@@ -1634,7 +1634,7 @@ export const recipes = [
   // {
   //   name: ,
   //   image: ,
-  //   type: ["Main", "Holiday_Thanksgiving", "Holiday_Christmas", "Dessert", "Bakery", "Misc", "Drink", "Side", "Pre-requisite", "Sauce", "Jam"],
+  //   type: ["Main", "Holiday_Thanksgiving", "Holiday_Christmas", "Dessert", "Bakery", "Misc", "Drink", "Side", "Sauce", "Jam"],
   //   ingredients: [
   //   ],
   //   steps: [
