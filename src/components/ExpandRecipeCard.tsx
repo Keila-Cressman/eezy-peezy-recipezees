@@ -41,7 +41,7 @@ export function ExpandRecipeCard({
             isMobile && "pb-0"
           )}
         >
-          <p> {recipeSelectedName.replaceAll("_", " ")}</p>
+          <p className={cn(isMobile && "invisible")}> {recipeSelectedName}</p>
           <button
             type="button"
             onClick={() => {
@@ -56,6 +56,9 @@ export function ExpandRecipeCard({
               className={cn("cursor-pointer h-7", isMobile && "p-1 pr-3 h-8")}
             />
           </button>
+        </div>
+        <div className={cn("flex text-left text-2xl", !isMobile && "hidden")}>
+          {recipeSelectedName}
         </div>
 
         <div className={cn("pb-10", isMobile && "pb-4")}>
