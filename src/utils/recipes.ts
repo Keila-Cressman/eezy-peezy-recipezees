@@ -166,10 +166,13 @@ export const recipes = [
       "8 tomatoes",
       "1 bulb of garlic",
       "2 tbsp salt",
-      "Veggie broth recipe",
+      "1 Gal freezer bag of frozen veggies",
+      "2 tbsp salt",
+      "3 qrts Water",
     ],
     steps: [
-      "Make veggie broth recipe",
+      "Place all in pot and boil for at least 2 hrs",
+      "Strain and save broth",
       "Chop cabbage into quarters",
       "Chop potatoes in half",
       "Remove top core of tomatoes",
@@ -575,7 +578,11 @@ export const recipes = [
     name: "Veggie Broth",
     image: "no image found",
     type: ["Sauce"],
-    ingredients: ["Bag of frozen veggies", "2 tbsp salt", "3 qrts Water"],
+    ingredients: [
+      "1 Gal freezer bag of frozen veggies",
+      "2 tbsp salt",
+      "3 qrts Water",
+    ],
     steps: [
       "Place all in pot and boil for at least 2 hrs",
       "Strain and save broth",
