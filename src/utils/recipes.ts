@@ -1387,7 +1387,9 @@ export const recipes = [
     image: "../images/spanish_rice.jpg",
     type: ["Side"],
     ingredients: [
-      "black beans recipe",
+      "2 c water",
+      "1/2 c black beans",
+      "1 tsp salt",
       "1 c white rice",
       "1 tbsp coconut oil",
       "1 packet sazon",
@@ -1397,8 +1399,9 @@ export const recipes = [
       "1 tbsp sofrito",
     ],
     steps: [
-      "Make balck beans",
-      "Add all to pot and bring to boil",
+      "Add 2 c water, 1 tsp salt, and black beans to pot and bring to boil",
+      "Simmer for 2 hrs",
+      "Add rice coconut oil, sazon, adobo, tomato sauce, 1 1/4 c water, and sofrito to pot and bring to boil",
       "Simmer for 40 minutes",
     ],
   },
@@ -1406,7 +1409,7 @@ export const recipes = [
     name: "Black Beans",
     image: "../images/black_beans.jpg",
     type: ["Side"],
-    ingredients: ["1 1/2 c water", "1/2 c black beans", "1 tsp salt"],
+    ingredients: ["2 c water", "1/2 c black beans", "1 tsp salt"],
     steps: ["Add all to pot and bring to boil", "Simmer for 2 hrs"],
   },
   {
