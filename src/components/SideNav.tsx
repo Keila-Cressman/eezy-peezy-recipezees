@@ -1,7 +1,7 @@
 import { useState } from "react"
+import { useMobileSize } from "../hooks/useMobileSize"
 import { cn } from "../utils/cn"
 import NavButton from "./NavButton"
-import { useMobileSize } from "../hooks/useMobileSize"
 
 export type SideNavProps = {
   onClick: (recipeType: string) => void
@@ -101,15 +101,6 @@ export function SideNav({ onClick }: SideNavProps) {
         className={cn(
           "rounded bg-blue-100 hover:bg-blue-300",
           selected === "Holiday_Christmas" && "bg-blue-500 text-white"
-        )}
-      />
-      <NavButton
-        title="Pre-requisite"
-        recipeType="Pre-requisite"
-        onClick={() => handleClick("Pre-requisite")}
-        className={cn(
-          "rounded bg-blue-100 hover:bg-blue-300",
-          selected === "Pre-requisite" && "bg-blue-500 text-white"
         )}
       />
       <NavButton
