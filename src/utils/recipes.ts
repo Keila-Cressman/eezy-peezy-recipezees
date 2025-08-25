@@ -1075,8 +1075,15 @@ export const recipes = [
     name: "Sofrito",
     image: "../images/pollo_guisado.jpg",
     type: ["Sauce"],
-    ingredients: [],
-    steps: [],
+    ingredients: [
+      "1 yellow onion",
+      "1 green pepper",
+      "1 garlic bulb",
+      "1 bunch cilantro",
+    ],
+    steps: [
+      "Chop and add all to blender",
+    ],
   },
   {
     name: "Rostiaire Chicken",
