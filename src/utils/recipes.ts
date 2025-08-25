@@ -1081,9 +1081,7 @@ export const recipes = [
       "1 garlic bulb",
       "1 bunch cilantro",
     ],
-    steps: [
-      "Chop and add all to blender",
-    ],
+    steps: ["Chop and add all to blender"],
   },
   {
     name: "Rostiaire Chicken",
@@ -1246,15 +1244,18 @@ export const recipes = [
     image: "../images/shoulder_roast.jpg",
     type: ["Main"],
     ingredients: [
-      "bone broth recipe",
+      "2 lbs frozen beef bones",
+      "1 gal of water",
       "2 tbsp onion powder",
-      "1 tbsp salt",
+      "3 tbsp salt",
       "1/2 tbsp thyme",
       "1/2 tbsp smoked paprika",
       "4 lb shoulder roast",
     ],
     steps: [
-      "Make bone broth recipe",
+      "Bake bones in oven at 400F for 1 hr",
+      "Add bones, bone drippings, 2 tbsp salt, and 1 gal water to pot",
+      "Boil then simmer for 4 hrs",
       "Add all spices to pot",
       "Stab roast with fork and add to pot",
       "Bake for 30 minutes, flip roast, and finish baking for 30 miutes",
