@@ -35,7 +35,7 @@ export default function SummaryView({ currRecipe }: SummaryViewProps) {
     <div
       ref={SummaryRef}
       className={cn(
-        "flex flex-col gap-4 h-full w-full bg-red-800",
+        "flex flex-col gap-4 h-full w-full",
         isMobile && "pl-0 gap-2"
       )}
     >
