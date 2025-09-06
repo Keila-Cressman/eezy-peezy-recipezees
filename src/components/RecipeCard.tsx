@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useMobileSize } from "../hooks/useMobileSize"
 import { cn } from "../utils/cn"
 import { recipes } from "../utils/recipes"
@@ -16,12 +16,14 @@ export type RecipeCardProps = {
   searchFor: string
   currRecipe: Recipe
   recipeExpanded: (hide: boolean) => void
+  closeRecipeCard: boolean
 }
 
 export default function RecipeCard({
   searchFor,
   currRecipe,
   recipeExpanded,
+  closeRecipeCard,
 }: RecipeCardProps) {
   const isMobile = useMobileSize()
   const [openRecipeCard, setOpenRecipeCard] = useState(false)
@@ -29,6 +31,13 @@ export default function RecipeCard({
   const lowerCase = (str: string): string => {
     return str.toLowerCase()
   }
+
+  useEffect(() => {
+    if (!closeRecipeCard) {
+      setOpenRecipeCard(false)
+    }
+  }, [closeRecipeCard])
+
   return (
     <div
       className={cn(

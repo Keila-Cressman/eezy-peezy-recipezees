@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react"
 import { useMobileSize } from "../hooks/useMobileSize"
 import { ReturnIcon } from "../icons/ReturnIcon"
 import { cn } from "../utils/cn"
@@ -13,28 +12,11 @@ export function ExpandRecipeCard({
   recipeSelectedName,
   onClose,
 }: expandedRecipeCardProps) {
-  const expandCardRef = useRef<HTMLDivElement>(null)
   const isMobile = useMobileSize()
-
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (
-        expandCardRef.current &&
-        !expandCardRef.current.contains(event.target as Node)
-      ) {
-        onClose()
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside)
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [onClose])
 
   return (
     <div className="w-full">
-      <div ref={expandCardRef} className="w-full h-full bg-gray-50">
+      <div className="w-full h-full bg-gray-50">
         <div
           className={cn(
             "flex justify-between items-center pb-5",
