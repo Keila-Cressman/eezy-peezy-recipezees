@@ -1853,10 +1853,26 @@ export const recipes = [
     ],
     steps: ["Mix all in a bowl", "Note: will be runny but not drip off"],
   },
+  {
+    name: "Granola",
+    image: "no image found",
+    type: ["Side"],
+    ingredients: [
+      "1 c old fashioned rolled oats whole grain",
+      "1.5 tbsp honey",
+      "1 tbsp vanilla",
+    ],
+    steps: [
+      "Set oven to 275F",
+      "Mix in bowl",
+      "Spread on cookie sheet",
+      "Bake for 10 min",
+    ],
+  },
   // {
   //   name: ,
   //   image: ,
-  //   type: ["Main", "Holiday_Thanksgiving", "Holiday_Christmas", "Dessert", "Bakery", "Misc", "Drink", "Side", "Pre-requisite", "Sauce", "Jam"],
+  //   type: ["Main", "Holiday_Thanksgiving", "Holiday_Christmas", "Dessert", "Bakery", "Misc", "Drink", "Side", "Sauce", "Jam"],
   //   ingredients: [
   //   ],
   //   steps: [
