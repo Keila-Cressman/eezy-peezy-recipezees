@@ -1840,6 +1840,19 @@ export const recipes = [
     ],
     steps: ["Add all to blender and blend", "Fill with ice and blend"],
   },
+  {
+    name: "Chocolate Frosting",
+    image: "no image found",
+    type: ["Sauce"],
+    ingredients: [
+      "1/4 c melted butter",
+      "2/3 c cacao powder",
+      "1.5 c confectionary sugar",
+      "1/6 c milk",
+      "1/2 tsp vanilla",
+    ],
+    steps: ["Mix all in a bowl", "Note: will be runny but not drip off"],
+  },
   // {
   //   name: ,
   //   image: ,
@@ -1849,4 +1862,5 @@ export const recipes = [
   //   steps: [
   //   ],
   // },
+  ,
 ]
