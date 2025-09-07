@@ -1914,6 +1914,18 @@ export const recipes = [
     ],
     steps: ["Set oven to 375F", "Mix all ingredients", "Bake for 20 min"],
   },
+  {
+    name: "Boxed Mac and Cheese",
+    image: "no image found",
+    type: ["Main"],
+    ingredients: ["1 box mac and cheese", "1/4 c milk", "2 tbsp butter"],
+    steps: [
+      "Set oven to 350F",
+      "Follow box instructions",
+      "Bake for 30 min",
+      "Broil on hi for 5 min",
+    ],
+  },
   // {
   //   name: "",
   //   image: "no image found",
