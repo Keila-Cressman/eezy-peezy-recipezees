@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react"
+import { use, useEffect, useState } from "react"
 import { useMobileSize } from "../hooks/useMobileSize"
 import { cn } from "../utils/cn"
-import { recipes } from "../utils/recipes"
+// import { recipes } from "../utils/recipes"
 import { ExpandRecipeCard } from "./ExpandRecipeCard"
 import Gallery from "./Gallery"
+import { useRecipes } from "../hooks/useRecipes"
 
 export type Recipe = [
   {
@@ -31,12 +32,14 @@ export default function RecipeCard({
   const lowerCase = (str: string): string => {
     return str.toLowerCase()
   }
+  const recipes = useRecipes()
 
   useEffect(() => {
     if (!closeRecipeCard) {
       setOpenRecipeCard(false)
     }
   }, [closeRecipeCard])
+
 
   return (
     <div
