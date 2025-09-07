@@ -1866,13 +1866,36 @@ export const recipes = [
       "Set oven to 275F",
       "Mix in bowl",
       "Spread on cookie sheet",
-      "Bake for 10 min",
+      "Bake for 20 min",
+    ],
+  },
+  {
+    name: "Parfait",
+    image: "no image found",
+    type: ["Breakfast"],
+    ingredients: [
+      "1 c old fashioned rolled oats whole grain",
+      "2.5 tbsp honey",
+      "1 tbsp vanilla",
+      "3/4 c greek yogurt",
+      "Strawberries",
+      "Blackberries",
+      "Blueberries",
+    ],
+    steps: [
+      "Set oven to 275F",
+      "Mix oats, 1.5 tbsp honey, and vanilla in bowl",
+      "Spread on cookie sheet",
+      "Bake for 20 min",
+      "Let cool then break into crumbles in a bowl",
+      "Slice strawberries into 4 pieces",
+      "In the bowl you are eating from add yogurt, fruit, granola, and drizzle 1 tbsp honey",
     ],
   },
   // {
   //   name: ,
   //   image: ,
-  //   type: ["Main", "Holiday_Thanksgiving", "Holiday_Christmas", "Dessert", "Bakery", "Misc", "Drink", "Side", "Sauce", "Jam"],
+  //   type: ["Main","Breakfast", "Holiday_Thanksgiving", "Holiday_Christmas", "Dessert", "Bakery", "Misc", "Drink", "Side", "Sauce", "Jam"],
   //   ingredients: [
   //   ],
   //   steps: [
