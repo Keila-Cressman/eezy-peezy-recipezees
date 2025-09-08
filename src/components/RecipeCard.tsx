@@ -1,7 +1,6 @@
 import { use, useEffect, useState } from "react"
 import { useMobileSize } from "../hooks/useMobileSize"
 import { cn } from "../utils/cn"
-// import { recipes } from "../utils/recipes"
 import { ExpandRecipeCard } from "./ExpandRecipeCard"
 import Gallery from "./Gallery"
 import { useRecipes } from "../hooks/useRecipes"
@@ -14,10 +13,10 @@ export type Recipe = [
 ]
 
 export type RecipeCardProps = {
-  searchFor: string
+  searchFor?: string
   currRecipe: Recipe
-  recipeExpanded: (hide: boolean) => void
-  closeRecipeCard: boolean
+  recipeExpanded?: (hide: boolean) => void
+  closeRecipeCard?: boolean
 }
 
 export default function RecipeCard({
@@ -40,7 +39,6 @@ export default function RecipeCard({
     }
   }, [closeRecipeCard])
 
-
   return (
     <div
       className={cn(
@@ -48,7 +46,7 @@ export default function RecipeCard({
         isMobile && "text-base font-semibold"
       )}
     >
-      {searchFor !== "" && !openRecipeCard && (
+      {searchFor !== "" && !openRecipeCard && searchFor && recipeExpanded && (
         <div className="flex flex-1 flex-col gap-2">
           {recipes
             .filter((recipe) =>
@@ -78,7 +76,7 @@ export default function RecipeCard({
         </div>
       )}
 
-      {openRecipeCard && (
+      {openRecipeCard && recipeExpanded && (
         <div className="w-full h-full">
           <ExpandRecipeCard
             recipeSelectedName={selectRecipe}
@@ -90,7 +88,7 @@ export default function RecipeCard({
         </div>
       )}
 
-      {searchFor === "" && !openRecipeCard && (
+      {searchFor === "" && !openRecipeCard && recipeExpanded && (
         <div
           className={cn(
             "grid grid-cols-2 gap-2 w-full overflow-auto",

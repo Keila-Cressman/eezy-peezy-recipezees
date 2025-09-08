@@ -1,15 +1,19 @@
 import { useState } from "react"
-import { cn } from "../utils/cn"
 import { useRecipes } from "../hooks/useRecipes"
+import { cn } from "../utils/cn"
+import RecipeCard from "./RecipeCard"
 
 export function RandomDishSelector() {
   const fullRecipeList = useRecipes()
-  const mainTypeRecipes = fullRecipeList
-    .filter((recipe) => recipe.type)
-    .filter((r) => r.type.includes("Main"))
+  const [searchRecipeName, setSearchRecipeName] = useState("")
+  
+  const [hideSearchBar, setHideSearchBar] = useState(false)
+  const mainTypeRecipes = fullRecipeList.filter((recipe) =>
+    recipe.type.includes("Main")
+  )
 
   const [newRecipe, setNewRecipe] = useState(
-    mainTypeRecipes[mainTypeRecipes.length - 1]
+    mainTypeRecipes[Math.floor(Math.random() * mainTypeRecipes.length)]
   )
 
   function getNewRecipe() {
@@ -17,13 +21,30 @@ export function RandomDishSelector() {
       mainTypeRecipes[Math.floor(Math.random() * mainTypeRecipes.length)]
     return setNewRecipe(newRecipe)
   }
+
   return (
     <div className={cn("rounded bg-blue-100 flex-1")}>
       welcome!!!
       <div className="flex flex-col">
-        <div className="bg-green-400">{newRecipe.name}</div>
+        <div className="bg-green-400 h-32 flex items-center justify-center">
+          <div className="bg-blue-200 rounded-md h-24 w-full items-center flex justify-center">
+            {newRecipe.name}
+            {mainTypeRecipes.map((recipe) => (
+            
+              <RecipeCard
+                        currRecipe={[{ image: recipe.image, name: recipe.name }]}
+                        searchFor={searchRecipeName}
+                        recipeExpanded={(open: boolean) => {
+                          setHideSearchBar(open)
+                          setSearchRecipeName("")
+                        }}
+                        closeRecipeCard={hideSearchBar}
+                      />
+            ))}
+          </div>
+        </div>
 
-        <div className="bg-red-400">
+        <div className="bg-red-400 flex items-center justify-center h-32">
           <button type="button" onClick={() => getNewRecipe()}>
             Refresh
           </button>
