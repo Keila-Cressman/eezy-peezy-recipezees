@@ -6,7 +6,7 @@ import RecipeCard from "./RecipeCard"
 export function RandomDishSelector() {
   const fullRecipeList = useRecipes()
   const [searchRecipeName, setSearchRecipeName] = useState("")
-  
+
   const [hideSearchBar, setHideSearchBar] = useState(false)
   const mainTypeRecipes = fullRecipeList.filter((recipe) =>
     recipe.type.includes("Main")
@@ -27,21 +27,16 @@ export function RandomDishSelector() {
       welcome!!!
       <div className="flex flex-col">
         <div className="bg-green-400 h-32 flex items-center justify-center">
-          <div className="bg-blue-200 rounded-md h-24 w-full items-center flex justify-center">
-            {newRecipe.name}
-            {mainTypeRecipes.map((recipe) => (
-            
-              <RecipeCard
-                        currRecipe={[{ image: recipe.image, name: recipe.name }]}
-                        searchFor={searchRecipeName}
-                        recipeExpanded={(open: boolean) => {
-                          setHideSearchBar(open)
-                          setSearchRecipeName("")
-                        }}
-                        closeRecipeCard={hideSearchBar}
-                      />
-            ))}
-          </div>
+          <RecipeCard
+            className="flex flex-col"
+            currRecipe={[{ image: newRecipe.image, name: newRecipe.name }]}
+            searchFor={searchRecipeName}
+            recipeExpanded={(open: boolean) => {
+              setHideSearchBar(open)
+              setSearchRecipeName("")
+            }}
+            closeRecipeCard={hideSearchBar}
+          />
         </div>
 
         <div className="bg-red-400 flex items-center justify-center h-32">

@@ -1,9 +1,9 @@
-import { use, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { useMobileSize } from "../hooks/useMobileSize"
+import { useRecipes } from "../hooks/useRecipes"
 import { cn } from "../utils/cn"
 import { ExpandRecipeCard } from "./ExpandRecipeCard"
 import Gallery from "./Gallery"
-import { useRecipes } from "../hooks/useRecipes"
 
 export type Recipe = [
   {
@@ -17,6 +17,7 @@ export type RecipeCardProps = {
   currRecipe: Recipe
   recipeExpanded?: (hide: boolean) => void
   closeRecipeCard?: boolean
+  className?: string
 }
 
 export default function RecipeCard({
@@ -24,6 +25,7 @@ export default function RecipeCard({
   currRecipe,
   recipeExpanded,
   closeRecipeCard,
+  className,
 }: RecipeCardProps) {
   const isMobile = useMobileSize()
   const [openRecipeCard, setOpenRecipeCard] = useState(false)
@@ -92,7 +94,8 @@ export default function RecipeCard({
         <div
           className={cn(
             "grid grid-cols-2 gap-2 w-full overflow-auto",
-            isMobile && "flex flex-col"
+            isMobile && "flex flex-col",
+            className
           )}
         >
           {currRecipe.map((recipe) => (
