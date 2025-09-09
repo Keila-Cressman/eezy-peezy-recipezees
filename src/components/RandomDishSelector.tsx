@@ -23,10 +23,10 @@ export function RandomDishSelector() {
   }
 
   return (
-    <div className={cn("rounded bg-blue-100 flex-1")}>
-      welcome!!!
+    <div className={cn("rounded flex-1")}>
+      Click for a new Main Dish:
       <div className="flex flex-col">
-        <div className="bg-green-400 h-32 flex items-center justify-center">
+        <div className="h-32 flex items-center justify-center">
           <RecipeCard
             className="flex flex-col"
             currRecipe={[{ image: newRecipe.image, name: newRecipe.name }]}
@@ -39,9 +39,13 @@ export function RandomDishSelector() {
           />
         </div>
 
-        <div className="bg-red-400 flex items-center justify-center h-32">
+        <div className="flex items-center justify-center h-32">
           <button type="button" onClick={() => getNewRecipe()}>
-            Refresh
+            <div className="bg-blue-100 rounded-lg p-2">
+              <div className="bg-blue-50 rounded-lg py-8 px-3">
+              Refresh
+              </div>
+            </div>
           </button>
         </div>
       </div>
