@@ -6,12 +6,13 @@ import RecipeCard from "./RecipeCard"
 export function RandomDishSelector() {
   const fullRecipeList = useRecipes()
   const [searchRecipeName, setSearchRecipeName] = useState("")
-
   const [hideSearchBar, setHideSearchBar] = useState(false)
+
   const mainTypeRecipes = fullRecipeList.filter((recipe) =>
     recipe.type.includes("Main")
   )
 
+  const [recipeToLoop, setRecipeToLoop] = useState(mainTypeRecipes)
   const [newRecipe, setNewRecipe] = useState(
     mainTypeRecipes[Math.floor(Math.random() * mainTypeRecipes.length)]
   )
@@ -22,9 +23,19 @@ export function RandomDishSelector() {
     return setNewRecipe(newRecipe)
   }
 
+  function removeRecipe(recipeToRemove: string) {
+    const removedRecipe = recipeToLoop.filter(
+      (recipe) => recipe.name !== recipeToRemove
+    )
+    setRecipeToLoop(removedRecipe)
+    return setNewRecipe(
+      removedRecipe[Math.floor(Math.random() * removedRecipe.length)]
+    )
+  }
+
   return (
     <div className={cn("rounded flex-1")}>
-      Click for a new Main Dish:
+      Click for a Main Dish:
       <div className="flex flex-col">
         <div className="h-32 flex items-center justify-center">
           <RecipeCard
@@ -40,14 +51,25 @@ export function RandomDishSelector() {
         </div>
 
         <div className="flex items-center justify-center h-32">
-          <button type="button" onClick={() => getNewRecipe()}>
+          <button
+            type="button"
+            onClick={() => {
+              if (newRecipe && recipeToLoop.length > 1) {
+                getNewRecipe()
+                removeRecipe(newRecipe.name)
+              } else {
+                getNewRecipe()
+                setRecipeToLoop(mainTypeRecipes)
+              }
+            }}
+          >
             <div className="bg-blue-100 rounded-lg p-2">
               <div className="bg-blue-50 rounded-lg py-8 px-3">
-              Refresh
-              </div>
+                {recipeToLoop.length > 1 ? "Next Main Dish" : "Restart Main Dish"}</div>
             </div>
           </button>
         </div>
+
       </div>
     </div>
   )
