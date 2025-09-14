@@ -5,14 +5,13 @@ import RecipeCard from "./RecipeCard"
 
 export function RandomDishSelector() {
   const fullRecipeList = useRecipes()
-  const [searchRecipeName, setSearchRecipeName] = useState("")
-  const [hideSearchBar, setHideSearchBar] = useState(false)
 
   const mainTypeRecipes = fullRecipeList.filter((recipe) =>
     recipe.type.includes("Main")
   )
 
   const [recipeToLoop, setRecipeToLoop] = useState(mainTypeRecipes)
+
   const [newRecipe, setNewRecipe] = useState(
     mainTypeRecipes[Math.floor(Math.random() * mainTypeRecipes.length)]
   )
@@ -32,21 +31,18 @@ export function RandomDishSelector() {
       removedRecipe[Math.floor(Math.random() * removedRecipe.length)]
     )
   }
-
+// To Do:
+// hide Title and refresh button when recipe card is expanded
+// center recipe card
   return (
-    <div className={cn("rounded flex-1")}>
-      Click for a Main Dish:
-      <div className="flex flex-col">
-        <div className="h-32 flex items-center justify-center">
+    <div className={cn("flex flex-col gap-4 h-full w-full bg-blue-500")}>
+      <div>Click for a Main Dish:</div>
+      <div className="flex flex-col gap-8 overflow-y-auto bg-purple-500">
+        <div className="flex items-center justify-center">
           <RecipeCard
-            className="flex flex-col"
+            // className={{ recipeCard: "" }}
             currRecipe={[{ image: newRecipe.image, name: newRecipe.name }]}
-            searchFor={searchRecipeName}
-            recipeExpanded={(open: boolean) => {
-              setHideSearchBar(open)
-              setSearchRecipeName("")
-            }}
-            closeRecipeCard={hideSearchBar}
+            searchFor="Random Dish Selector"
           />
         </div>
 
@@ -65,11 +61,13 @@ export function RandomDishSelector() {
           >
             <div className="bg-blue-100 rounded-lg p-2">
               <div className="bg-blue-50 rounded-lg py-8 px-3">
-                {recipeToLoop.length > 1 ? "Next Main Dish" : "Restart Main Dish"}</div>
+                {recipeToLoop.length > 1
+                  ? "Next Main Dish"
+                  : "Restart Main Dish"}
+              </div>
             </div>
           </button>
         </div>
-
       </div>
     </div>
   )

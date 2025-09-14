@@ -48,6 +48,7 @@ export default function SummaryView({ currRecipe }: SummaryViewProps) {
       </div>
       <div className="overflow-y-auto ">
         <RecipeCard
+        className={{ recipeCard: "flex flex-1 gap-4 overflow-y-auto" }}
           currRecipe={currRecipe as Recipe}
           searchFor={searchRecipeName}
           recipeExpanded={(open: boolean) => {

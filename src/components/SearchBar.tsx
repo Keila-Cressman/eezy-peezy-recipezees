@@ -30,7 +30,7 @@ export function SearchBar({
           isMobile && "h-10 text-base"
         )}
         type="text"
-        placeholder="Search recipe name..."
+        placeholder="Search ALL recipes..."
         value={searchRecipeName}
         onChange={(e) => setSearchRecipeName(e.target.value)}
       />
