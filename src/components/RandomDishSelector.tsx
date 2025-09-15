@@ -5,68 +5,165 @@ import RecipeCard from "./RecipeCard"
 
 export function RandomDishSelector() {
   const fullRecipeList = useRecipes()
+  const [hidePageText, setHidePageText] = useState(false)
+  const [hideMain, setHideMain] = useState(false)
+  const [hideDessert, setHideDessert] = useState(false)
 
   const mainTypeRecipes = fullRecipeList.filter((recipe) =>
     recipe.type.includes("Main")
   )
-
-  const [recipeToLoop, setRecipeToLoop] = useState(mainTypeRecipes)
-
-  const [newRecipe, setNewRecipe] = useState(
-    mainTypeRecipes[Math.floor(Math.random() * mainTypeRecipes.length)]
+  const dessertTypeRecipes = fullRecipeList.filter((recipe) =>
+    recipe.type.includes("Dessert")
   )
 
-  function getNewRecipe() {
+  const [mainRecipeToLoop, setMainRecipeToLoop] = useState(mainTypeRecipes)
+  const [dessertRecipeToLoop, setDessertRecipeToLoop] =
+    useState(dessertTypeRecipes)
+
+  const [newMainRecipe, setNewMainRecipe] = useState(
+    mainTypeRecipes[Math.floor(Math.random() * mainTypeRecipes.length)]
+  )
+  const [newDessertRecipe, setNewDessertRecipe] = useState(
+    dessertTypeRecipes[Math.floor(Math.random() * dessertTypeRecipes.length)]
+  )
+
+  function getNewMainRecipe() {
     const newRecipe =
       mainTypeRecipes[Math.floor(Math.random() * mainTypeRecipes.length)]
-    return setNewRecipe(newRecipe)
+    return setNewMainRecipe(newRecipe)
+  }
+  function getNewDessertRecipe() {
+    const newRecipe =
+      dessertTypeRecipes[Math.floor(Math.random() * dessertTypeRecipes.length)]
+    return setNewDessertRecipe(newRecipe)
   }
 
-  function removeRecipe(recipeToRemove: string) {
-    const removedRecipe = recipeToLoop.filter(
+  function removeMainRecipe(recipeToRemove: string) {
+    const removedRecipe = mainRecipeToLoop.filter(
       (recipe) => recipe.name !== recipeToRemove
     )
-    setRecipeToLoop(removedRecipe)
-    return setNewRecipe(
+    setMainRecipeToLoop(removedRecipe)
+    return setNewMainRecipe(
       removedRecipe[Math.floor(Math.random() * removedRecipe.length)]
     )
   }
-// To Do:
-// hide Title and refresh button when recipe card is expanded
-// center recipe card
+  function removeDessertRecipe(recipeToRemove: string) {
+    const removedRecipe = dessertRecipeToLoop.filter(
+      (recipe) => recipe.name !== recipeToRemove
+    )
+    setDessertRecipeToLoop(removedRecipe)
+    return setNewDessertRecipe(
+      removedRecipe[Math.floor(Math.random() * removedRecipe.length)]
+    )
+  }
+
+  // ToDo:
+  // get the 2 sections to only scroll in their own section
   return (
-    <div className={cn("flex flex-col gap-4 h-full w-full bg-blue-500")}>
-      <div>Click for a Main Dish:</div>
-      <div className="flex flex-col gap-8 overflow-y-auto bg-purple-500">
-        <div className="flex items-center justify-center">
-          <RecipeCard
-            // className={{ recipeCard: "" }}
-            currRecipe={[{ image: newRecipe.image, name: newRecipe.name }]}
-            searchFor="Random Dish Selector"
-          />
+    <div className={cn("grid-cols-1 w-full")}>
+      <div
+        className={cn(
+          "grid grid-rows-2 h-full gap-2",
+          hidePageText && "overflow-y-auto"
+        )}
+      >
+        <div className={cn("bg-red-300 overflow-y-auto", hideMain && "hidden")}>
+          <div className={cn("pb-2", hidePageText && "hidden")}>
+            Click for a Main Dish:
+          </div>
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center justify-center">
+              <RecipeCard
+                currRecipe={[
+                  { image: newMainRecipe.image, name: newMainRecipe.name },
+                ]}
+                searchFor="Random Dish Selector"
+                recipeExpanded={(open: boolean) => {
+                  setHidePageText(open)
+                  setHideDessert(open)
+                }}
+              />
+            </div>
+
+            <div
+              className={cn(
+                "flex justify-center h-32",
+                hidePageText && "hidden"
+              )}
+            >
+              <button
+                type="button"
+                onClick={() => {
+                  if (newMainRecipe && mainRecipeToLoop.length > 1) {
+                    getNewMainRecipe()
+                    removeMainRecipe(newMainRecipe.name)
+                  } else {
+                    getNewMainRecipe()
+                    setMainRecipeToLoop(mainTypeRecipes)
+                  }
+                }}
+              >
+                <div className="bg-blue-100 rounded-lg p-2">
+                  <div className="bg-blue-50 rounded-lg py-8 px-3">
+                    {mainRecipeToLoop.length > 1
+                      ? "Next Main Dish"
+                      : "Restart Main Dish"}
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div className="flex items-center justify-center h-32">
-          <button
-            type="button"
-            onClick={() => {
-              if (newRecipe && recipeToLoop.length > 1) {
-                getNewRecipe()
-                removeRecipe(newRecipe.name)
-              } else {
-                getNewRecipe()
-                setRecipeToLoop(mainTypeRecipes)
-              }
-            }}
-          >
-            <div className="bg-blue-100 rounded-lg p-2">
-              <div className="bg-blue-50 rounded-lg py-8 px-3">
-                {recipeToLoop.length > 1
-                  ? "Next Main Dish"
-                  : "Restart Main Dish"}
-              </div>
+        <div className={cn("bg-purple-300 overflow-y-auto", hideDessert && "hidden overflow-y-auto")}>
+          <div className={cn("pb-2", hidePageText && "hidden")}>
+            Click for a Dessert:
+          </div>
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center justify-center">
+              <RecipeCard
+                currRecipe={[
+                  {
+                    image: newDessertRecipe.image,
+                    name: newDessertRecipe.name,
+                  },
+                ]}
+                searchFor="Random Dish Selector"
+                recipeExpanded={(open: boolean) => {
+                  setHidePageText(open)
+                  setHideMain(open)
+                }}
+              />
             </div>
-          </button>
+
+            <div
+              className={cn(
+                "flex items-center justify-center h-32",
+                hidePageText && "hidden"
+              )}
+            >
+              <button
+                type="button"
+                onClick={() => {
+                  if (newDessertRecipe && dessertRecipeToLoop.length > 1) {
+                    getNewDessertRecipe()
+                    removeDessertRecipe(newDessertRecipe.name)
+                  } else {
+                    getNewDessertRecipe()
+                    setDessertRecipeToLoop(dessertTypeRecipes)
+                  }
+                }}
+              >
+                <div className="bg-blue-100 rounded-lg p-2">
+                  <div className="bg-blue-50 rounded-lg py-8 px-3">
+                    {dessertRecipeToLoop.length > 1
+                      ? "Next Dessert"
+                      : "Restart Dessert"}
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
