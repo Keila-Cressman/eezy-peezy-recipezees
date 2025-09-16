@@ -1955,6 +1955,22 @@ export const recipes = [
       "* Meatball temp: 145F",
     ],
   },
+  {
+    name: "Cheese Steak",
+    image: "no image found",
+    type: ["Main"],
+    ingredients: [
+      "1 lb Cheese steak meat",
+      "American cheese",
+      "Mayo",
+      "Lettuce",
+      "1 tomato",
+      "1 red onion",
+      "Roll",
+      "italian seasoning",
+    ],
+    steps: [],
+  },
   // {
   //   name: "",
   //   image: "no image found",
