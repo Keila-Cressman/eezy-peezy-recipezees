@@ -1626,7 +1626,7 @@ export const recipes = [
     steps: [
       "Remove core from tomatoes and blend",
       "Add all ingredients to pot and bring to boil",
-      "Simmer for about an hour, until sauce looks like tomato sauce",
+      "Simmer for about an hour on med heat or your preferred sauce consistency",
     ],
   },
   {
