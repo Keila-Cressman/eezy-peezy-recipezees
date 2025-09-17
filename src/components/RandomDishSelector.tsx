@@ -1,10 +1,12 @@
 import { useState } from "react"
+import { useMobileSize } from "../hooks/useMobileSize"
 import { useRecipes } from "../hooks/useRecipes"
 import { cn } from "../utils/cn"
 import RecipeCard from "./RecipeCard"
 
 export function RandomDishSelector() {
   const fullRecipeList = useRecipes()
+  const isMobile = useMobileSize()
   const [hidePageText, setHidePageText] = useState(false)
   const [hideMain, setHideMain] = useState(false)
   const [hideDessert, setHideDessert] = useState(false)
@@ -58,11 +60,12 @@ export function RandomDishSelector() {
   }
 
   return (
-    <div className={cn("grid-cols-1 w-full overflow-y-auto")}>
+    <div className={cn("grid grid-cols-1 w-full overflow-y-auto")}>
       <div
         className={cn(
-          "grid grid-rows-2 divide-y-2 divide-blue-300",
-          hidePageText && "flex"
+          !isMobile && "grid grid-cols-2",
+          isMobile && "grid grid-rows-2 divide-y-2 divide-blue-300",
+          hidePageText && "flex divide-y-0"
         )}
       >
         <div
