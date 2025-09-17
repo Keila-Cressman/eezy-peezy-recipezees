@@ -57,21 +57,22 @@ export function RandomDishSelector() {
     )
   }
 
-  // ToDo:
-  // get the 2 sections to only scroll in their own section
   return (
-    <div className={cn("grid-cols-1 w-full")}>
+    <div className={cn("grid-cols-1 w-full overflow-y-auto")}>
       <div
         className={cn(
-          "grid grid-rows-2 h-full gap-2",
-          hidePageText && "overflow-y-auto"
+          "grid grid-rows-2 divide-y-2 divide-blue-300",
+          hidePageText && "flex"
         )}
       >
-        <div className={cn("bg-red-300 overflow-y-auto", hideMain && "hidden")}>
-          <div className={cn("pb-2", hidePageText && "hidden")}>
+        <div
+          className={cn("flex flex-col justify-around", hideMain && "hidden")}
+        >
+          <div className={cn("text-2xl h-20", hidePageText && "hidden")}>
             Click for a Main Dish:
           </div>
-          <div className="flex flex-col gap-4">
+
+          <div className="h-full flex justify-center">
             <div className="flex items-center justify-center">
               <RecipeCard
                 currRecipe={[
@@ -84,12 +85,11 @@ export function RandomDishSelector() {
                 }}
               />
             </div>
+          </div>
 
+          <div className="h-full">
             <div
-              className={cn(
-                "flex justify-center h-32",
-                hidePageText && "hidden"
-              )}
+              className={cn("flex justify-center", hidePageText && "hidden")}
             >
               <button
                 type="button"
@@ -115,11 +115,17 @@ export function RandomDishSelector() {
           </div>
         </div>
 
-        <div className={cn("bg-purple-300 overflow-y-auto", hideDessert && "hidden overflow-y-auto")}>
-          <div className={cn("pb-2", hidePageText && "hidden")}>
+        <div
+          className={cn(
+            "flex flex-col justify-around",
+            hideDessert && "hidden"
+          )}
+        >
+          <div className={cn("text-2xl", hidePageText && "hidden")}>
             Click for a Dessert:
           </div>
-          <div className="flex flex-col gap-4">
+
+          <div className="h-full flex justify-center">
             <div className="flex items-center justify-center">
               <RecipeCard
                 currRecipe={[
@@ -135,12 +141,11 @@ export function RandomDishSelector() {
                 }}
               />
             </div>
+          </div>
 
+          <div className="h-full">
             <div
-              className={cn(
-                "flex items-center justify-center h-32",
-                hidePageText && "hidden"
-              )}
+              className={cn("flex justify-center", hidePageText && "hidden")}
             >
               <button
                 type="button"
