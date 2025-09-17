@@ -6,11 +6,13 @@ import { recipes } from "../utils/recipes"
 export type expandedRecipeCardProps = {
   recipeSelectedName: string
   onClose: () => void
+  className?: string
 }
 
 export function ExpandRecipeCard({
   recipeSelectedName,
   onClose,
+  className
 }: expandedRecipeCardProps) {
   const isMobile = useMobileSize()
 

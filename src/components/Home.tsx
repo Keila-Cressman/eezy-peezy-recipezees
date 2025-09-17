@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
+import { useMobileSize } from "../hooks/useMobileSize"
+import { cn } from "../utils/cn"
 import { recipes } from "../utils/recipes"
-import Gallery from "./Gallery"
+import { RandomDishSelector } from "./RandomDishSelector"
 import { Recipe } from "./RecipeCard"
 import { SideNav } from "./SideNav"
 import SummaryView from "./SummaryView"
-import { cn } from "../utils/cn"
-import { useMobileSize } from "../hooks/useMobileSize"
 
 export default function Home() {
   const fullRecipes = recipes as []
@@ -33,18 +33,25 @@ export default function Home() {
   }
 
   return (
-      <div className={cn("flex flex-1 py-5 px-5 gap-4",
-        isMobile && "gap-2 px-2 py-2")}>
-          <SideNav
-            onClick={(recipeType: string) =>
-              buttonSelection(fullRecipes, recipeType)
-            }
-          />
+    <div
+      className={cn(
+        "flex flex-1 py-5 px-5 gap-4",
+        isMobile && "gap-2 px-2 py-2"
+      )}
+    >
+      <SideNav
+        onClick={(recipeType: string) =>
+          buttonSelection(fullRecipes, recipeType)
+        }
+      />
 
-        <div className="border-blue-200 border flex" />
+      <div className="border-blue-200 border flex" />
 
-          <SummaryView currRecipe={currRecipe as Recipe} />
-          {currRecipe.length === 0 && <Gallery recipeType={"View_all"} />}
-      </div>
+      {currRecipe.length === 0 ? (
+        <RandomDishSelector />
+      ) : (
+        <SummaryView currRecipe={currRecipe as Recipe} />
+      )}
+    </div>
   )
 }

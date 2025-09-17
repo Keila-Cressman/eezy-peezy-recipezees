@@ -140,12 +140,12 @@ export function SideNav({ onClick }: SideNavProps) {
         )}
       />
       <NavButton
-        title="Tips & Tricks"
-        recipeType="Tips_and_tricks"
-        onClick={() => handleClick("Tips_and_tricks")}
+        title="Random Dish Selector"
+        recipeType="None"
+        onClick={() => handleClick("Random Dish Selector")}
         className={cn(
           "rounded bg-blue-100 hover:bg-blue-300",
-          selected === "Tips_and_tricks" && "bg-blue-500 text-white"
+          selected === "Random Dish Selector" && "bg-blue-500 text-white"
         )}
       />
     </div>
