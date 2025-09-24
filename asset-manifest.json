@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/eezy-peezy-recipezees/static/css/main.7a7e51bc.css",
-    "main.js": "/eezy-peezy-recipezees/static/js/main.25a4bae2.js",
+    "main.js": "/eezy-peezy-recipezees/static/js/main.b642a2fb.js",
     "static/js/973.847c7374.chunk.js": "/eezy-peezy-recipezees/static/js/973.847c7374.chunk.js",
     "static/media/bread_loaf.jpg": "/eezy-peezy-recipezees/static/media/bread_loaf.097360d690118ff1c56d.jpg",
     "static/media/english_muffins.jpg": "/eezy-peezy-recipezees/static/media/english_muffins.e8fcca0b31640e7c1d1d.jpg",
@@ -68,11 +68,11 @@
     "static/media/chocolate_cookies.jpg": "/eezy-peezy-recipezees/static/media/chocolate_cookies.54ef58db5b6ad42c2f2e.jpg",
     "index.html": "/eezy-peezy-recipezees/index.html",
     "main.7a7e51bc.css.map": "/eezy-peezy-recipezees/static/css/main.7a7e51bc.css.map",
-    "main.25a4bae2.js.map": "/eezy-peezy-recipezees/static/js/main.25a4bae2.js.map",
+    "main.b642a2fb.js.map": "/eezy-peezy-recipezees/static/js/main.b642a2fb.js.map",
     "973.847c7374.chunk.js.map": "/eezy-peezy-recipezees/static/js/973.847c7374.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7a7e51bc.css",
-    "static/js/main.25a4bae2.js"
+    "static/js/main.b642a2fb.js"
   ]
 }
