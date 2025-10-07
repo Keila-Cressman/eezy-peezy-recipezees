@@ -18,20 +18,20 @@ export function ExpandRecipeCard({
 
   return (
     <div className="w-full">
-      <div className="w-full h-full bg-gray-50">
+      <div className="w-full h-full bg-gray-50 divide-y-2 divide-blue-200">
         <div
           className={cn(
-            "flex justify-between items-center pb-5",
+            "flex items-center pb-5",
             isMobile && "pb-0"
           )}
         >
-          <p className={cn(isMobile && "invisible")}> {recipeSelectedName}</p>
+          <p className={cn("flex-auto text-6xl", isMobile && "invisible")}> {recipeSelectedName}</p>
           <button
             type="button"
             onClick={() => {
               onClose()
             }}
-            className="flex items-center"
+            className="flex items-center ml-auto"
           >
             <ReturnIcon
               className={cn("cursor-pointer h-10", isMobile && "p-1 pr-3 h-8")}
@@ -42,7 +42,7 @@ export function ExpandRecipeCard({
           {recipeSelectedName}
         </div>
 
-        <div className={cn("flex flex-row gap-10", isMobile && "block")}>
+        <div className={cn("flex flex-row gap-10 pt-5", isMobile && "block")}>
           <div className={cn("pb-10", isMobile && "pb-4")}>
             {recipes.map((recipe) => {
               if (
