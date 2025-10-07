@@ -12,7 +12,7 @@ export type expandedRecipeCardProps = {
 export function ExpandRecipeCard({
   recipeSelectedName,
   onClose,
-  className
+  className,
 }: expandedRecipeCardProps) {
   const isMobile = useMobileSize()
 
@@ -33,11 +33,8 @@ export function ExpandRecipeCard({
             }}
             className="flex items-center"
           >
-            <span className={cn("text-xs", isMobile && "hidden")}>
-              Return To List
-            </span>
             <ReturnIcon
-              className={cn("cursor-pointer h-7", isMobile && "p-1 pr-3 h-8")}
+              className={cn("cursor-pointer h-10", isMobile && "p-1 pr-3 h-8")}
             />
           </button>
         </div>
@@ -45,46 +42,55 @@ export function ExpandRecipeCard({
           {recipeSelectedName}
         </div>
 
-        <div className={cn("pb-10", isMobile && "pb-4")}>
-          {recipes.map((recipe) => {
-            if (
-              recipe &&
-              recipe.name === recipeSelectedName &&
-              recipe.ingredients
-            ) {
-              return (
-                <ul
-                  key={recipe.name}
-                  className={cn("text-left text-sm pl-4", isMobile && "p-1")}
-                >
-                  {recipe.ingredients.map((ingredient, index) => (
-                    <li key={index}>{ingredient}</li>
-                  ))}
-                </ul>
-              )
-            }
-            return null
-          })}
-        </div>
+        <div className={cn("flex flex-row gap-10", isMobile && "block")}>
+          <div className={cn("pb-10", isMobile && "pb-4")}>
+            {recipes.map((recipe) => {
+              if (
+                recipe &&
+                recipe.name === recipeSelectedName &&
+                recipe.ingredients
+              ) {
+                return (
+                  <ul
+                    key={recipe.name}
+                    className={cn("text-left text-sm pl-4", isMobile && "p-1")}
+                  >
+                    {recipe.ingredients.map((ingredient, index) => (
+                      <li key={index}>{ingredient}</li>
+                    ))}
+                  </ul>
+                )
+              }
+              return null
+            })}
+          </div>
 
-        <div>
-          {recipes.map((recipe) => {
-            if (recipe && recipe.name === recipeSelectedName && recipe.steps) {
-              return (
-                <ul
-                  key={recipe.name}
-                  className={cn("text-left text-base pl-4", isMobile && "p-1")}
-                >
-                  {recipe.steps.map((step, index) => (
-                    <li key={index}>
-                      {index + 1}. {step}
-                    </li>
-                  ))}
-                </ul>
-              )
-            }
-            return null
-          })}
+          <div>
+            {recipes.map((recipe) => {
+              if (
+                recipe &&
+                recipe.name === recipeSelectedName &&
+                recipe.steps
+              ) {
+                return (
+                  <ul
+                    key={recipe.name}
+                    className={cn(
+                      "text-left text-base pl-4",
+                      isMobile && "p-1"
+                    )}
+                  >
+                    {recipe.steps.map((step, index) => (
+                      <li key={index}>
+                        {index + 1}. {step}
+                      </li>
+                    ))}
+                  </ul>
+                )
+              }
+              return null
+            })}
+          </div>
         </div>
       </div>
     </div>
