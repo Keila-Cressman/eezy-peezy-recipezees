@@ -12,32 +12,29 @@ export type expandedRecipeCardProps = {
 export function ExpandRecipeCard({
   recipeSelectedName,
   onClose,
-  className
+  className,
 }: expandedRecipeCardProps) {
   const isMobile = useMobileSize()
 
   return (
     <div className="w-full">
-      <div className="w-full h-full bg-gray-50">
+      <div className={cn("w-full h-full bg-gray-50" , !isMobile && "divide-y-2 divide-blue-200")}>
         <div
           className={cn(
-            "flex justify-between items-center pb-5",
-            isMobile && "pb-0"
+            "flex items-center pb-5",
+            isMobile && "pb-0 h-5"
           )}
         >
-          <p className={cn(isMobile && "invisible")}> {recipeSelectedName}</p>
+          <p className={cn("flex-auto text-6xl", isMobile && "invisible")}> {recipeSelectedName}</p>
           <button
             type="button"
             onClick={() => {
               onClose()
             }}
-            className="flex items-center"
+            className={cn("flex items-center ml-auto", isMobile && "-ml-8")}
           >
-            <span className={cn("text-xs", isMobile && "hidden")}>
-              Return To List
-            </span>
             <ReturnIcon
-              className={cn("cursor-pointer h-7", isMobile && "p-1 pr-3 h-8")}
+              className={cn("cursor-pointer h-10", isMobile && "p-1 h-8")}
             />
           </button>
         </div>
@@ -45,46 +42,55 @@ export function ExpandRecipeCard({
           {recipeSelectedName}
         </div>
 
-        <div className={cn("pb-10", isMobile && "pb-4")}>
-          {recipes.map((recipe) => {
-            if (
-              recipe &&
-              recipe.name === recipeSelectedName &&
-              recipe.ingredients
-            ) {
-              return (
-                <ul
-                  key={recipe.name}
-                  className={cn("text-left text-sm pl-4", isMobile && "p-1")}
-                >
-                  {recipe.ingredients.map((ingredient, index) => (
-                    <li key={index}>{ingredient}</li>
-                  ))}
-                </ul>
-              )
-            }
-            return null
-          })}
-        </div>
+        <div className={cn("flex flex-row gap-10 pt-5", isMobile && "block pt-0")}>
+          <div className={cn("pb-10", isMobile && "pb-4")}>
+            {recipes.map((recipe) => {
+              if (
+                recipe &&
+                recipe.name === recipeSelectedName &&
+                recipe.ingredients
+              ) {
+                return (
+                  <ul
+                    key={recipe.name}
+                    className={cn("text-left text-sm pl-4", isMobile && "p-1")}
+                  >
+                    {recipe.ingredients.map((ingredient, index) => (
+                      <li key={index}>{ingredient}</li>
+                    ))}
+                  </ul>
+                )
+              }
+              return null
+            })}
+          </div>
 
-        <div>
-          {recipes.map((recipe) => {
-            if (recipe && recipe.name === recipeSelectedName && recipe.steps) {
-              return (
-                <ul
-                  key={recipe.name}
-                  className={cn("text-left text-base pl-4", isMobile && "p-1")}
-                >
-                  {recipe.steps.map((step, index) => (
-                    <li key={index}>
-                      {index + 1}. {step}
-                    </li>
-                  ))}
-                </ul>
-              )
-            }
-            return null
-          })}
+          <div>
+            {recipes.map((recipe) => {
+              if (
+                recipe &&
+                recipe.name === recipeSelectedName &&
+                recipe.steps
+              ) {
+                return (
+                  <ul
+                    key={recipe.name}
+                    className={cn(
+                      "text-left text-base pl-4",
+                      isMobile && "p-1"
+                    )}
+                  >
+                    {recipe.steps.map((step, index) => (
+                      <li key={index}>
+                        {index + 1}. {step}
+                      </li>
+                    ))}
+                  </ul>
+                )
+              }
+              return null
+            })}
+          </div>
         </div>
       </div>
     </div>
