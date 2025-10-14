@@ -72,7 +72,7 @@ export function RandomDishSelector() {
           className={cn("flex flex-col justify-around", hideMain && "hidden")}
         >
           <div className={cn("text-2xl h-20", hidePageText && "hidden")}>
-            Click for a Main Dish:
+            Main Dish:
           </div>
 
           <div className="h-full flex justify-center">
@@ -107,9 +107,9 @@ export function RandomDishSelector() {
                 }}
               >
                 <div className="bg-blue-100 rounded-lg p-2">
-                  <div className="bg-blue-50 rounded-lg py-8 px-3">
+                  <div className="bg-blue-50 rounded-lg py-4 px-3">
                     {mainRecipeToLoop.length > 1
-                      ? "Next Main Dish"
+                      ? "Click for Next Main Dish"
                       : "Restart Main Dish"}
                   </div>
                 </div>
@@ -124,8 +124,8 @@ export function RandomDishSelector() {
             hideDessert && "hidden"
           )}
         >
-          <div className={cn("text-2xl", hidePageText && "hidden")}>
-            Click for a Dessert:
+          <div className={cn("text-2xl pt-4", hidePageText && "hidden")}>
+            Dessert:
           </div>
 
           <div className="h-full flex justify-center">
@@ -163,9 +163,9 @@ export function RandomDishSelector() {
                 }}
               >
                 <div className="bg-blue-100 rounded-lg p-2">
-                  <div className="bg-blue-50 rounded-lg py-8 px-3">
+                  <div className="bg-blue-50 rounded-lg py-4 px-3">
                     {dessertRecipeToLoop.length > 1
-                      ? "Next Dessert"
+                      ? "Click for Next Dessert"
                       : "Restart Dessert"}
                   </div>
                 </div>
