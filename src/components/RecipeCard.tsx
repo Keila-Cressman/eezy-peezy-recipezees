@@ -46,6 +46,7 @@ export default function RecipeCard({
       className={cn(
         className?.recipeCard,
         isMobile && "text-base font-semibold",
+        searchFor === "Random Dish Selector" && isMobile && "text-2xl font-semibold"
         
       )}
     >
