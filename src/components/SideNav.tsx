@@ -19,7 +19,7 @@ export function SideNav({ onClick }: SideNavProps) {
     <div
       className={cn(
         "flex flex-col text-base gap-2",
-        isMobile && "w-20 text-sm"
+        isMobile && "text-sm"
       )}
     >
       <NavButton
