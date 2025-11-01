@@ -1988,6 +1988,21 @@ export const recipes = [
       "1 tsp salt",
     ],
     steps: ["Set oven to 350F", "Mix all ingredients", "Bake 22-28 min"],
+  },  
+  {
+    name: "Adobo",
+    image: "no image found",
+    type: ["Sauce"],
+    ingredients: [
+      "3 tbsp salt",
+      "3 tbsp garlic",
+      "2 tsp black pepper",
+      "1 tsp oregano",
+      "1/2 tsp turmeric",
+    ],
+    steps: [
+      "Mix all and store in an old spice container",
+    ],
   },
   // {
   //   name: "",
