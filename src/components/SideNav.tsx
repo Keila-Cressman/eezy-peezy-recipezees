@@ -16,7 +16,12 @@ export function SideNav({ onClick }: SideNavProps) {
   }
 
   return (
-    <div className={cn("flex flex-col text-base gap-2", isMobile && "text-sm")}>
+    <div
+      className={cn(
+        "flex flex-col text-base gap-2 overflow-y-auto",
+        isMobile && "text-sm"
+      )}
+    >
       <NavButton
         title="View all"
         recipeType="View_all"
