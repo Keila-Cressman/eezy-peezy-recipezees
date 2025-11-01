@@ -52,6 +52,8 @@ export default function RecipeCard({
     >
       {searchFor !== "" && !openRecipeCard && searchFor && searchFor !== "Random Dish Selector" && (
         <div className="flex flex-1 flex-col gap-2">
+          {/* ToDo: use currRecipe to get the list of recipes under that 
+          category only for search bar */}
           {recipes
             .filter((recipe) =>
               lowerCase(recipe.name).includes(lowerCase(searchFor))

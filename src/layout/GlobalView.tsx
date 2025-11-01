@@ -23,7 +23,7 @@ export default function GlobalView() {
           <PageContents />
         </div>
       </div>
-      <div className="flex justify-center text-xs py-1">V. {pkg.version}</div>
+      <div className="flex justify-center text-xs py-1">Ver. {pkg.version}</div>
     </div>
   )
 }
