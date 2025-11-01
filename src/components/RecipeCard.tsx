@@ -1,16 +1,13 @@
 import { useEffect, useState } from "react"
 import { useMobileSize } from "../hooks/useMobileSize"
-import { useRecipes } from "../hooks/useRecipes"
 import { cn } from "../utils/cn"
 import { ExpandRecipeCard } from "./ExpandRecipeCard"
 import Gallery from "./Gallery"
 
-export type Recipe = [
-  {
-    image: string
-    name: string
-  }
-]
+export type Recipe = {
+  image: string
+  name: string
+}[]
 
 export type RecipeCardProps = {
   searchFor?: string
@@ -33,7 +30,6 @@ export default function RecipeCard({
   const lowerCase = (str: string): string => {
     return str.toLowerCase()
   }
-  const recipes = useRecipes()
 
   useEffect(() => {
     if (!closeRecipeCard) {
@@ -41,44 +37,55 @@ export default function RecipeCard({
     }
   }, [closeRecipeCard])
 
+  function searchBarInput(): Recipe {
+    if (searchFor && searchFor !== "") {
+      return currRecipe.filter((recipe) =>
+        lowerCase(recipe.name).includes(lowerCase(searchFor))
+      )
+    }
+    return currRecipe
+  }
+  
   return (
     <div
       className={cn(
         className?.recipeCard,
         isMobile && "text-base font-semibold",
-        searchFor === "Random Dish Selector" && isMobile && "text-2xl font-semibold"
-        
+        searchFor === "Random Dish Selector" &&
+          isMobile &&
+          "text-2xl font-semibold"
       )}
     >
-      {searchFor !== "" && !openRecipeCard && searchFor && searchFor !== "Random Dish Selector" && (
-        <div className="flex flex-1 flex-col gap-2">
-          {recipes
-            .filter((recipe) =>
-              lowerCase(recipe.name).includes(lowerCase(searchFor))
-            )
-            .map((recipe) => (
-              <button
-                key={recipe.name}
-                type="button"
-                onClick={() => {
-                  setOpenRecipeCard(!openRecipeCard)
-                  setSelectRecipe(recipe.name)
-                  if (recipeExpanded) {
-                    recipeExpanded(true)
-                  }
-                }}
-                className={cn("bg-blue-100 rounded-xl w-full p-2")}
+      {!openRecipeCard && searchFor !== "Random Dish Selector" && (
+        <div
+          className={cn(
+            "grid grid-cols-2 gap-2 w-full overflow-auto",
+            isMobile && "flex flex-1 flex-col gap-2"
+          )}
+        >
+          {searchBarInput().map((recipe) => (
+            <button
+              key={recipe.name}
+              type="button"
+              onClick={() => {
+                setOpenRecipeCard(!openRecipeCard)
+                setSelectRecipe(recipe.name)
+                if (recipeExpanded) {
+                  recipeExpanded(true)
+                }
+              }}
+              className={cn("bg-blue-100 rounded-xl w-full p-2")}
+            >
+              <div
+                className={cn(
+                  "flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden",
+                  isMobile && "pb-0"
+                )}
               >
-                <div
-                  className={cn(
-                    "flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden",
-                    isMobile && "pb-0"
-                  )}
-                >
-                  <span>{recipe.name}</span>
-                </div>
-              </button>
-            ))}
+                <span>{recipe.name}</span>
+              </div>
+            </button>
+          ))}
         </div>
       )}
 
@@ -97,43 +104,7 @@ export default function RecipeCard({
         </div>
       )}
 
-      {searchFor === "" && !openRecipeCard && (
-        <div
-          className={cn(
-            "grid grid-cols-2 gap-2 w-full overflow-auto",
-            isMobile && "flex flex-col"
-          )}
-        >
-          {currRecipe.map((recipe) => (
-            <button
-              type="button"
-              onClick={() => {
-                setOpenRecipeCard(!openRecipeCard)
-                setSelectRecipe(recipe.name)
-                if (recipeExpanded) {
-                  recipeExpanded(true)
-                }
-              }}
-              className=" bg-blue-100 rounded-xl w-full p-2"
-            >
-              <Gallery
-                recipeType={recipe.name}
-                className="rounded-xl h-36 my-4"
-              />
-              <div
-                className={cn(
-                  "flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden",
-                  isMobile && "pb-0"
-                )}
-              >
-                <span>{recipe.name.replaceAll("_", " ")}</span>
-              </div>
-            </button>
-          ))}
-        </div>
-      )}
-
-      {searchFor === "Random Dish Selector" && !openRecipeCard &&(
+      {searchFor === "Random Dish Selector" && !openRecipeCard && (
         <div className={cn(isMobile && "flex flex-col")}>
           {currRecipe.map((recipe) => (
             <button
