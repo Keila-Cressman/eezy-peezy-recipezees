@@ -1676,7 +1676,7 @@ export const recipes = [
     name: "Pancakes(10)",
     image: "../images/waffles_pancakes.jpg",
     type: ["Breakfast"],
-    ingredients: [      
+    ingredients: [
       "1 egg",
       "1 c hard white flour",
       "1/4 c oil",
@@ -1988,7 +1988,7 @@ export const recipes = [
       "1 tsp salt",
     ],
     steps: ["Set oven to 350F", "Mix all ingredients", "Bake 22-28 min"],
-  },  
+  },
   {
     name: "Adobo",
     image: "no image found",
@@ -2000,9 +2000,21 @@ export const recipes = [
       "1 tsp oregano",
       "1/2 tsp turmeric",
     ],
-    steps: [
-      "Mix all and store in an old spice container",
+    steps: ["Mix all and store in an old spice container"],
+  },
+  {
+    name: "Sazon",
+    image: "no image found",
+    type: ["Sauce"],
+    ingredients: [
+      "2 tbsp onion powder",
+      "2 tbsp garlic powder",
+      "2 tbsp salt",
+      "1 tsp cumin",
+      "2 1/2 tbsp Annatto/ achiote",
+      "2 tbsp coriander",
     ],
+    steps: ["Mix all and store in an old spice container"],
   },
   // {
   //   name: "",
