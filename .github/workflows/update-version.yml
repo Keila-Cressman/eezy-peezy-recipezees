@@ -24,15 +24,26 @@ jobs:
       - name: Compute daily counter and set VERSION (YYYY.MM.DD.NN)
         id: compute_version
         run: |
-          # Count previous workflow commits that set today's version and compute next index
+          # Compute next daily index by reading current package.json version (if any)
+          # This avoids counting commits and prevents accidental double increments.
           DATE="$DATE"
-          # Search commit bodies for the exact chore message we use when committing the version
-          COUNT=$(git --no-pager log --pretty=%B --all --grep="chore: set version to ${DATE}" | wc -l | tr -d ' ')
-          NEXT=$((COUNT + 1))
+          VERSION_CURRENT=""
+          if [ -f package.json ]; then
+            VERSION_CURRENT=$(node -e "try{const fs=require('fs');const pkg=JSON.parse(fs.readFileSync('package.json')); console.log(pkg.version||'');}catch(e){}")
+          fi
+          # If current version matches today's date, extract NN and increment by 1. Otherwise start at 01.
+          if echo "${VERSION_CURRENT}" | grep -q "^${DATE}\."; then
+            # Extract the fourth dot-separated field (NN), strip leading zeros
+            CUR_NN=$(echo "${VERSION_CURRENT}" | awk -F. '{print $4}' | sed 's/^0*//')
+            if [ -z "${CUR_NN}" ]; then CUR_NN=0; fi
+            NEXT=$((CUR_NN + 1))
+          else
+            NEXT=1
+          fi
           PAD=$(printf "%02d" "$NEXT")
           VERSION="${DATE}.${PAD}"
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
-          echo "Found ${COUNT} previous version commits for ${DATE}, next is ${PAD}"
+          echo "Current package.json version: ${VERSION_CURRENT}; next is ${VERSION}"
 
       - name: Ensure Node.js is available
         uses: actions/setup-node@v4
