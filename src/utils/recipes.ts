@@ -219,6 +219,7 @@ export const recipes = [
       "Chop hard ends of garlic",
       "Make 1 inch meatballs",
       "Add all to giant pot and simmer for 2 hours",
+      "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -262,6 +263,7 @@ export const recipes = [
       "Chop cauliflower, green pepper, onion, and garlic",
       "Cook pepper and onion until lightly browned",
       "Add all ingredients to pan and cook until shrimp is pink",
+      "* Save leftover veggies, minus cauliflower, in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -301,6 +303,7 @@ export const recipes = [
       "Form burger patties and cook/grill",
       "Stack it",
       "* burger temp: 185F",
+      "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -365,6 +368,7 @@ export const recipes = [
       "Cut chicken into strips and cook in pan",
       "Flatten each ball and cook for 2 minutes each side",
       "* Chicken temp: 165F",
+      "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -480,6 +484,7 @@ export const recipes = [
       "Add a good layer of salt all over steak",
       "Cook steak on cast iron skillet on stove top for 3 minutes",
       "Flip steak and bake for 4 minutes",
+      "* Save leftover veggies, minus cilantro, in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -645,6 +650,7 @@ export const recipes = [
       "Heat oil to 325F in a flat bottom pan",
       "Flatten masa ball and fry one side for 1 minute and the other for 50 sec",
       "Fold in half and set aside to cool",
+      "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
 
@@ -684,6 +690,7 @@ export const recipes = [
       "Chop tomatoes",
       "Add all to a bowl and mix",
       "Let sit for at least 15 minutes",
+      "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -701,6 +708,7 @@ export const recipes = [
       "Slice avocados and mash in a bowl",
       "Roll lime, slice in half and squeeze juice into bowl",
       "Chop red onion, tomato, and 1/2 bunch of cilanto and add to bowl",
+      "* Save leftover veggies, minus cilantro, in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -957,6 +965,7 @@ export const recipes = [
       "Once seafood is defrosted add rice, onion powder, garlic powder, oregano, 1/4 c water, 1 chopped tomato, and chopped jalepenos with seeds",
       "Cook for 20 minutes on low heat",
       "Garnish with 1 chopped tomato",
+      "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -1110,6 +1119,7 @@ export const recipes = [
       "Bring to boil",
       "Add 1 inch chopped potatoes, salt, and carrots",
       "Bring to boil and remove after 20 minutes",
+      "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -1122,7 +1132,8 @@ export const recipes = [
       "1 garlic bulb",
       "1 bunch cilantro",
     ],
-    steps: ["Chop and add all to blender"],
+    steps: ["Chop and add all to blender",
+      "* Save leftover veggies, minus cilantro, in a 1 gal freezer bag for future broth"],
   },
   {
     name: "Rostiaire Chicken",
@@ -1200,6 +1211,7 @@ export const recipes = [
       "Let bread cool while cooking sausage",
       "Chop all veggies",
       "Scoop out insides of bread",
+      "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -1223,6 +1235,7 @@ export const recipes = [
       "Add to large pot",
       "Add beans and bean water to pot",
       "Cook on low",
+      "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -1278,6 +1291,7 @@ export const recipes = [
       "Add to glass dish and flatten",
       "Mash potatoes and flatten on top of beef",
       "Bake for 30 minutes",
+      "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -1334,6 +1348,7 @@ export const recipes = [
       "Place shell side up on baking pan",
       "Bake for 30 minutes",
       "Once cooled, shred with fork",
+      "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -1375,6 +1390,7 @@ export const recipes = [
       "Create 1 inch balls",
       "Sear all sides in a large pan",
       "Make meatball recipe and add to sauce",
+      "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -1537,6 +1553,7 @@ export const recipes = [
       "Pour tomato sauce over cabbge rolls",
       "Bake for 30 minutes",
       "* Cabbage temp: 145F",
+      "* Save leftover veggies, minus cilantro, in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -1571,6 +1588,7 @@ export const recipes = [
       "Add the remaining spinash, tomato, and shallot to top of each chicken",
       "Bake for 30 minutes",
       "* Chicken temp: 165F",
+      "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -1631,6 +1649,7 @@ export const recipes = [
       "Remove core from tomatoes and blend",
       "Add all ingredients to pot and bring to boil",
       "Simmer for about an hour on med heat or your preferred sauce consistency",
+      "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -1727,6 +1746,7 @@ export const recipes = [
       "Add a layer of refried beans",
       "Add layer of room temp cream cheese",
       "Add chopped tomatoes, lettuce, and shredded cheese",
+      "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -1769,6 +1789,7 @@ export const recipes = [
       "Fry each side of the chicken for 3 minutes",
       "In a glass dish add chicken and 2 slices of mozerella cheese",
       "Bake for 10 minutes",
+      "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -1790,6 +1811,7 @@ export const recipes = [
       "Add to a pot and bring to boil",
       "Simmer for 30 minutes",
       "Store in mason jar",
+      "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -1953,6 +1975,7 @@ export const recipes = [
       "Create 1 inch balls",
       "Sear all sides in a large pan",
       "* Meatball temp: 145F",
+      "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
   {
@@ -1969,7 +1992,8 @@ export const recipes = [
       "Roll",
       "italian seasoning",
     ],
-    steps: [],
+    steps: [
+      "* Save all leftover veggies in a 1 gal freezer bag for future broth",],
   },
   {
     name: "Chocolate Chocolate Peanut Butter Chip Brownies",
