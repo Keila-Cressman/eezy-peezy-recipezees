@@ -2,10 +2,10 @@ import { useEffect, useState } from "react"
 import { useMobileSize } from "../hooks/useMobileSize"
 import { cn } from "../utils/cn"
 import { recipes } from "../utils/recipes"
-import { RandomDishSelector } from "./RandomDishSelector"
 import { Recipe } from "./RecipeCard"
 import { SideNav } from "./SideNav"
 import SummaryView from "./SummaryView"
+import { RandomDishSelector } from "./side-nav-bar/RandomDishSelector"
 
 export default function Home() {
   const fullRecipes = recipes as []

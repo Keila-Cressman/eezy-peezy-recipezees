@@ -1,8 +1,8 @@
 import { useState } from "react"
-import { useMobileSize } from "../hooks/useMobileSize"
-import { useRecipes } from "../hooks/useRecipes"
-import { cn } from "../utils/cn"
-import RecipeCard from "./RecipeCard"
+import { useMobileSize } from "../../hooks/useMobileSize"
+import { useRecipes } from "../../hooks/useRecipes"
+import { cn } from "../../utils/cn"
+import RecipeCard from "../RecipeCard"
 
 export function RandomDishSelector() {
   const fullRecipeList = useRecipes()
