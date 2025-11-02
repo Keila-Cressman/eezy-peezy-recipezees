@@ -3,9 +3,10 @@ import { useMobileSize } from "../hooks/useMobileSize"
 import { cn } from "../utils/cn"
 import { recipes } from "../utils/recipes"
 import { Recipe } from "./RecipeCard"
-import { SideNav } from "./SideNav"
+import { SideNav } from "./side-nav-bar/SideNav"
 import SummaryView from "./SummaryView"
 import { RandomDishSelector } from "./side-nav-bar/RandomDishSelector"
+import { FridayMeals } from "./side-nav-bar/FridayMeals"
 
 export default function Home() {
   const fullRecipes = recipes as []
@@ -48,7 +49,8 @@ export default function Home() {
       <div className="border-blue-200 border flex" />
 
       {currRecipe.length === 0 ? (
-        <RandomDishSelector />
+        // <RandomDishSelector />
+        <FridayMeals/>
       ) : (
         <SummaryView currRecipe={currRecipe as Recipe} />
       )}
