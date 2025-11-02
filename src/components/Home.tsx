@@ -26,10 +26,10 @@ export default function Home() {
       return
     }
 
-    const inRecipe = recipes.filter((recipe) =>
+    const getRecipeByType = recipes.filter((recipe) =>
       recipe.type.includes(recipeType)
     ) as []
-    setCurrRecipe(inRecipe)
+    setCurrRecipe(getRecipeByType)
   }
 
   return (
