@@ -5,7 +5,7 @@ import { recipes } from "../utils/recipes"
 import { Recipe } from "./RecipeCard"
 import { SideNav } from "./side-nav-bar/SideNav"
 import SummaryView from "./SummaryView"
-import { RandomDishSelector } from "./side-nav-bar/RandomDishSelector"
+// import { RandomDishSelector } from "./side-nav-bar/RandomDishSelector"
 import { FridayMeals } from "./side-nav-bar/FridayMeals"
 
 export default function Home() {
@@ -50,7 +50,7 @@ export default function Home() {
 
       {currRecipe.length === 0 ? (
         // <RandomDishSelector />
-        <FridayMeals/>
+        <FridayMeals />
       ) : (
         <SummaryView currRecipe={currRecipe as Recipe} />
       )}
