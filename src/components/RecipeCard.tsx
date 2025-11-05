@@ -134,6 +134,37 @@ export default function RecipeCard({
           ))}
         </div>
       )}
+
+      {searchFor === "Friday Meals" && !openRecipeCard && (
+        <div className={cn(isMobile && "flex flex-col")}>
+          {currRecipe.map((recipe) => (
+            <button
+              type="button"
+              onClick={() => {
+                setOpenRecipeCard(!openRecipeCard)
+                setSelectRecipe(recipe.name)
+                if (recipeExpanded) {
+                  recipeExpanded(true)
+                }
+              }}
+              className=" bg-blue-100 rounded-xl w-full p-2"
+            >
+              <Gallery
+                recipeType={recipe.name}
+                className="rounded-xl h-36 my-4"
+              />
+              <div
+                className={cn(
+                  "flex pb-2 justify-center bg-blue-50 rounded-lg overflow-hidden",
+                  isMobile && "pb-0"
+                )}
+              >
+                <span>{recipe.name.replaceAll("_", " ")}</span>
+              </div>
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   )
 }
