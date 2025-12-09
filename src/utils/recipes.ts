@@ -2264,6 +2264,26 @@ export const recipes = [
       "* Store in fridge for 5 days",
     ],
   },
+  {
+    name: "Homemade Butter",
+    image: "no image found",
+    type: ["Sauce"],
+    ingredients: [
+      "1 pt heavy whipping cream",
+      "1/2 tbsp salt",
+      "1/2 c avocado oil",
+    ],
+    steps: [
+      "Bring cream to room temp ( best to speed up process)",
+      "Add cream to stand mixer",
+      "Blend on high until butter separates from buttermilk",
+      "Squeeze butter to form a ball",
+      "Store buttermilk for other recipes",
+      "Place butter back in stand mixer bowl and add salt",
+      "Blend and slowly add avocado oil",
+      "Pour into container and use right away or store in fridge",
+    ],
+  },
   // {
   //   name: "",
   //   image: "no image found",
