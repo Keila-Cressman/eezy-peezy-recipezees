@@ -2326,6 +2326,27 @@ export const recipes = [
       "Mix in garlic, butter, milk, and salt to potatoes",
     ],
   },
+  {
+    name: "Cornbread",
+    image: "no image found",
+    type: ["Holiday_Thanksgiving"],
+    ingredients: ["1 box Fleischmann's Simply Homemade Corn Bread"],
+    steps: ["Follow instructions on box"],
+  },
+  {
+    name: "Fresh Corn",
+    image: "no image found",
+    type: ["Holiday_Thanksgiving"],
+    ingredients: ["3 ears of corn"],
+    steps: ["Husk and grill"],
+  },
+  {
+    name: "Propane Tank",
+    image: "no image found",
+    type: ["Holiday_Thanksgiving"],
+    ingredients: ["1 propane tank"],
+    steps: ["Check if it needs to be refilled"],
+  },
   // {
   //   name: "",
   //   image: "no image found",
