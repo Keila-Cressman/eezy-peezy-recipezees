@@ -2152,6 +2152,20 @@ export const recipes = [
       "Fry each side for 2 minutes while splashing oil on top of disc to create bubbles and even cooking",
     ],
   },
+  {
+    name: "Coquito",
+    image: "no image found",
+    type: ["Drink"],
+    ingredients: [
+      "1 condensed milk",
+      "1 evaporated milk",
+      "2 cream of coconut",
+      "2 cups Bacardi rum",
+      "1 tbsp Cinnamon",
+      "1 tbsp Vanilla",
+    ],
+    steps: ["Mix all in a blender"],
+  },
   // {
   //   name: "",
   //   image: "no image found",
