@@ -1811,7 +1811,7 @@ export const recipes = [
     steps: [
       "Blend all",
       "Add to a pot and bring to boil",
-      "Simmer for 30 minutes",
+      "Simmer for 1 hr/ until sauce is about 1/3 of original volume",
       "Store in mason jar",
       "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
@@ -2123,7 +2123,29 @@ export const recipes = [
     ],
     steps: [
       "Blend all until smooth",
-      "Put in fridge to thicken or drink right away"
+      "Put in fridge to thicken or drink right away",
+    ],
+  },
+  {
+    name: "Pastelillos",
+    image: "no image found",
+    type: ["Main"],
+    ingredients: [
+      "1 lb ground beef",
+      "Goya 10 pack orange disc",
+      "2 tsp adobo",
+      "2 packets sazon",
+      "Cheese slices",
+      "2 c olive oil",
+    ],
+    steps: [
+      "Cook ground beef and drain oil",
+      "Add sazon and adobo to ground beef",
+      "Add beef mixture and half a slice of cheese to center of disc",
+      "Fold disc over in half and use fork prongs to seal disc edges by pressing down",
+      "Heat pan and fill with oil",
+      "Add disc to pan",
+      "Fry each side for 2 minutes while splashing oil on top of disc to create bubbles and even cooking",
     ],
   },
   // {
