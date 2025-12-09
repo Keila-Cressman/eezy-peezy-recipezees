@@ -2066,6 +2066,23 @@ export const recipes = [
       "Bake for 25 min",
     ],
   },
+  {
+    name: "Buffalo Chicken Dip",
+    image: "no image found",
+    type: ["Side"],
+    ingredients: [
+      "1 cans of shredded chicken",
+      "8 oz cheddar cheese",
+      "1/4 c hot suace",
+      "8 oz cream cheese",
+      "1/8 c olive oil"
+    ],
+    steps: [
+      "Add olive oil to heated pan",
+      "Add canned chicken and stir until slitly browned",
+      "Add hot sauce, cream cheese, and shredded cheese",
+    ],
+  },
   // {
   //   name: "",
   //   image: "no image found",
