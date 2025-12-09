@@ -2111,6 +2111,21 @@ export const recipes = [
       "Once all sticks are coated add to oil and fry for 90 sec/golden brown",
     ],
   },
+  {
+    name: "Protein Packed Chocolate Pudding",
+    image: "no image found",
+    type: ["Sauce"],
+    ingredients: [
+      "4 boiled eggs",
+      "3 tbsp cacao powder",
+      "1/2 c milk",
+      "1/4 c honey",
+    ],
+    steps: [
+      "Blend all until smooth",
+      "Put in fridge to thicken or drink right away"
+    ],
+  },
   // {
   //   name: "",
   //   image: "no image found",
