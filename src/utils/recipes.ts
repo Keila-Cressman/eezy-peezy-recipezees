@@ -2166,6 +2166,24 @@ export const recipes = [
     ],
     steps: ["Mix all in a blender"],
   },
+  {
+    name: "Deep Fried Turkey",
+    image: "no image found",
+    type: ["Holiday_Thanksgiving"],
+    ingredients: [
+      "~20 lbs whole turkey",
+      "3 gal peanut oil",
+      "1 gal vegetable oil",
+    ],
+    steps: [
+      "Put turkey in a bag in fridge 10 days before cooking",
+      "Add turkey to giant pot and fill with water",
+      "Take note of how much water was needed to then add the amount of oil",
+      "Remove turkey from water and pat dry",
+      "Heat oil to 400F in a large pot",
+      "Fry turkey at 3 min per pound at 350F",
+    ],
+  },
   // {
   //   name: "",
   //   image: "no image found",
