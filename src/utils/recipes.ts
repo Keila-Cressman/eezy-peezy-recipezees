@@ -669,13 +669,6 @@ export const recipes = [
     ],
   },
   {
-    name: "Thanksgiving Items",
-    image: "../images/cherry_pie.jpg",
-    type: ["Misc", "Holiday_Thanksgiving"],
-    ingredients: ["Brown paper bags", "Aluminum pan"],
-    steps: [],
-  },
-  {
     name: "Garlic Aioli",
     image: "../images/chicken_garlic_aioli_tacos.jpg",
     type: ["Sauce"],
