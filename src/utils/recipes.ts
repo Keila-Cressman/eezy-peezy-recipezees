@@ -1210,13 +1210,13 @@ export const recipes = [
     ],
   },
   {
-    name: "Shawns Chili",
+    name: "Shawn Chili (CI/CD)",
     image: "../images/shawns_chili.jpg",
     type: ["Main", "Friday_Favorites"],
     ingredients: [
       "2 lbs ground beef",
       "6 tomatoes chopped",
-      "16 oz red kidney beans(black beans recipe)",
+      "16 oz red kidney beans",
       "2 corn",
       "2 garlic bulbs",
       "shredded cheese",
@@ -1227,8 +1227,7 @@ export const recipes = [
     ],
     steps: [
       "Chop all veggies",
-      "Add to large pot",
-      "Add beans and bean water to pot",
+      "Add all to crock pot",
       "Cook on low",
       "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
