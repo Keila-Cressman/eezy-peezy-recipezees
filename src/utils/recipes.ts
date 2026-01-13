@@ -2340,6 +2340,23 @@ export const recipes = [
     ingredients: ["1 propane tank"],
     steps: ["Check if it needs to be refilled"],
   },
+  {
+    name: "Shawn Chicken Soup (CI/CD)",
+    image: "no image found",
+    type: ["Main"],
+    ingredients: [
+      "1 whole chicken",
+      "1 onion",
+      "6 tomatoes",
+      "Carrots",
+      "Potatoes",
+      "Mushrooms",
+      "Garlic",
+      "Celery"
+    ],
+    steps: [
+    ],
+  },
   // {
   //   name: "",
   //   image: "no image found",
