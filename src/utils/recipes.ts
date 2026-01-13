@@ -1983,7 +1983,7 @@ export const recipes = [
     ],
   },
   {
-    name: "Cheese Steak",
+    name: "Cheese Steak (CI/CD)",
     image: "no image found",
     type: ["Main"],
     ingredients: [
@@ -1993,10 +1993,16 @@ export const recipes = [
       "Lettuce",
       "1 tomato",
       "1 red onion",
-      "Roll",
+      "Sandwich Roll",
       "italian seasoning",
     ],
     steps: [
+      "Set oven to 350F",
+      "Chop all veggies and set aside",
+      "Cook steak and mix in italian seasoning",
+      "Add mayo to both sides of roll",
+      "Add cheese, then steak, then cheese, lastly add veggies",
+      "Bake for 10 min",
       "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
