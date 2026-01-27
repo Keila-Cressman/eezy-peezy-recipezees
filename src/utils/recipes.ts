@@ -1827,7 +1827,7 @@ export const recipes = [
       "1/2 tsp salt",
       "1 c milk",
       "1 tsp vanilla",
-      "6 c or 18 oz oats",
+      "6 c or 18 oz regular oats - not steel cut or quick oats",
       "2 1/2 c peanut or 28oz jar",
     ],
     steps: [
