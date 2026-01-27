@@ -17,9 +17,9 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set DATE (UTC YYYY.MM.DD)
+      - name: Set DATE (Arizona Time YYYY.MM.DD)
         id: set_date
-        run: echo "DATE=$(date -u +%Y.%m.%d)" >> $GITHUB_ENV
+        run: echo "DATE=$(TZ='America/Phoenix' date +%Y.%m.%d)" >> $GITHUB_ENV
 
       - name: Compute daily counter and set VERSION (YYYY.MM.DD.NN)
         id: compute_version
