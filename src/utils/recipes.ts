@@ -1230,7 +1230,7 @@ export const recipes = [
     steps: [
       "Chop all veggies",
       "Add all to crock pot",
-      "Cook on low",
+      "Cook on low for 8 hrs or high for 6 hrs",
       "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
