@@ -2454,4 +2454,4 @@ export const recipes = [
   //   steps: [
   //   ],
   // },
-]
+];

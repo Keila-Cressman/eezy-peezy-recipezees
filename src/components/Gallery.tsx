@@ -1,71 +1,71 @@
-import avocado_lime from "../images/avocado_lime.jpg"
-import bagels from "../images/bagels.jpg"
-import beef_bone_in_chuck_roast from "../images/beef_bone_in_chuck_roast.jpg"
-import beef_sirloin_tip_roast from "../images/beef_sirloin_tip_roast.jpg"
-import bone_broth from "../images/bone_broth.jpg"
-import boneless_ribs from "../images/boneless_ribs.jpg"
-import bread_loaf from "../images/bread_loaf.jpg"
-import cabbage_and_meatball from "../images/cabbage_and_meatball.jpg"
-import carrot_cake from "../images/carrot_cake.jpg"
-import cauliflower_shrimp from "../images/cauliflower_shrimp.jpg"
-import cheese_burgers from "../images/cheese_burgers.jpg"
-import cherry_pie from "../images/cherry_pie.jpg"
-import chicken_garlic_aioli_tacos from "../images/chicken_garlic_aioli_tacos.jpg"
-import chicken_nugs_and_french_fries from "../images/chicken_nugs_and_french_fries.jpg"
-import chicken_pot_pie from "../images/chicken_pot_pie.jpg"
-import chipotle from "../images/chipotle.jpg"
-import chocolate_candy from "../images/chocolate_candy.jpg"
-import chocolate_cookies from "../images/chocolate_cookies.jpg"
-import chocolate_rice_krispies from "../images/chocolate_rice_krispies.jpg"
-import chuletas_and_tostones from "../images/chuletas_and_tostones.jpg"
-import dippy_eggs from "../images/dippy_eggs.jpg"
-import dutch_oven_beef_stew from "../images/dutch_oven_beef_stew.jpg"
-import english_muffins from "../images/english_muffins.jpg"
-import fathers_day_special from "../images/fathers_day_special.jpg"
-import flour_tortilla from "../images/flour_tortilla.jpg"
-import french_toast from "../images/french_toast.jpg"
-import grape_jelly from "../images/grape_jelly.jpg"
-import kabobs from "../images/kabobs.jpg"
-import lemon_chicken_mushroom from "../images/lemon_chicken_mushroom.jpg"
-import lotion from "../images/lotion.jpg"
-import mac_and_cheese_cicd from "../images/mac_and_cheese_cicd.jpg"
-import mofongo from "../images/mofongo.jpg"
-import paella from "../images/paella.jpg"
-import peanut_butter_oats from "../images/peanut_butter_oats.jpg"
-import pernil from "../images/pernil.jpg"
-import pie_crust from "../images/pie_crust.jpg"
-import pizza_crust from "../images/pizza_crust.jpg"
-import garlic_tostones from "../images/garlic_tostones.jpg"
-import pollo_guisado from "../images/pollo_guisado.jpg"
-import rostiaire_chicken from "../images/rostiaire_chicken.jpg"
-import salmon from "../images/salmon.jpg"
-import sausage_boats from "../images/sausage_boats.jpg"
-import shawns_chili from "../images/shawns_chili.jpg"
-import shawns_lemonade from "../images/shawns_lemonade.jpg"
-import shawns_tea from "../images/shawns_tea.jpg"
-import shepherds_pie from "../images/shepherds_pie.jpg"
-import shoulder_roast from "../images/shoulder_roast.jpg"
-import spaghetti_and_meatballs from "../images/spaghetti_and_meatballs.jpg"
-import spaghetti from "../images/spaghetti.jpg"
-import spanish_rice from "../images/spanish_rice.jpg"
-import steak_potato from "../images/steak_potato.jpg"
-import stove_cleaner from "../images/stove_cleaner.jpg"
-import strawberry_jam from "../images/strawberry_jam.jpg"
-import stuffed_cabbage from "../images/stuffed_cabbage.jpg"
-import stuffed_chicken from "../images/stuffed_chicken.jpg"
-import sushi from "../images/sushi.jpg"
-import sweet_potato_casserole from "../images/sweet_potato_casserole.jpg"
-import thanksgiving_utensils from "../images/thanksgiving_utensils.jpg"
-import tomato_sauce from "../images/tomato_sauce.jpg"
-import top_round from "../images/top_round.jpg"
-import tortilla_chips from "../images/tortilla_chips.jpg"
-import waffles_pancakes from "../images/waffles_pancakes.jpg"
-import zuchini_bread from "../images/zuchini_bread.jpg"
+import avocado_lime from "../images/avocado_lime.jpg";
+import bagels from "../images/bagels.jpg";
+import beef_bone_in_chuck_roast from "../images/beef_bone_in_chuck_roast.jpg";
+import beef_sirloin_tip_roast from "../images/beef_sirloin_tip_roast.jpg";
+import bone_broth from "../images/bone_broth.jpg";
+import boneless_ribs from "../images/boneless_ribs.jpg";
+import bread_loaf from "../images/bread_loaf.jpg";
+import cabbage_and_meatball from "../images/cabbage_and_meatball.jpg";
+import carrot_cake from "../images/carrot_cake.jpg";
+import cauliflower_shrimp from "../images/cauliflower_shrimp.jpg";
+import cheese_burgers from "../images/cheese_burgers.jpg";
+import cherry_pie from "../images/cherry_pie.jpg";
+import chicken_garlic_aioli_tacos from "../images/chicken_garlic_aioli_tacos.jpg";
+import chicken_nugs_and_french_fries from "../images/chicken_nugs_and_french_fries.jpg";
+import chicken_pot_pie from "../images/chicken_pot_pie.jpg";
+import chipotle from "../images/chipotle.jpg";
+import chocolate_candy from "../images/chocolate_candy.jpg";
+import chocolate_cookies from "../images/chocolate_cookies.jpg";
+import chocolate_rice_krispies from "../images/chocolate_rice_krispies.jpg";
+import chuletas_and_tostones from "../images/chuletas_and_tostones.jpg";
+import dippy_eggs from "../images/dippy_eggs.jpg";
+import dutch_oven_beef_stew from "../images/dutch_oven_beef_stew.jpg";
+import english_muffins from "../images/english_muffins.jpg";
+import fathers_day_special from "../images/fathers_day_special.jpg";
+import flour_tortilla from "../images/flour_tortilla.jpg";
+import french_toast from "../images/french_toast.jpg";
+import grape_jelly from "../images/grape_jelly.jpg";
+import kabobs from "../images/kabobs.jpg";
+import lemon_chicken_mushroom from "../images/lemon_chicken_mushroom.jpg";
+import lotion from "../images/lotion.jpg";
+import mac_and_cheese_cicd from "../images/mac_and_cheese_cicd.jpg";
+import mofongo from "../images/mofongo.jpg";
+import paella from "../images/paella.jpg";
+import peanut_butter_oats from "../images/peanut_butter_oats.jpg";
+import pernil from "../images/pernil.jpg";
+import pie_crust from "../images/pie_crust.jpg";
+import pizza_crust from "../images/pizza_crust.jpg";
+import garlic_tostones from "../images/garlic_tostones.jpg";
+import pollo_guisado from "../images/pollo_guisado.jpg";
+import rostiaire_chicken from "../images/rostiaire_chicken.jpg";
+import salmon from "../images/salmon.jpg";
+import sausage_boats from "../images/sausage_boats.jpg";
+import shawns_chili from "../images/shawns_chili.jpg";
+import shawns_lemonade from "../images/shawns_lemonade.jpg";
+import shawns_tea from "../images/shawns_tea.jpg";
+import shepherds_pie from "../images/shepherds_pie.jpg";
+import shoulder_roast from "../images/shoulder_roast.jpg";
+import spaghetti_and_meatballs from "../images/spaghetti_and_meatballs.jpg";
+import spaghetti from "../images/spaghetti.jpg";
+import spanish_rice from "../images/spanish_rice.jpg";
+import steak_potato from "../images/steak_potato.jpg";
+import stove_cleaner from "../images/stove_cleaner.jpg";
+import strawberry_jam from "../images/strawberry_jam.jpg";
+import stuffed_cabbage from "../images/stuffed_cabbage.jpg";
+import stuffed_chicken from "../images/stuffed_chicken.jpg";
+import sushi from "../images/sushi.jpg";
+import sweet_potato_casserole from "../images/sweet_potato_casserole.jpg";
+import thanksgiving_utensils from "../images/thanksgiving_utensils.jpg";
+import tomato_sauce from "../images/tomato_sauce.jpg";
+import top_round from "../images/top_round.jpg";
+import tortilla_chips from "../images/tortilla_chips.jpg";
+import waffles_pancakes from "../images/waffles_pancakes.jpg";
+import zuchini_bread from "../images/zuchini_bread.jpg";
 
 export type GalleryProps = {
-  recipeType: string
-  className?: string
-}
+  recipeType: string;
+  className?: string;
+};
 
 export default function Gallery({ recipeType, className }: GalleryProps) {
   const recipes = [
@@ -132,11 +132,11 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
     tortilla_chips,
     waffles_pancakes,
     zuchini_bread,
-  ]
+  ];
 
   const sameType = recipes.filter((recipe) =>
-    recipe.includes(recipeType)
-  ) as string[]
+    recipe.includes(recipeType),
+  ) as string[];
 
   return (
     <div>
@@ -161,5 +161,5 @@ export default function Gallery({ recipeType, className }: GalleryProps) {
         </div>
       )}
     </div>
-  )
+  );
 }

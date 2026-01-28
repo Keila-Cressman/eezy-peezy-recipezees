@@ -1,62 +1,62 @@
-import { useState } from "react"
-import { useMobileSize } from "../hooks/useMobileSize"
-import { useRecipes } from "../hooks/useRecipes"
-import { cn } from "../utils/cn"
-import RecipeCard from "./RecipeCard"
+import { useState } from "react";
+import { useMobileSize } from "../hooks/useMobileSize";
+import { useRecipes } from "../hooks/useRecipes";
+import { cn } from "../utils/cn";
+import RecipeCard from "./RecipeCard";
 
 export function RandomDishSelector() {
-  const fullRecipeList = useRecipes()
-  const isMobile = useMobileSize()
-  const [hidePageText, setHidePageText] = useState(false)
-  const [hideMain, setHideMain] = useState(false)
-  const [hideDessert, setHideDessert] = useState(false)
+  const fullRecipeList = useRecipes();
+  const isMobile = useMobileSize();
+  const [hidePageText, setHidePageText] = useState(false);
+  const [hideMain, setHideMain] = useState(false);
+  const [hideDessert, setHideDessert] = useState(false);
 
   const mainTypeRecipes = fullRecipeList.filter((recipe) =>
-    recipe.type.includes("Main")
-  )
+    recipe.type.includes("Main"),
+  );
   const dessertTypeRecipes = fullRecipeList.filter((recipe) =>
-    recipe.type.includes("Dessert")
-  )
+    recipe.type.includes("Dessert"),
+  );
 
-  const [mainRecipeToLoop, setMainRecipeToLoop] = useState(mainTypeRecipes)
+  const [mainRecipeToLoop, setMainRecipeToLoop] = useState(mainTypeRecipes);
   const [dessertRecipeToLoop, setDessertRecipeToLoop] =
-    useState(dessertTypeRecipes)
+    useState(dessertTypeRecipes);
 
   const [newMainRecipe, setNewMainRecipe] = useState(
-    mainTypeRecipes[Math.floor(Math.random() * mainTypeRecipes.length)]
-  )
+    mainTypeRecipes[Math.floor(Math.random() * mainTypeRecipes.length)],
+  );
   const [newDessertRecipe, setNewDessertRecipe] = useState(
-    dessertTypeRecipes[Math.floor(Math.random() * dessertTypeRecipes.length)]
-  )
+    dessertTypeRecipes[Math.floor(Math.random() * dessertTypeRecipes.length)],
+  );
 
   function getNewMainRecipe() {
     const newRecipe =
-      mainTypeRecipes[Math.floor(Math.random() * mainTypeRecipes.length)]
-    return setNewMainRecipe(newRecipe)
+      mainTypeRecipes[Math.floor(Math.random() * mainTypeRecipes.length)];
+    return setNewMainRecipe(newRecipe);
   }
   function getNewDessertRecipe() {
     const newRecipe =
-      dessertTypeRecipes[Math.floor(Math.random() * dessertTypeRecipes.length)]
-    return setNewDessertRecipe(newRecipe)
+      dessertTypeRecipes[Math.floor(Math.random() * dessertTypeRecipes.length)];
+    return setNewDessertRecipe(newRecipe);
   }
 
   function removeMainRecipe(recipeToRemove: string) {
     const removedRecipe = mainRecipeToLoop.filter(
-      (recipe) => recipe.name !== recipeToRemove
-    )
-    setMainRecipeToLoop(removedRecipe)
+      (recipe) => recipe.name !== recipeToRemove,
+    );
+    setMainRecipeToLoop(removedRecipe);
     return setNewMainRecipe(
-      removedRecipe[Math.floor(Math.random() * removedRecipe.length)]
-    )
+      removedRecipe[Math.floor(Math.random() * removedRecipe.length)],
+    );
   }
   function removeDessertRecipe(recipeToRemove: string) {
     const removedRecipe = dessertRecipeToLoop.filter(
-      (recipe) => recipe.name !== recipeToRemove
-    )
-    setDessertRecipeToLoop(removedRecipe)
+      (recipe) => recipe.name !== recipeToRemove,
+    );
+    setDessertRecipeToLoop(removedRecipe);
     return setNewDessertRecipe(
-      removedRecipe[Math.floor(Math.random() * removedRecipe.length)]
-    )
+      removedRecipe[Math.floor(Math.random() * removedRecipe.length)],
+    );
   }
 
   return (
@@ -65,7 +65,7 @@ export function RandomDishSelector() {
         className={cn(
           !isMobile && "grid grid-cols-2",
           isMobile && "grid grid-rows-2 divide-y-2 divide-blue-300",
-          hidePageText && "flex divide-y-0"
+          hidePageText && "flex divide-y-0",
         )}
       >
         <div
@@ -83,8 +83,8 @@ export function RandomDishSelector() {
                 ]}
                 searchFor="Random Dish Selector"
                 recipeExpanded={(open: boolean) => {
-                  setHidePageText(open)
-                  setHideDessert(open)
+                  setHidePageText(open);
+                  setHideDessert(open);
                 }}
               />
             </div>
@@ -98,11 +98,11 @@ export function RandomDishSelector() {
                 type="button"
                 onClick={() => {
                   if (newMainRecipe && mainRecipeToLoop.length > 1) {
-                    getNewMainRecipe()
-                    removeMainRecipe(newMainRecipe.name)
+                    getNewMainRecipe();
+                    removeMainRecipe(newMainRecipe.name);
                   } else {
-                    getNewMainRecipe()
-                    setMainRecipeToLoop(mainTypeRecipes)
+                    getNewMainRecipe();
+                    setMainRecipeToLoop(mainTypeRecipes);
                   }
                 }}
               >
@@ -121,7 +121,7 @@ export function RandomDishSelector() {
         <div
           className={cn(
             "flex flex-col justify-around",
-            hideDessert && "hidden"
+            hideDessert && "hidden",
           )}
         >
           <div className={cn("text-2xl pt-4", hidePageText && "hidden")}>
@@ -139,8 +139,8 @@ export function RandomDishSelector() {
                 ]}
                 searchFor="Random Dish Selector"
                 recipeExpanded={(open: boolean) => {
-                  setHidePageText(open)
-                  setHideMain(open)
+                  setHidePageText(open);
+                  setHideMain(open);
                 }}
               />
             </div>
@@ -154,11 +154,11 @@ export function RandomDishSelector() {
                 type="button"
                 onClick={() => {
                   if (newDessertRecipe && dessertRecipeToLoop.length > 1) {
-                    getNewDessertRecipe()
-                    removeDessertRecipe(newDessertRecipe.name)
+                    getNewDessertRecipe();
+                    removeDessertRecipe(newDessertRecipe.name);
                   } else {
-                    getNewDessertRecipe()
-                    setDessertRecipeToLoop(dessertTypeRecipes)
+                    getNewDessertRecipe();
+                    setDessertRecipeToLoop(dessertTypeRecipes);
                   }
                 }}
               >
@@ -175,5 +175,5 @@ export function RandomDishSelector() {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,11 +1,11 @@
-import { cn } from "../utils/cn"
+import { cn } from "../utils/cn";
 
 export type NavButtonProps = {
-  title: string
-  recipeType: string
-  onClick: (recipeType: string) => void
-  className: string
-}
+  title: string;
+  recipeType: string;
+  onClick: (recipeType: string) => void;
+  className: string;
+};
 
 export default function NavButton({
   title,
@@ -18,10 +18,10 @@ export default function NavButton({
       type="button"
       className={cn(className)}
       onClick={() => {
-        onClick(recipeType)
+        onClick(recipeType);
       }}
     >
       {title}
     </button>
-  )
+  );
 }

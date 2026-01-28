@@ -1,25 +1,25 @@
-import { useState } from "react"
-import { useMobileSize } from "../hooks/useMobileSize"
-import { cn } from "../utils/cn"
-import NavButton from "./NavButton"
+import { useState } from "react";
+import { useMobileSize } from "../hooks/useMobileSize";
+import { cn } from "../utils/cn";
+import NavButton from "./NavButton";
 
 export type SideNavProps = {
-  onClick: (recipeType: string) => void
-}
+  onClick: (recipeType: string) => void;
+};
 
 export function SideNav({ onClick }: SideNavProps) {
-  const [selected, setSelected] = useState<string | null>(null)
-  const isMobile = useMobileSize()
+  const [selected, setSelected] = useState<string | null>(null);
+  const isMobile = useMobileSize();
   const handleClick = (recipeType: string) => {
-    setSelected(recipeType)
-    onClick(recipeType)
-  }
+    setSelected(recipeType);
+    onClick(recipeType);
+  };
 
   return (
     <div
       className={cn(
         "flex flex-col text-base gap-2 overflow-y-auto",
-        isMobile && "text-sm"
+        isMobile && "text-sm",
       )}
     >
       <NavButton
@@ -28,7 +28,7 @@ export function SideNav({ onClick }: SideNavProps) {
         onClick={() => handleClick("View_all")}
         className={cn(
           "rounded bg-blue-100 hover:bg-blue-300",
-          selected === "View_all" && "bg-blue-500 text-white"
+          selected === "View_all" && "bg-blue-500 text-white",
         )}
       />
       <NavButton
@@ -37,7 +37,7 @@ export function SideNav({ onClick }: SideNavProps) {
         onClick={() => handleClick("Friday_Favorites")}
         className={cn(
           "rounded bg-blue-100 hover:bg-blue-300",
-          selected === "Friday_Favorites" && "bg-blue-500 text-white"
+          selected === "Friday_Favorites" && "bg-blue-500 text-white",
         )}
       />
       <NavButton
@@ -46,7 +46,7 @@ export function SideNav({ onClick }: SideNavProps) {
         onClick={() => handleClick("Breakfast")}
         className={cn(
           "rounded bg-blue-100 hover:bg-blue-300",
-          selected === "Breakfast" && "bg-blue-500 text-white"
+          selected === "Breakfast" && "bg-blue-500 text-white",
         )}
       />
       <NavButton
@@ -55,7 +55,7 @@ export function SideNav({ onClick }: SideNavProps) {
         onClick={() => handleClick("Side")}
         className={cn(
           "rounded bg-blue-100 hover:bg-blue-300",
-          selected === "Side" && "bg-blue-500 text-white"
+          selected === "Side" && "bg-blue-500 text-white",
         )}
       />
       <NavButton
@@ -64,7 +64,7 @@ export function SideNav({ onClick }: SideNavProps) {
         onClick={() => handleClick("Main")}
         className={cn(
           "rounded bg-blue-100 hover:bg-blue-300",
-          selected === "Main" && "bg-blue-500 text-white"
+          selected === "Main" && "bg-blue-500 text-white",
         )}
       />
       <NavButton
@@ -73,7 +73,7 @@ export function SideNav({ onClick }: SideNavProps) {
         onClick={() => handleClick("Drink")}
         className={cn(
           "rounded bg-blue-100 hover:bg-blue-300",
-          selected === "Drink" && "bg-blue-500 text-white"
+          selected === "Drink" && "bg-blue-500 text-white",
         )}
       />
       <NavButton
@@ -82,7 +82,7 @@ export function SideNav({ onClick }: SideNavProps) {
         onClick={() => handleClick("Dessert")}
         className={cn(
           "rounded bg-blue-100 hover:bg-blue-300",
-          selected === "Dessert" && "bg-blue-500 text-white"
+          selected === "Dessert" && "bg-blue-500 text-white",
         )}
       />
       <NavButton
@@ -91,7 +91,7 @@ export function SideNav({ onClick }: SideNavProps) {
         onClick={() => handleClick("Holiday_Thanksgiving")}
         className={cn(
           "rounded bg-blue-100 hover:bg-blue-300",
-          selected === "Holiday_Thanksgiving" && "bg-blue-500 text-white"
+          selected === "Holiday_Thanksgiving" && "bg-blue-500 text-white",
         )}
       />
       <NavButton
@@ -100,7 +100,7 @@ export function SideNav({ onClick }: SideNavProps) {
         onClick={() => handleClick("Holiday_Christmas")}
         className={cn(
           "rounded bg-blue-100 hover:bg-blue-300",
-          selected === "Holiday_Christmas" && "bg-blue-500 text-white"
+          selected === "Holiday_Christmas" && "bg-blue-500 text-white",
         )}
       />
       <NavButton
@@ -109,7 +109,7 @@ export function SideNav({ onClick }: SideNavProps) {
         onClick={() => handleClick("Bakery")}
         className={cn(
           "rounded bg-blue-100 hover:bg-blue-300",
-          selected === "Bakery" && "bg-blue-500 text-white"
+          selected === "Bakery" && "bg-blue-500 text-white",
         )}
       />
       <NavButton
@@ -118,7 +118,7 @@ export function SideNav({ onClick }: SideNavProps) {
         onClick={() => handleClick("Jam")}
         className={cn(
           "rounded bg-blue-100 hover:bg-blue-300",
-          selected === "Jam" && "bg-blue-500 text-white"
+          selected === "Jam" && "bg-blue-500 text-white",
         )}
       />
       <NavButton
@@ -127,7 +127,7 @@ export function SideNav({ onClick }: SideNavProps) {
         onClick={() => handleClick("Sauce")}
         className={cn(
           "rounded bg-blue-100 hover:bg-blue-300",
-          selected === "Sauce" && "bg-blue-500 text-white"
+          selected === "Sauce" && "bg-blue-500 text-white",
         )}
       />
       <NavButton
@@ -136,7 +136,7 @@ export function SideNav({ onClick }: SideNavProps) {
         onClick={() => handleClick("Misc")}
         className={cn(
           "rounded bg-blue-100 hover:bg-blue-300",
-          selected === "Misc" && "bg-blue-500 text-white"
+          selected === "Misc" && "bg-blue-500 text-white",
         )}
       />
       <NavButton
@@ -145,9 +145,9 @@ export function SideNav({ onClick }: SideNavProps) {
         onClick={() => handleClick("Random Dish Selector")}
         className={cn(
           "rounded bg-blue-100 hover:bg-blue-300",
-          selected === "Random Dish Selector" && "bg-blue-500 text-white"
+          selected === "Random Dish Selector" && "bg-blue-500 text-white",
         )}
       />
     </div>
-  )
+  );
 }

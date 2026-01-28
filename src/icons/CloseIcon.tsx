@@ -1,6 +1,6 @@
 export type CloseIconProps = {
-  className?: string
-}
+  className?: string;
+};
 
 export function CloseIcon({ className }: CloseIconProps) {
   return (
@@ -12,5 +12,5 @@ export function CloseIcon({ className }: CloseIconProps) {
     >
       <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
     </svg>
-  )
+  );
 }

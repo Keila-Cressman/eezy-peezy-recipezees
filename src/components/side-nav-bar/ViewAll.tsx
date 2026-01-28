@@ -1,23 +1,23 @@
-import { recipes } from "../../utils/recipes"
+import { recipes } from "../../utils/recipes";
 
 export type ViewAllProps = {
-  searchFor: string
-}
+  searchFor: string;
+};
 
 export function ViewAll({ searchFor }: ViewAllProps) {
   const lowerCase = (str: string): string => {
-    return str.toLowerCase()
-  }
+    return str.toLowerCase();
+  };
   return (
     <>
       <div>
         {recipes.map((recipe) => {
           if (lowerCase(recipe.name).includes(lowerCase(searchFor))) {
-            return recipe.name
+            return recipe.name;
           }
-          return null
+          return null;
         })}
       </div>
     </>
-  )
+  );
 }

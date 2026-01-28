@@ -1,4 +1,4 @@
-import Home from "../components/Home"
+import Home from "../components/Home";
 
 export default function PageContents() {
   return (
@@ -7,5 +7,5 @@ export default function PageContents() {
         <Home />
       </div>
     </div>
-  )
+  );
 }
