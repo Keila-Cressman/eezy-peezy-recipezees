@@ -2444,6 +2444,20 @@ export const recipes = [
       "Bake for 15 min",
     ],
   },
+  {
+    name: "Felicity's Basic Ginger Shots(4)",
+    image: "no image found",
+    type: ["Drink"],
+    ingredients: [
+      "1/2 c or 2 inches of fresh ginger root",
+      "2 inches of turmeric root",
+      "1/2 c lemon juice or 4 lemons",
+      "1/2 c water",
+      "2 tbsp honey",
+      "pinch of cayenne pepper",
+    ],
+    steps: [],
+  },
   // {
   //   name: "",
   //   image: "no image found",
