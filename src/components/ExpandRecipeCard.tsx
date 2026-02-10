@@ -1,21 +1,21 @@
-import { useMobileSize } from "../hooks/useMobileSize";
-import { ReturnIcon } from "../icons/ReturnIcon";
-import { cn } from "../utils/cn";
-import { recipes } from "../utils/recipes";
-import { ServingSize } from "./ServingSize";
+import { useMobileSize } from "../hooks/useMobileSize"
+import { ReturnIcon } from "../icons/ReturnIcon"
+import { cn } from "../utils/cn"
+import { recipes } from "../utils/recipes"
+import { ServingSize } from "./ServingSize"
 
 export type expandedRecipeCardProps = {
-  recipeSelectedName: string;
-  onClose: () => void;
-  className?: string;
-};
+  recipeSelectedName: string
+  onClose: () => void
+  className?: string
+}
 
 export function ExpandRecipeCard({
   recipeSelectedName,
   onClose,
   className,
 }: expandedRecipeCardProps) {
-  const isMobile = useMobileSize();
+  const isMobile = useMobileSize()
 
   return (
     <div className="w-full">
@@ -37,7 +37,7 @@ export function ExpandRecipeCard({
           <button
             type="button"
             onClick={() => {
-              onClose();
+              onClose()
             }}
             className={cn("flex items-center ml-auto", isMobile && "-ml-8")}
           >
@@ -53,9 +53,8 @@ export function ExpandRecipeCard({
         <div
           className={cn("flex flex-row gap-10 pt-5", isMobile && "block pt-0")}
         >
-          {/* TOdo: fit into 1 column */}
           <div className="flex flex-col gap-4">
-            <ServingSize className={cn("h-12", isMobile && "pt-2")} />
+            <ServingSize className={cn("h-24", isMobile && "pt-2")} />
             <div className={cn("pb-10", isMobile && "pb-4")}>
               {recipes.map((recipe) => {
                 if (
@@ -75,9 +74,9 @@ export function ExpandRecipeCard({
                         <li key={index}>{ingredient}</li>
                       ))}
                     </ul>
-                  );
+                  )
                 }
-                return null;
+                return null
               })}
             </div>
           </div>
@@ -102,13 +101,13 @@ export function ExpandRecipeCard({
                       </li>
                     ))}
                   </ul>
-                );
+                )
               }
-              return null;
+              return null
             })}
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
