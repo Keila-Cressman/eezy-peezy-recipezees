@@ -1216,6 +1216,7 @@ export const recipes = [
       "Let bread cool while cooking sausage",
       "Chop all veggies",
       "Scoop out insides of bread",
+      "Fill bun, add mayo and 1/4 of the chopped veggies, sausage, and top it off with 1/4 of chopped veggies",
       "* Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
