@@ -2406,7 +2406,7 @@ export const recipes = [
     ],
   },
   {
-    name: "English Muffins (10)*",
+    name: "English Muffins* (10)",
     image: "no image found",
     type: ["Breakfast"],
     ingredients: [
