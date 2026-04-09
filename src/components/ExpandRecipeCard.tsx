@@ -15,6 +15,14 @@ export function ExpandRecipeCard({
   className,
 }: expandedRecipeCardProps) {
   const isMobile = useMobileSize()
+  const checkSubRecipeIngredients = (ingredient: string): string[] => {
+    const subRecipe = recipes.find((recipe) => recipe.name === ingredient)
+    return subRecipe?.ingredients ?? [ingredient]
+  }
+
+  const isSubRecipe = (ingredient: string): boolean => {
+    return recipes.some((recipe) => recipe.name === ingredient)
+  }
 
   return (
     <div className="w-full">
@@ -59,14 +67,19 @@ export function ExpandRecipeCard({
                 recipe.name === recipeSelectedName &&
                 recipe.ingredients
               ) {
+                // need to add a clicakble drop down
                 return (
                   <ul
                     key={recipe.name}
                     className={cn("text-left text-sm pl-4", isMobile && "p-1")}
                   >
-                    {recipe.ingredients.map((ingredient, index) => (
-                      <li key={index}>{ingredient}</li>
-                    ))}
+                    {recipe.ingredients.flatMap((ingredient, index) =>
+                      isSubRecipe(ingredient)
+                        ? checkSubRecipeIngredients(ingredient).map((subIngredient, subIndex) => (
+                            <li key={`${index}-${subIndex}`}>{subIngredient}</li>
+                          ))
+                        : [<li key={index}>{ingredient}</li>]
+                    )}
                   </ul>
                 )
               }
