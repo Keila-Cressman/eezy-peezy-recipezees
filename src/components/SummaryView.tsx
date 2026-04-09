@@ -22,6 +22,7 @@ export default function SummaryView({ currRecipe }: SummaryViewProps) {
 
   useEffect(() => {
     outsideClick()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [setHideSearchBar, setSearchRecipeName])
 
   return (
