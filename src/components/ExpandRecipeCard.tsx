@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { useMobileSize } from "../hooks/useMobileSize"
 import { ReturnIcon } from "../icons/ReturnIcon"
 import { cn } from "../utils/cn"
@@ -23,20 +24,21 @@ export function ExpandRecipeCard({
   const isSubRecipe = (ingredient: string): boolean => {
     return recipes.some((recipe) => recipe.name === ingredient)
   }
+  const [expandSubRecipe, setExpandSubRecipe] = useState(false)
 
   return (
     <div className="w-full">
       <div
         className={cn(
           "w-full h-full bg-gray-50",
-          !isMobile && "divide-y-2 divide-blue-200"
+          !isMobile && "divide-y-2 divide-blue-200",
         )}
       >
         <div className={cn("flex items-center pb-5", isMobile && "pb-0 h-5")}>
           <p
             className={cn(
               "flex-auto text-6xl",
-              isMobile && "invisible text-sm"
+              isMobile && "invisible text-sm",
             )}
           >
             {recipeSelectedName}
@@ -67,18 +69,41 @@ export function ExpandRecipeCard({
                 recipe.name === recipeSelectedName &&
                 recipe.ingredients
               ) {
-                // need to add a clicakble drop down
                 return (
                   <ul
                     key={recipe.name}
                     className={cn("text-left text-sm pl-4", isMobile && "p-1")}
                   >
                     {recipe.ingredients.flatMap((ingredient, index) =>
-                      isSubRecipe(ingredient)
-                        ? checkSubRecipeIngredients(ingredient).map((subIngredient, subIndex) => (
-                            <li key={`${index}-${subIndex}`}>{subIngredient}</li>
-                          ))
-                        : [<li key={index}>{ingredient}</li>]
+                      isSubRecipe(ingredient) ? (
+                        <button
+                          type="button"
+                          onClick={() => setExpandSubRecipe(!expandSubRecipe)}
+                        >
+                          <div
+                            className={cn(
+                              "text-left border-2 border-blue-300 p-1",
+                              expandSubRecipe && "divide-y-2 divide-blue-200",
+                            )}
+                          >
+                            <span className="font-semibold">
+                              {ingredient} Recipe
+                            </span>
+                            <div>
+                              {expandSubRecipe &&
+                                checkSubRecipeIngredients(ingredient).map(
+                                  (subIngredient, subIndex) => (
+                                    <li key={`${index}-${subIndex}`}>
+                                      {subIngredient}
+                                    </li>
+                                  ),
+                                )}
+                            </div>
+                          </div>
+                        </button>
+                      ) : (
+                        [<li key={index}>{ingredient}</li>]
+                      ),
                     )}
                   </ul>
                 )
@@ -99,7 +124,7 @@ export function ExpandRecipeCard({
                     key={recipe.name}
                     className={cn(
                       "text-left text-base pl-4",
-                      isMobile && "p-1"
+                      isMobile && "p-1",
                     )}
                   >
                     {recipe.steps.map((step, index) => (
