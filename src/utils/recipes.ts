@@ -68,11 +68,11 @@ export const recipes = [
     image: "../images/beef_sirloin_tip_roast.jpg",
     type: ["Main"],
     ingredients: [
+      "Bone Broth",
       "4 lb beef sirloin tip roast",
       "olive oil",
       "salt",
       "pepper",
-      "Bone Broth",
       "1 tbsp onion powder",
       "1 tbsp garlic powder",
       "1 tsp smoked paprika",

@@ -16,15 +16,19 @@ export function ExpandRecipeCard({
   className,
 }: expandedRecipeCardProps) {
   const isMobile = useMobileSize()
-  const checkSubRecipeIngredients = (ingredient: string): string[] => {
+  const checkSubRecipeIngredients = (ingredient: string ):string[] => {
     const subRecipe = recipes.find((recipe) => recipe.name === ingredient)
-    return subRecipe?.ingredients ?? [ingredient]
+    return subRecipe?.ingredients || [] 
   }
-
+const checkSubRecipeSteps = (step: string ):string[] => {
+    const subRecipe = recipes.find((recipe) => recipe.name === step)
+    return subRecipe?.steps || [] 
+  }
   const isSubRecipe = (ingredient: string): boolean => {
     return recipes.some((recipe) => recipe.name === ingredient)
   }
-  const [expandSubRecipe, setExpandSubRecipe] = useState(false)
+  const [expandSubRecipeIngredients, setExpandSubRecipeIngredients] = useState(false)
+  const [expandSubRecipeSteps, setExpandSubRecipeSteps] = useState(false)
 
   return (
     <div className="w-full">
@@ -78,20 +82,20 @@ export function ExpandRecipeCard({
                       isSubRecipe(ingredient) ? (
                         <button
                           type="button"
-                          onClick={() => setExpandSubRecipe(!expandSubRecipe)}
+                          onClick={() => setExpandSubRecipeIngredients(!expandSubRecipeIngredients)}
                         >
                           <div
                             className={cn(
                               "text-left border-2 border-blue-300 p-1",
-                              expandSubRecipe && "divide-y-2 divide-blue-200",
+                              expandSubRecipeIngredients && "divide-y-2 divide-blue-200",
                             )}
                           >
                             <span className="font-semibold">
                               {ingredient} Recipe
                             </span>
                             <div>
-                              {expandSubRecipe &&
-                                checkSubRecipeIngredients(ingredient).map(
+                              {expandSubRecipeIngredients &&
+                                checkSubRecipeIngredients(ingredient ).map(
                                   (subIngredient, subIndex) => (
                                     <li key={`${index}-${subIndex}`}>
                                       {subIngredient}
@@ -127,11 +131,40 @@ export function ExpandRecipeCard({
                       isMobile && "p-1",
                     )}
                   >
-                    {recipe.steps.map((step, index) => (
-                      <li key={index}>
+                    {/* fix numberieng */}
+                    {recipe.steps.flatMap((step, index) =>
+                      isSubRecipe(step) ? (
+                        <button
+                          type="button"
+                          onClick={() => setExpandSubRecipeSteps(!expandSubRecipeSteps)}
+                        >
+                          <div
+                            className={cn(
+                              "text-left border-2 border-blue-300 p-1",
+                              expandSubRecipeSteps && "divide-y-2 divide-blue-200",
+                            )}
+                          >
+                            <span className="font-semibold">
+                              {step} Steps
+                            </span>
+                            <div>
+                              {expandSubRecipeSteps &&
+                                checkSubRecipeSteps( step ).map(
+                                  (subStep, subIndex) => (
+                                    <li key={`${index}-${subIndex}`}>
+                                      {subIndex + 1}. {subStep}
+                                    </li>
+                                  ),
+                                )}
+                            </div>
+                          </div>
+                        </button>
+                      ) : (
+                        [<li key={index}>
                         {index + 1}. {step}
-                      </li>
-                    ))}
+                      </li>]
+                      ),
+                    )}
                   </ul>
                 )
               }
