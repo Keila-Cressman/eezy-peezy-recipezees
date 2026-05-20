@@ -2588,16 +2588,28 @@ export const recipes = [
       "Grate fresh garlic on top and add sauce",
     ],
   },
-  // {
-  //   name: "",
-  //   image: "no image found",
-  //   type: ["Main", "Breakfast", "Holiday_Thanksgiving", "Holiday_Christmas",
-  // "Dessert", "Bakery", "Misc", "Drink", "Side", "Sauce", "Jam"],
-  //   ingredients: [
-  //   ],
-  //   steps: [
-  //   ],
-  // },
+  {
+    name: "Saltine Crackers*",
+    image: "no image found",
+    type: ["Side"],
+    ingredients: [
+      "1 c soft white flour",
+      "2 tbsp olive oil",
+      "1/2 tbsp salt",
+      "1/3 c water",
+    ],
+    steps: [
+      "Mix flour, water, and oil",
+      "Cover and rest for 20 min",
+      "Flatten on parchment paper",
+      "Cut into squares",
+      "Poke holes with fork",
+      "Sprinkle salt on top",
+      "Bake 400f 8 min",
+      "Mix around moving the inside crackers out",
+      "Bake another 8 min",
+    ],
+  },
   // {
   //   name: "",
   //   image: "no image found",
