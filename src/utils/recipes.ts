@@ -2552,6 +2552,82 @@ export const recipes = [
       "Fry each side of the chicken for 3 minutes",
     ],
   },
+  {
+    name: "Spinach Ricotta Ravioli*",
+    image: "no image found",
+    type: ["Main"],
+    ingredients: [
+      "1 1/4 c soft white flour",
+      "2 eggs",
+      "3 cloves of garlic",
+      "1 bunch spinach",
+      "1 tbsp butter",
+      "15 oz whole milk ricotta",
+      "3 1/2 tbsp salt",
+      "1 tbsp avocado oil",
+      "Marinara sauce",
+    ],
+    steps: [
+      "Pour flour on counter",
+      "Create a well in the center",
+      "Add the 2 eggs and scramble with fork",
+      "Slowly add sides of flour into well",
+      "Knead for about 5 min",
+      "Add small amounts of flour if dough is sticking to counter",
+      "Roll dough into a ball and let rest for 1 hour",
+      "Heat pan and add butter",
+      "Chop spinach into inch pieces and add to pan",
+      "Once slightly wilted add ricotta and 1/2 tbsp salt and turn off pan",
+      "Boil a large pot of water and add 3 tbsp salt",
+      "Split dough in half and flatten into long rectangles",
+      "Flour counter and add 1/2 tbsp of ricotta with an inch of space between",
+      "Place second layer of dough on top and push down around ricotta lump to seal",
+      "Cut ravioli pieces with pizza cutter",
+      "Add ravioli to boiling pot for 3 minutes",
+      "Drain and add avocado oil to prevent pasta from sticking",
+      "Grate fresh garlic on top and add sauce",
+    ],
+  },
+  // {
+  //   name: "",
+  //   image: "no image found",
+  //   type: ["Main", "Breakfast", "Holiday_Thanksgiving", "Holiday_Christmas",
+  // "Dessert", "Bakery", "Misc", "Drink", "Side", "Sauce", "Jam"],
+  //   ingredients: [
+  //   ],
+  //   steps: [
+  //   ],
+  // },
+  // {
+  //   name: "",
+  //   image: "no image found",
+  //   type: ["Main", "Breakfast", "Holiday_Thanksgiving", "Holiday_Christmas",
+  // "Dessert", "Bakery", "Misc", "Drink", "Side", "Sauce", "Jam"],
+  //   ingredients: [
+  //   ],
+  //   steps: [
+  //   ],
+  // },
+  // {
+  //   name: "",
+  //   image: "no image found",
+  //   type: ["Main", "Breakfast", "Holiday_Thanksgiving", "Holiday_Christmas",
+  // "Dessert", "Bakery", "Misc", "Drink", "Side", "Sauce", "Jam"],
+  //   ingredients: [
+  //   ],
+  //   steps: [
+  //   ],
+  // },
+  // {
+  //   name: "",
+  //   image: "no image found",
+  //   type: ["Main", "Breakfast", "Holiday_Thanksgiving", "Holiday_Christmas",
+  // "Dessert", "Bakery", "Misc", "Drink", "Side", "Sauce", "Jam"],
+  //   ingredients: [
+  //   ],
+  //   steps: [
+  //   ],
+  // },
   // {
   //   name: "",
   //   image: "no image found",
