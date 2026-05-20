@@ -2610,16 +2610,17 @@ export const recipes = [
       "Bake another 8 min",
     ],
   },
-  // {
-  //   name: "",
-  //   image: "no image found",
-  //   type: ["Main", "Breakfast", "Holiday_Thanksgiving", "Holiday_Christmas",
-  // "Dessert", "Bakery", "Misc", "Drink", "Side", "Sauce", "Jam"],
-  //   ingredients: [
-  //   ],
-  //   steps: [
-  //   ],
-  // },
+  {
+    name: "Sourdough Starter",
+    image: "no image found",
+    type: ["Misc"],
+    ingredients: ["150g flour", "150g water"],
+    steps: [
+      "Must measure by weight",
+      "1st 3 days or until bubbles add 75g hard white flour and 75g water",
+      "Once bubbles, every 24 hours discard 75g and add 150g flour and 150g water",
+    ],
+  },
   // {
   //   name: "",
   //   image: "no image found",
