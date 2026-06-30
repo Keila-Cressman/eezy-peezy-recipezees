@@ -2019,10 +2019,12 @@ export const recipes = [
       "1 red onion",
       "Sandwich Roll",
       "italian seasoning",
+      "1/4 c beef tallow"
     ],
     steps: [
       "Set oven to 350F",
-      "Chop all veggies and set aside",
+      "Chop all veggies into long slices and set aside",
+      "Heat up cast iron skillet and melt tallow",
       "Cook steak and mix in italian seasoning",
       "Add mayo to both sides of roll",
       "Add cheese, then steak, then cheese, lastly add veggies",
