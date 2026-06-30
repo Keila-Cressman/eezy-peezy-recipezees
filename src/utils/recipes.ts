@@ -511,7 +511,7 @@ export const recipes = [
     ],
   },
   {
-    name: "Chocolate Chocolate Peanut Butter Chip Cookies",
+    name: "Chocolate Chocolate Peanut Butter Chip Cookies(24)",
     image: "../images/chocolate_cookies.jpg",
     type: ["Dessert"],
     ingredients: [
