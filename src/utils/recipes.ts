@@ -1684,11 +1684,11 @@ export const recipes = [
     ],
   },
   {
-    name: "Waffles*(2)",
+    name: "Waffles(2)*",
     image: "../images/waffles_pancakes.jpg",
     type: ["Breakfast"],
     ingredients: [
-      "1 1/2 c hard red flour",
+      "1 1/2 c hard white flour",
       "1 tbsp honey",
       "1/2 tbsp baking powder",
       "1 tsp salt",
@@ -1708,7 +1708,7 @@ export const recipes = [
       "Rest for 5 minutes",
       "Heat waffle maker then add cold butter",
       "Pour 1/3 c batter into each section",
-      "Cook for 7 min",
+      "Cook for 5 min",
     ],
   },
   {
