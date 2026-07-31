@@ -2756,6 +2756,28 @@ export const recipes = [
       "Flip steak and cook for 2 min covered",
     ],
   },
+  {
+    name: "Alfredo Sauce*",
+    image: "no image found",
+    type: ["Sauce"],
+    ingredients: [
+      "1/4 c butter",
+      "3 tbsp flour",
+      "1 bulb of garlic",
+      "2 c cream",
+      "2 c parmesan cheese",
+      "1/2 tsp salt",
+      "1/2 tsp pepper",
+      "1/2 tbsp italian seasoning",
+    ],
+    steps: [
+      "In a large sauce pan melt butter",
+      "Add flour and stir until pasty",
+      "Add garlic and cook until slightly brown",
+      "Add heavy cream and stir until it simmers",
+      "Add Parmesan, salt, pepper, italian seasoning",
+    ],
+  },
   // {
   //   name: "",
   //   image: "no image found",
