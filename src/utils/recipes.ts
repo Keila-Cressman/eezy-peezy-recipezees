@@ -2600,11 +2600,11 @@ export const recipes = [
     name: "Sourdough Starter",
     image: "no image found",
     type: ["Misc"],
-    ingredients: ["150g flour", "150g water"],
+    ingredients: ["hard white flour", "warm water"],
     steps: [
       "Must measure by weight",
-      "1st 3 days or until bubbles add 75g hard white flour and 75g water",
-      "Once bubbles, every 24 hours discard 75g and add 150g flour and 150g water",
+      "1st 3 days or until bubbles add 65g flour and 80g water",
+      "Once bubbles, every 24 hours discard 75g and add 120g flour and 200g water",
     ],
   },
   {
