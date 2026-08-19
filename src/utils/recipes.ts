@@ -2838,6 +2838,25 @@ export const recipes = [
       "Wrap in tea towel to keep warm and pliable",
     ],
   },
+  {
+    name: "Loaded Baked Potato",
+    image: "no image found",
+    type: ["Side"],
+    ingredients: [
+      "brown potato",
+      "salt",
+      "butter",
+      "sour cream",
+      "cheddar cheese",
+      "green onions",
+      "bacon",
+    ],
+    steps: [
+      "Stab potato all around with fork",
+      "Wrap each in aluminum",
+      "Bake at 450F for 1 hour",
+    ],
+  },
   // {
   //   name: "",
   //   image: "no image found",
