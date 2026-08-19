@@ -2817,6 +2817,27 @@ export const recipes = [
       "Add fresh garlic and parmesan on top",
     ],
   },
+  {
+    name: "Sourdough Tortillas(8)*",
+    image: "no image found",
+    type: ["Misc"],
+    ingredients: [
+      "100g starter",
+      "100g warm water",
+      "40g melted butter",
+      "2 tsp salt",
+      "200g hard white flour",
+    ],
+    steps: [
+      "Mix all together",
+      "Knead 2 minutes until not sticky",
+      "Form 8 balls",
+      "Rest 30 min",
+      "Roll out almost paper thin",
+      "*Heat on medium heat pan for 20 sec flip for another 20 sec",
+      "Wrap in tea towel to keep warm and pliable",
+    ],
+  },
   // {
   //   name: "",
   //   image: "no image found",
