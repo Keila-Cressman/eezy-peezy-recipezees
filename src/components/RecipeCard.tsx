@@ -9,7 +9,9 @@ type WakeLockSentinelLike = {
 }
 
 type WakeLockLike = {
-  request: (type: "screen") => Promise<WakeLockSentinelLike>
+  request?: (
+    type: "screen"
+  ) => Promise<WakeLockSentinelLike | undefined>
 }
 
 export type Recipe = {
@@ -50,13 +52,16 @@ export default function RecipeCard({
       return
     }
 
-    const wakeLock = (navigator as Navigator & { wakeLock?: WakeLockLike })
-      .wakeLock
+    const wakeLock =
+      typeof navigator !== "undefined"
+        ? (navigator as Navigator & { wakeLock?: WakeLockLike }).wakeLock
+        : undefined
 
-    if (!wakeLock) {
+    if (!wakeLock || typeof wakeLock.request !== "function") {
       return
     }
 
+    const requestWakeLockMethod = wakeLock.request
     let wakeLockSentinel: WakeLockSentinelLike | null = null
     let disposed = false
 
@@ -66,7 +71,11 @@ export default function RecipeCard({
       }
 
       try {
-        const sentinel = await wakeLock.request("screen")
+        const sentinel = await requestWakeLockMethod.call(wakeLock, "screen")
+
+        if (!sentinel) {
+          return
+        }
 
         if (disposed) {
           await sentinel.release()
