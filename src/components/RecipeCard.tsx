@@ -31,6 +31,7 @@ export default function RecipeCard({
   const lowerCase = (str: string): string => {
     return str.toLowerCase()
   }
+  const wakeLock = useWakeLockAPI()
 
   useEffect(() => {
     if (!closeRecipeCard) {
@@ -42,7 +43,7 @@ export default function RecipeCard({
     if (!openRecipeCard) {
       return
     }
-    useWakeLockAPI()
+    wakeLock?.()
     
   }, [openRecipeCard])
 
