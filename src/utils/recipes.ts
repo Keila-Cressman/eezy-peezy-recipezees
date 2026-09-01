@@ -2604,7 +2604,7 @@ export const recipes = [
     steps: [
       "Must measure by weight",
       "1st 3 days or until bubbles add 65g flour and 80g water",
-      "Once bubbles, every 24 hours discard 75g starter, 127g water, and 165g flour",
+      "Once bubbles, every 24 hours discard 75g starter, 140g water, and 160g flour",
     ],
   },
   {
@@ -2619,7 +2619,7 @@ export const recipes = [
       "10g salt",
     ],
     steps: [
-      "Night before in a jar mix 75g starter, 127g water, and 165g flour",
+      "Night before in a jar mix 75g starter, 140g water, and 160g flour",
       "Next day starter should appear doubled and bubbly",
       "In a large bowl add water, oil, starter",
       "Mix until starter is dissolved",
