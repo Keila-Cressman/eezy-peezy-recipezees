@@ -2958,6 +2958,26 @@ export const recipes = [
       "Remove cover and continue to bake for 40 min",
     ],
   },
+  {
+    name: "Chocolate Ice Cream*",
+    image: "no image found",
+    type: ["Dessert"],
+    ingredients: [
+      "1 c milk",
+      "1/2 c cacao",
+      "1/2 c Maple syrup/honey",
+      "4 egg yolks",
+      "1 tsp vanilla",
+      "1/4 tsp salt",
+      "2 c heavy cream",
+    ],
+    steps: [
+      "Blend milk, cacao, syrup, eggs, vanilla, and salt for 30 sec",
+      "Heat on a sauce pan up to 170F",
+      "Remove from heat and stir in cream",
+      "*Place in freezer for 4 hours and blend again to make creamier",
+    ],
+  },
   // {
   //   name: "",
   //   image: "no image found",
