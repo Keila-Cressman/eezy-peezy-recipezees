@@ -30,9 +30,6 @@ export function ExpandRecipeCard({
             <ReturnIcon className={cn("cursor-pointer h-10")} />
           </button>
         </div>
-        <div className={cn("text-left text-2xl hidden")}>
-          {recipeSelectedName}
-        </div>
 
         <div className={cn("flex flex-row gap-10 pt-5")}>
           <div className={cn("pb-10")}>
