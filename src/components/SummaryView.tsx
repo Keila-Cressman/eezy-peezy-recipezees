@@ -7,9 +7,10 @@ import { SearchBar } from "./SearchBar"
 
 export type SummaryViewProps = {
   currRecipe: Recipe
+  expandForMobile?: (open: boolean) => void
 }
 
-export default function SummaryView({ currRecipe }: SummaryViewProps) {
+export default function SummaryView({ currRecipe, expandForMobile }: SummaryViewProps) {
   const [searchRecipeName, setSearchRecipeName] = useState("")
   const isMobile = useMobileSize()
   const [hideSearchBar, setHideSearchBar] = useState(false)
@@ -22,6 +23,7 @@ export default function SummaryView({ currRecipe }: SummaryViewProps) {
 
   useEffect(() => {
     outsideClick()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [setHideSearchBar, setSearchRecipeName])
 
   return (
@@ -49,6 +51,7 @@ export default function SummaryView({ currRecipe }: SummaryViewProps) {
             setSearchRecipeName("")
           }}
           closeRecipeCard={hideSearchBar}
+          expandForMobile={expandForMobile}
         />
       </div>
     </div>

@@ -13,6 +13,7 @@ export default function Home() {
   const [currRecipe, setCurrRecipe] = useState<
     { image: string; name: string }[]
   >([])
+  const [expandRecipeMobile, setExpandRecipeMobile] = useState(false)
 
   useEffect(() => {
     if (currRecipe.length === 0) {
@@ -27,7 +28,7 @@ export default function Home() {
     }
 
     const getRecipeByType = recipes.filter((recipe) =>
-      recipe.type.includes(recipeType)
+      recipe.type.includes(recipeType),
     ) as []
     setCurrRecipe(getRecipeByType)
   }
@@ -36,21 +37,27 @@ export default function Home() {
     <div
       className={cn(
         "flex flex-1 py-5 px-5 gap-4",
-        isMobile && "gap-2 px-2 py-2"
+        isMobile && "gap-2 px-2 py-2",
       )}
     >
-      <SideNav
-        onClick={(recipeType: string) =>
-          buttonSelection(fullRecipes, recipeType)
-        }
-      />
-
-      <div className="border-blue-200 border flex" />
+      {!expandRecipeMobile && (
+        <>
+          <SideNav
+            onClick={(recipeType: string) =>
+              buttonSelection(fullRecipes, recipeType)
+            }
+          />
+          <div className="border-blue-200 border flex" />
+        </>
+      )}
 
       {currRecipe.length === 0 ? (
         <RandomDishSelector />
       ) : (
-        <SummaryView currRecipe={currRecipe as Recipe} />
+        <SummaryView
+          currRecipe={currRecipe as Recipe}
+          expandForMobile={(open: boolean) => setExpandRecipeMobile(open)}
+        />
       )}
     </div>
   )

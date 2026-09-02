@@ -4,6 +4,7 @@ import { cn } from "../utils/cn"
 import { ExpandRecipeCard } from "./ExpandRecipeCard"
 import Gallery from "./Gallery"
 import { useWakeLockAPI } from "../hooks/useWakeLockAPI"
+import { ExpandRecipeCardMobile } from "./ExpandRecipeCardMobile"
 
 export type Recipe = {
   image: string
@@ -15,6 +16,7 @@ export type RecipeCardProps = {
   currRecipe: Recipe
   recipeExpanded?: (hide: boolean) => void
   closeRecipeCard?: boolean
+  expandForMobile?: (open: boolean) => void
   className?: { recipeCard?: string; expandedCard?: string }
 }
 
@@ -23,6 +25,7 @@ export default function RecipeCard({
   currRecipe,
   recipeExpanded,
   closeRecipeCard,
+  expandForMobile,
   className,
 }: RecipeCardProps) {
   const isMobile = useMobileSize()
@@ -44,7 +47,7 @@ export default function RecipeCard({
       return
     }
     wakeLock?.()
-    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [openRecipeCard])
 
   function searchBarInput(): Recipe {
@@ -101,7 +104,7 @@ export default function RecipeCard({
 
       {openRecipeCard && (
         <div className="w-full h-full">
-          <ExpandRecipeCard
+          {!isMobile ? <ExpandRecipeCard
             recipeSelectedName={selectRecipe}
             onClose={() => {
               setOpenRecipeCard(false)
@@ -110,7 +113,19 @@ export default function RecipeCard({
               }
             }}
             className={className?.expandedCard}
-          />
+          /> :
+          <ExpandRecipeCardMobile
+            recipeSelectedName={selectRecipe}
+            onClose={() => {
+              setOpenRecipeCard(false)
+              if (recipeExpanded) {
+                recipeExpanded(false)
+              }
+              expandForMobile && expandForMobile(false)
+            }}
+            expandForMobile={expandForMobile}
+            className={className?.expandedCard}
+          />}
         </div>
       )}
 
