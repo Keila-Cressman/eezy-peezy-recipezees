@@ -2,40 +2,39 @@ import { ReturnIcon } from "../icons/ReturnIcon"
 import { cn } from "../utils/cn"
 import { recipes } from "../utils/recipes"
 
-export type expandedRecipeCardProps = {
+export type expandedRecipeCardMobileProps = {
   recipeSelectedName: string
   onClose: () => void
+  expandForMobile?: (open: boolean) => void
   className?: string
 }
 
-export function ExpandRecipeCard({
+export function ExpandRecipeCardMobile({
   recipeSelectedName,
   onClose,
+  expandForMobile,
   className,
-}: expandedRecipeCardProps) {
+}: expandedRecipeCardMobileProps) {
+  expandForMobile && expandForMobile(true)
+
   return (
-    <div className="w-full">
-      <div
-        className={cn("w-full h-full bg-gray-50 divide-y-2 divide-blue-200")}
-      >
-        <div className={cn("flex items-center pb-5")}>
-          <p className={cn("flex-auto text-6xl")}>{recipeSelectedName}</p>
+      <div className={cn("w-full h-full bg-gray-50")}>
+        <div className={cn("flex justify-between items-center pb-5")}>
+          <div className={cn("text-2xl")}>{recipeSelectedName}</div>
           <button
             type="button"
             onClick={() => {
               onClose()
             }}
-            className={cn("flex items-center ml-auto")}
           >
-            <ReturnIcon className={cn("cursor-pointer h-10")} />
+            <ReturnIcon className={cn("p-1 h-8")} />
           </button>
         </div>
-        <div className={cn("text-left text-2xl hidden")}>
-          {recipeSelectedName}
-        </div>
 
-        <div className={cn("flex flex-row gap-10 pt-5")}>
-          <div className={cn("pb-10")}>
+        <div className="border-blue-200 border flex" />
+
+        <div className={cn("flex-row gap-10 block pt-5")}>
+          <div className={cn("pb-4")}>
             {recipes.map((recipe) => {
               if (
                 recipe &&
@@ -45,7 +44,7 @@ export function ExpandRecipeCard({
                 return (
                   <ul
                     key={recipe.name}
-                    className={cn("text-left text-sm pl-4")}
+                    className={cn("text-left text-sm pl-4 p-1")}
                   >
                     {recipe.ingredients.map((ingredient, index) => (
                       <li key={index}>{ingredient}</li>
@@ -67,7 +66,7 @@ export function ExpandRecipeCard({
                 return (
                   <ul
                     key={recipe.name}
-                    className={cn("text-left text-base pl-4")}
+                    className={cn("text-left text-base pl-4 p-1")}
                   >
                     {recipe.steps.map((step, index) => (
                       <li key={index}>
@@ -82,6 +81,5 @@ export function ExpandRecipeCard({
           </div>
         </div>
       </div>
-    </div>
   )
 }
