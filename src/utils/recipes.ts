@@ -1923,9 +1923,10 @@ export const recipes = [
     type: ["Main", "Side"],
     ingredients: ["wings", "olive oil"],
     steps: [
+      "Pat dry wings",
       "Add enough oil to pot to cover wings",
-      "Once oil reaches 360F add wings",
-      "Fry wings for 20 minutes",
+      "Heat oil on high as it reaches 375F",
+      "Add wings and fry for 20 minutes",
     ],
   },
   {
