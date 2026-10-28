@@ -1220,7 +1220,7 @@ export const recipes = [
     ],
   },
   {
-    name: "Shawn Chili*",
+    name: "Shawn Chili",
     image: "../images/shawns_chili.jpg",
     type: ["Main", "Friday_Favorites"],
     ingredients: [
@@ -1230,15 +1230,15 @@ export const recipes = [
       "2 corn",
       "2 garlic bulbs",
       "shredded cheese",
-      "1 onion",
+      "1 red onion",
       "3 peppers",
-      "2 jalapenos plus seeds",
+      "2 jalapenos with stripes and seeds",
       "2 tbsp salt",
     ],
     steps: [
       "Chop all veggies",
       "Add all to crock pot",
-      "Cook on low for 8 hrs or high for 6 hrs",
+      "Cook on high for 8 hrs",
       "*** Save all leftover veggies in a 1 gal freezer bag for future broth",
     ],
   },
