@@ -1683,7 +1683,7 @@ export const recipes = [
     ],
   },
   {
-    name: "Waffles(2)*",
+    name: "Waffles(2)",
     image: "../images/waffles_pancakes.jpg",
     type: ["Breakfast"],
     ingredients: [
@@ -1691,7 +1691,7 @@ export const recipes = [
       "1 tbsp honey",
       "1/2 tbsp baking powder",
       "1 tsp salt",
-      "1 c buttermilk or milk",
+      "1 1/2 c buttermilk or milk",
       "1 egg",
       "1/8 c melted butter",
       "1 tsp vanilla",
@@ -1699,7 +1699,7 @@ export const recipes = [
       "syrup",
     ],
     steps: [
-      "In mixing bowl add 3/4 c milk, egg, and vanilla",
+      "In mixing bowl add milk, egg, and vanilla",
       "In smaller bowl melt butter and mix in honey",
       "Whisk in butter honey mixture to liquids",
       "In a separate bowl mix flour, baking powder, and salt",
