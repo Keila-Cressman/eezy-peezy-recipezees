@@ -3007,13 +3007,13 @@ export const recipes = [
     type: ["Bakery"],
     ingredients: [
       "225 g starter",
-      "420 g warm water",
+      "420 g warm buttermilk",
       "500 g hard white wheat flour",
       "30 g olive oil or melted butter",
       "20 g salt",
     ],
     steps: [
-      "Mix starter and warm water",
+      "Mix starter and warm buttermilk",
       "Add olive oil/butter, flour, and salt",
       "Combine all in a bowl and do stretch and folds for 5 min",
       "With wet hands pat the top of dough",
