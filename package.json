@@ -1,6 +1,6 @@
 {
   "name": "eezy-peezy-recipezees",
-  "version": "2026.06.30.03",
+  "version": "2026.11.02.02",
   "homepage": "https://Keila-Cressman.github.io/eezy-peezy-recipezees",
   "private": true,
   "dependencies": {
@@ -20,13 +20,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "prebuild": "node scripts/bump-version.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "react-scripts build && gh-pages -d build",
-    "dev": "react-scripts build && react-scripts start"
+    "deploy": "gh-pages -d build",
+    "dev": "npm run build && react-scripts start"
   },
   "eslintConfig": {
     "extends": [
