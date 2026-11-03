@@ -912,7 +912,7 @@ export const recipes = [
       "Stir in elbows to pot and pour in baking dish",
       "Bake at 350F for 25 minutes",
       "Broil one level lower than highest rack in oven for 5 minutes",
-      "*liquid amount"
+      "*liquid amount",
     ],
   },
   {
@@ -2557,7 +2557,6 @@ export const recipes = [
       "Fry each side of the chicken for 3 minutes",
       "Put mayo on both insides of sliced bread",
       "Layer cheese, bacon, chicken, cheese, red onion, tomato, bacon, and lettuce",
-    
     ],
   },
   {
@@ -3046,6 +3045,24 @@ export const recipes = [
       "Heat on a sauce pan up to 170F",
       "Remove from heat and stir in cream",
       "*Place in freezer for 4 hours and blend again to make creamier",
+    ],
+  },
+  {
+    name: "Cheese Sauce",
+    image: "no image found",
+    type: ["Sauce"],
+    ingredients: [
+      "2 tbsp butter",
+      "2 tbsp flour",
+      "1 c milk",
+      "1/2 tsp salt",
+      "6 oz shredded cheese",
+    ],
+    steps: [
+      "On low heat melt butter in a sauce pan",
+      "Add flour and stir until pasty",
+      "Add milk and stir until it simmers",
+      "Add salt and cheese and stir until thickened",
     ],
   },
   // {
