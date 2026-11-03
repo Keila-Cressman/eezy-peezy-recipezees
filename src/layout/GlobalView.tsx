@@ -1,3 +1,4 @@
+import packageJson from "../../package.json"
 import { useMobileSize } from "../hooks/useMobileSize"
 import { cn } from "../utils/cn"
 import PageContents from "./PageContents"
@@ -22,6 +23,7 @@ export default function GlobalView() {
           <PageContents />
         </div>
       </div>
+      <div className="text-xs text-center">{packageJson.version}</div>
     </div>
   )
 }
